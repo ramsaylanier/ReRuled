@@ -1,0 +1,11 @@
+# import Post from "./generated/prisma.graphql"
+
+type Query {
+  games: [Game!]!
+  me: User
+}
+
+type Mutation {
+  authenticate(idToken: String!): User
+  createGame(title: String!): Game!
+}
