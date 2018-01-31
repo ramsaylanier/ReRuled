@@ -1,0 +1,13 @@
+type Game {
+  id: ID! @unique
+  title: String!
+}
+
+type User {
+  id: ID! @unique
+  email: String! @unique
+  name: String
+  avatar: String
+  auth0id: String! @unique
+  identity: String
+}

@@ -1,0 +1,20 @@
+{
+  "valueType": "nodes",
+  "values": [
+    {"_typeName":"Game","id":0,"title":"Cacao"},
+    {"_typeName":"Game","id":10,"title":"Legacy: The Testament of Duke de Crecy"},
+    {"_typeName":"Game","id":20,"title":"Monikers"},
+    {"_typeName":"Game","id":30,"title":"Hyperborea"},
+    {"_typeName":"Game","id":40,"title":"Mexica"},
+    {"_typeName":"Game","id":50,"title":"Flick 'em Up!"},
+    {"_typeName":"Game","id":60,"title":"Santiago"},
+    {"_typeName":"Game","id":70,"title":"Vast: The Crystal Caverns"},
+    {"_typeName":"Game","id":80,"title":"Lords of Xidit"},
+    {"_typeName":"Game","id":90,"title":"Hawaii"},
+    {"_typeName":"Game","id":100,"title":"Louis XIV"},
+    {"_typeName":"Game","id":110,"title":"Blokus"},
+    {"_typeName":"Game","id":120,"title":"Thunderstone: Dragonspire"},
+    {"_typeName":"Game","id":130,"title":"Dungeons & Dragons: Wrath of Ashardalon Board Game"},
+    {"_typeName":"Game","id":140,"title":"Last Night on Earth: The Zombie Game"}
+  ]
+}
