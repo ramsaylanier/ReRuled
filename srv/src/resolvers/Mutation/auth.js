@@ -1,10 +1,8 @@
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const { Context } = require( '../../utils')
-const validateAndParseIdToken = require('../../helpers/validateAndParseIdToken')
+const { validateAndParseIdToken } = require('../../middleware/jwt')
 
 async function createPrismaUser(ctx, idToken) {
-  console.log(idToken)
   const user = await ctx.db.mutation.createUser({
     data: {
       identity: idToken.sub.split(`|`)[0],

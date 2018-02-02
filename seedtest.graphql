@@ -1,0 +1,7003 @@
+
+      mutation createGames{
+    
+        cg0: createGame(data: {
+          title: "Battle Cry"
+        }) {
+          id
+        }
+
+      
+        cg1: createGame(data: {
+          title: "Exit: The Game – The Pharaoh's Tomb"
+        }) {
+          id
+        }
+
+      
+        cg2: createGame(data: {
+          title: "Diamant"
+        }) {
+          id
+        }
+
+      
+        cg3: createGame(data: {
+          title: "1846: The Race for the Midwest"
+        }) {
+          id
+        }
+
+      
+        cg4: createGame(data: {
+          title: "Manila"
+        }) {
+          id
+        }
+
+      
+        cg5: createGame(data: {
+          title: "Fabled Fruit"
+        }) {
+          id
+        }
+
+      
+        cg6: createGame(data: {
+          title: "Level 7 [Omega Protocol]"
+        }) {
+          id
+        }
+
+      
+        cg7: createGame(data: {
+          title: "Smash Up"
+        }) {
+          id
+        }
+
+      
+        cg8: createGame(data: {
+          title: "Space Hulk (fourth edition)"
+        }) {
+          id
+        }
+
+      
+        cg9: createGame(data: {
+          title: "Ninjato"
+        }) {
+          id
+        }
+
+      
+        cg10: createGame(data: {
+          title: "Mahjong"
+        }) {
+          id
+        }
+
+      
+        cg11: createGame(data: {
+          title: "Automobiles"
+        }) {
+          id
+        }
+
+      
+        cg12: createGame(data: {
+          title: "Can't Stop"
+        }) {
+          id
+        }
+
+      
+        cg13: createGame(data: {
+          title: "1812: The Invasion of Canada"
+        }) {
+          id
+        }
+
+      
+        cg14: createGame(data: {
+          title: "Valley of the Kings"
+        }) {
+          id
+        }
+
+      
+        cg15: createGame(data: {
+          title: "Terror in Meeple City"
+        }) {
+          id
+        }
+
+      
+        cg16: createGame(data: {
+          title: "China"
+        }) {
+          id
+        }
+
+      
+        cg17: createGame(data: {
+          title: "The Big Book of Madness"
+        }) {
+          id
+        }
+
+      
+        cg18: createGame(data: {
+          title: "Signorie"
+        }) {
+          id
+        }
+
+      
+        cg19: createGame(data: {
+          title: "Arkwright"
+        }) {
+          id
+        }
+
+      
+        cg20: createGame(data: {
+          title: "Metropolys"
+        }) {
+          id
+        }
+
+      
+        cg21: createGame(data: {
+          title: "Love Letter Premium"
+        }) {
+          id
+        }
+
+      
+        cg22: createGame(data: {
+          title: "Vanuatu"
+        }) {
+          id
+        }
+
+      
+        cg23: createGame(data: {
+          title: "Black Fleet"
+        }) {
+          id
+        }
+
+      
+        cg24: createGame(data: {
+          title: "Exit: The Game – The Secret Lab"
+        }) {
+          id
+        }
+
+      
+        cg25: createGame(data: {
+          title: "Pathfinder Adventure Card Game: Skull & Shackles – Base Set"
+        }) {
+          id
+        }
+
+      
+        cg26: createGame(data: {
+          title: "Manoeuvre"
+        }) {
+          id
+        }
+
+      
+        cg27: createGame(data: {
+          title: "Cottage Garden"
+        }) {
+          id
+        }
+
+      
+        cg28: createGame(data: {
+          title: "The Rivals for Catan"
+        }) {
+          id
+        }
+
+      
+        cg29: createGame(data: {
+          title: "Leaving Earth"
+        }) {
+          id
+        }
+
+      
+        cg30: createGame(data: {
+          title: "Domaine"
+        }) {
+          id
+        }
+
+      
+        cg31: createGame(data: {
+          title: "Loony Quest"
+        }) {
+          id
+        }
+
+      
+        cg32: createGame(data: {
+          title: "Oh My Goods!"
+        }) {
+          id
+        }
+
+      
+        cg33: createGame(data: {
+          title: "No Retreat! The Russian Front"
+        }) {
+          id
+        }
+
+      
+        cg34: createGame(data: {
+          title: "Fauna"
+        }) {
+          id
+        }
+
+      
+        cg35: createGame(data: {
+          title: "Dogs of War"
+        }) {
+          id
+        }
+
+      
+        cg36: createGame(data: {
+          title: "Eight-Minute Empire: Legends"
+        }) {
+          id
+        }
+
+      
+        cg37: createGame(data: {
+          title: "Warhammer Quest"
+        }) {
+          id
+        }
+
+      
+        cg38: createGame(data: {
+          title: "Planet Steam"
+        }) {
+          id
+        }
+
+      
+        cg39: createGame(data: {
+          title: "Qwirkle"
+        }) {
+          id
+        }
+
+      
+        cg40: createGame(data: {
+          title: "Yggdrasil"
+        }) {
+          id
+        }
+
+      
+        cg41: createGame(data: {
+          title: "Massive Darkness"
+        }) {
+          id
+        }
+
+      
+        cg42: createGame(data: {
+          title: "World's Fair 1893"
+        }) {
+          id
+        }
+
+      
+        cg43: createGame(data: {
+          title: "Unfair"
+        }) {
+          id
+        }
+
+      
+        cg44: createGame(data: {
+          title: "Diamonds"
+        }) {
+          id
+        }
+
+      
+        cg45: createGame(data: {
+          title: "Islebound"
+        }) {
+          id
+        }
+
+      
+        cg46: createGame(data: {
+          title: "Witness"
+        }) {
+          id
+        }
+
+      
+        cg47: createGame(data: {
+          title: "Caylus Magna Carta"
+        }) {
+          id
+        }
+
+      
+        cg48: createGame(data: {
+          title: "Peloponnes"
+        }) {
+          id
+        }
+
+      
+        cg49: createGame(data: {
+          title: "Mint Works"
+        }) {
+          id
+        }
+
+      
+        cg50: createGame(data: {
+          title: "Ultimate Werewolf: Ultimate Edition"
+        }) {
+          id
+        }
+
+      
+        cg51: createGame(data: {
+          title: "Catacombs"
+        }) {
+          id
+        }
+
+      
+        cg52: createGame(data: {
+          title: "Railroad Revolution"
+        }) {
+          id
+        }
+
+      
+        cg53: createGame(data: {
+          title: "Keythedral"
+        }) {
+          id
+        }
+
+      
+        cg54: createGame(data: {
+          title: "Steam Park"
+        }) {
+          id
+        }
+
+      
+        cg55: createGame(data: {
+          title: "Tales & Games: The Hare & the Tortoise"
+        }) {
+          id
+        }
+
+      
+        cg56: createGame(data: {
+          title: "Hey, That's My Fish!"
+        }) {
+          id
+        }
+
+      
+        cg57: createGame(data: {
+          title: "Primordial Soup"
+        }) {
+          id
+        }
+
+      
+        cg58: createGame(data: {
+          title: "Witch's Brew"
+        }) {
+          id
+        }
+
+      
+        cg59: createGame(data: {
+          title: "Loopin' Louie"
+        }) {
+          id
+        }
+
+      
+        cg60: createGame(data: {
+          title: "Nemo's War (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg61: createGame(data: {
+          title: "Ambush!"
+        }) {
+          id
+        }
+
+      
+        cg62: createGame(data: {
+          title: "Quarriors!"
+        }) {
+          id
+        }
+
+      
+        cg63: createGame(data: {
+          title: "A Distant Plain"
+        }) {
+          id
+        }
+
+      
+        cg64: createGame(data: {
+          title: "Hamburgum"
+        }) {
+          id
+        }
+
+      
+        cg65: createGame(data: {
+          title: "Haggis"
+        }) {
+          id
+        }
+
+      
+        cg66: createGame(data: {
+          title: "Power Grid: Factory Manager"
+        }) {
+          id
+        }
+
+      
+        cg67: createGame(data: {
+          title: "Wizard"
+        }) {
+          id
+        }
+
+      
+        cg68: createGame(data: {
+          title: "The Pursuit of Happiness"
+        }) {
+          id
+        }
+
+      
+        cg69: createGame(data: {
+          title: "Merchant of Venus"
+        }) {
+          id
+        }
+
+      
+        cg70: createGame(data: {
+          title: "Winner's Circle"
+        }) {
+          id
+        }
+
+      
+        cg71: createGame(data: {
+          title: "Runebound (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg72: createGame(data: {
+          title: "Quartermaster General"
+        }) {
+          id
+        }
+
+      
+        cg73: createGame(data: {
+          title: "Eat Poop You Cat"
+        }) {
+          id
+        }
+
+      
+        cg74: createGame(data: {
+          title: "Ikusa"
+        }) {
+          id
+        }
+
+      
+        cg75: createGame(data: {
+          title: "Risk: Star Wars Edition"
+        }) {
+          id
+        }
+
+      
+        cg76: createGame(data: {
+          title: "Guildhall"
+        }) {
+          id
+        }
+
+      
+        cg77: createGame(data: {
+          title: "Liberté"
+        }) {
+          id
+        }
+
+      
+        cg78: createGame(data: {
+          title: "Fleet"
+        }) {
+          id
+        }
+
+      
+        cg79: createGame(data: {
+          title: "A Game of Thrones: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg80: createGame(data: {
+          title: "Qwixx"
+        }) {
+          id
+        }
+
+      
+        cg81: createGame(data: {
+          title: "Viceroy"
+        }) {
+          id
+        }
+
+      
+        cg82: createGame(data: {
+          title: "Citadels"
+        }) {
+          id
+        }
+
+      
+        cg83: createGame(data: {
+          title: "Parade"
+        }) {
+          id
+        }
+
+      
+        cg84: createGame(data: {
+          title: "Star Trek: Ascendancy"
+        }) {
+          id
+        }
+
+      
+        cg85: createGame(data: {
+          title: "Hacienda"
+        }) {
+          id
+        }
+
+      
+        cg86: createGame(data: {
+          title: "Lord of the Rings"
+        }) {
+          id
+        }
+
+      
+        cg87: createGame(data: {
+          title: "Via Nebula"
+        }) {
+          id
+        }
+
+      
+        cg88: createGame(data: {
+          title: "Strasbourg"
+        }) {
+          id
+        }
+
+      
+        cg89: createGame(data: {
+          title: "Queendomino"
+        }) {
+          id
+        }
+
+      
+        cg90: createGame(data: {
+          title: "Trains: Rising Sun"
+        }) {
+          id
+        }
+
+      
+        cg91: createGame(data: {
+          title: "Linko!"
+        }) {
+          id
+        }
+
+      
+        cg92: createGame(data: {
+          title: "Gold West"
+        }) {
+          id
+        }
+
+      
+        cg93: createGame(data: {
+          title: "Rallyman"
+        }) {
+          id
+        }
+
+      
+        cg94: createGame(data: {
+          title: "Hansa"
+        }) {
+          id
+        }
+
+      
+        cg95: createGame(data: {
+          title: "For the People"
+        }) {
+          id
+        }
+
+      
+        cg96: createGame(data: {
+          title: "The Bloody Inn"
+        }) {
+          id
+        }
+
+      
+        cg97: createGame(data: {
+          title: "Thunderbolt Apache Leader"
+        }) {
+          id
+        }
+
+      
+        cg98: createGame(data: {
+          title: "Caverna: Cave vs Cave"
+        }) {
+          id
+        }
+
+      
+        cg99: createGame(data: {
+          title: "Java"
+        }) {
+          id
+        }
+
+      
+        cg100: createGame(data: {
+          title: "Acquire"
+        }) {
+          id
+        }
+
+      
+        cg101: createGame(data: {
+          title: "Love Letter"
+        }) {
+          id
+        }
+
+      
+        cg102: createGame(data: {
+          title: "The Manhattan Project"
+        }) {
+          id
+        }
+
+      
+        cg103: createGame(data: {
+          title: "Burgle Bros."
+        }) {
+          id
+        }
+
+      
+        cg104: createGame(data: {
+          title: "Neuroshima Hex!"
+        }) {
+          id
+        }
+
+      
+        cg105: createGame(data: {
+          title: "Glass Road"
+        }) {
+          id
+        }
+
+      
+        cg106: createGame(data: {
+          title: "Hero Realms"
+        }) {
+          id
+        }
+
+      
+        cg107: createGame(data: {
+          title: "Notre Dame"
+        }) {
+          id
+        }
+
+      
+        cg108: createGame(data: {
+          title: "Dune"
+        }) {
+          id
+        }
+
+      
+        cg109: createGame(data: {
+          title: "In the Year of the Dragon"
+        }) {
+          id
+        }
+
+      
+        cg110: createGame(data: {
+          title: "The Manhattan Project: Energy Empire"
+        }) {
+          id
+        }
+
+      
+        cg111: createGame(data: {
+          title: "Tikal"
+        }) {
+          id
+        }
+
+      
+        cg112: createGame(data: {
+          title: "Space Hulk (third edition)"
+        }) {
+          id
+        }
+
+      
+        cg113: createGame(data: {
+          title: "Sagrada"
+        }) {
+          id
+        }
+
+      
+        cg114: createGame(data: {
+          title: "Kanban: Automotive Revolution"
+        }) {
+          id
+        }
+
+      
+        cg115: createGame(data: {
+          title: "Civilization"
+        }) {
+          id
+        }
+
+      
+        cg116: createGame(data: {
+          title: "Telestrations"
+        }) {
+          id
+        }
+
+      
+        cg117: createGame(data: {
+          title: "King of Tokyo"
+        }) {
+          id
+        }
+
+      
+        cg118: createGame(data: {
+          title: "Cthulhu Wars"
+        }) {
+          id
+        }
+
+      
+        cg119: createGame(data: {
+          title: "Aeon's End"
+        }) {
+          id
+        }
+
+      
+        cg120: createGame(data: {
+          title: "Risk Legacy"
+        }) {
+          id
+        }
+
+      
+        cg121: createGame(data: {
+          title: "San Juan"
+        }) {
+          id
+        }
+
+      
+        cg122: createGame(data: {
+          title: "Vinhos Deluxe Edition"
+        }) {
+          id
+        }
+
+      
+        cg123: createGame(data: {
+          title: "Modern Art"
+        }) {
+          id
+        }
+
+      
+        cg124: createGame(data: {
+          title: "Saint Petersburg"
+        }) {
+          id
+        }
+
+      
+        cg125: createGame(data: {
+          title: "Survive: Escape from Atlantis!"
+        }) {
+          id
+        }
+
+      
+        cg126: createGame(data: {
+          title: "The Pillars of the Earth"
+        }) {
+          id
+        }
+
+      
+        cg127: createGame(data: {
+          title: "Ticket to Ride: Märklin"
+        }) {
+          id
+        }
+
+      
+        cg128: createGame(data: {
+          title: "Arkham Horror"
+        }) {
+          id
+        }
+
+      
+        cg129: createGame(data: {
+          title: "Century: Spice Road"
+        }) {
+          id
+        }
+
+      
+        cg130: createGame(data: {
+          title: "Tiny Epic Galaxies"
+        }) {
+          id
+        }
+
+      
+        cg131: createGame(data: {
+          title: "Antiquity"
+        }) {
+          id
+        }
+
+      
+        cg132: createGame(data: {
+          title: "Sheriff of Nottingham"
+        }) {
+          id
+        }
+
+      
+        cg133: createGame(data: {
+          title: "At the Gates of Loyang"
+        }) {
+          id
+        }
+
+      
+        cg134: createGame(data: {
+          title: "A Few Acres of Snow"
+        }) {
+          id
+        }
+
+      
+        cg135: createGame(data: {
+          title: "Blood Bowl: Team Manager – The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg136: createGame(data: {
+          title: "Exit: The Game – The Abandoned Cabin"
+        }) {
+          id
+        }
+
+      
+        cg137: createGame(data: {
+          title: "Quadropolis"
+        }) {
+          id
+        }
+
+      
+        cg138: createGame(data: {
+          title: "Macao"
+        }) {
+          id
+        }
+
+      
+        cg139: createGame(data: {
+          title: "1775: Rebellion"
+        }) {
+          id
+        }
+
+      
+        cg140: createGame(data: {
+          title: "Lancaster"
+        }) {
+          id
+        }
+
+      
+        cg141: createGame(data: {
+          title: "Blood Bowl (Third Edition)"
+        }) {
+          id
+        }
+
+      
+        cg142: createGame(data: {
+          title: "Fresco"
+        }) {
+          id
+        }
+
+      
+        cg143: createGame(data: {
+          title: "Nippon"
+        }) {
+          id
+        }
+
+      
+        cg144: createGame(data: {
+          title: "BattleLore"
+        }) {
+          id
+        }
+
+      
+        cg145: createGame(data: {
+          title: "Star Wars: X-Wing Miniatures Game – The Force Awakens Core Set"
+        }) {
+          id
+        }
+
+      
+        cg146: createGame(data: {
+          title: "Evolution: Climate"
+        }) {
+          id
+        }
+
+      
+        cg147: createGame(data: {
+          title: "Maria"
+        }) {
+          id
+        }
+
+      
+        cg148: createGame(data: {
+          title: "Flash Point: Fire Rescue"
+        }) {
+          id
+        }
+
+      
+        cg149: createGame(data: {
+          title: "This War of Mine: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg150: createGame(data: {
+          title: "Bruxelles 1893"
+        }) {
+          id
+        }
+
+      
+        cg151: createGame(data: {
+          title: "Pandemic: The Cure"
+        }) {
+          id
+        }
+
+      
+        cg152: createGame(data: {
+          title: "Mansions of Madness"
+        }) {
+          id
+        }
+
+      
+        cg153: createGame(data: {
+          title: "Lord of the Rings: The Confrontation"
+        }) {
+          id
+        }
+
+      
+        cg154: createGame(data: {
+          title: "Glen More"
+        }) {
+          id
+        }
+
+      
+        cg155: createGame(data: {
+          title: "One Night Ultimate Werewolf"
+        }) {
+          id
+        }
+
+      
+        cg156: createGame(data: {
+          title: "Amun-Re"
+        }) {
+          id
+        }
+
+      
+        cg157: createGame(data: {
+          title: "London"
+        }) {
+          id
+        }
+
+      
+        cg158: createGame(data: {
+          title: "Forbidden Desert"
+        }) {
+          id
+        }
+
+      
+        cg159: createGame(data: {
+          title: "For Sale"
+        }) {
+          id
+        }
+
+      
+        cg160: createGame(data: {
+          title: "51st State: Master Set"
+        }) {
+          id
+        }
+
+      
+        cg161: createGame(data: {
+          title: "Earth Reborn"
+        }) {
+          id
+        }
+
+      
+        cg162: createGame(data: {
+          title: "Sentinels of the Multiverse"
+        }) {
+          id
+        }
+
+      
+        cg163: createGame(data: {
+          title: "Descent: Journeys in the Dark"
+        }) {
+          id
+        }
+
+      
+        cg164: createGame(data: {
+          title: "Kingsburg"
+        }) {
+          id
+        }
+
+      
+        cg165: createGame(data: {
+          title: "Heroscape Master Set: Rise of the Valkyrie"
+        }) {
+          id
+        }
+
+      
+        cg166: createGame(data: {
+          title: "Amerigo"
+        }) {
+          id
+        }
+
+      
+        cg167: createGame(data: {
+          title: "Roads & Boats"
+        }) {
+          id
+        }
+
+      
+        cg168: createGame(data: {
+          title: "Shadows of Brimstone: City of the Ancients"
+        }) {
+          id
+        }
+
+      
+        cg169: createGame(data: {
+          title: "Hanabi"
+        }) {
+          id
+        }
+
+      
+        cg170: createGame(data: {
+          title: "Egizia"
+        }) {
+          id
+        }
+
+      
+        cg171: createGame(data: {
+          title: "Archipelago"
+        }) {
+          id
+        }
+
+      
+        cg172: createGame(data: {
+          title: "Catan"
+        }) {
+          id
+        }
+
+      
+        cg173: createGame(data: {
+          title: "Firefly: The Game"
+        }) {
+          id
+        }
+
+      
+        cg174: createGame(data: {
+          title: "Spartacus: A Game of Blood & Treachery"
+        }) {
+          id
+        }
+
+      
+        cg175: createGame(data: {
+          title: "Small World Underground"
+        }) {
+          id
+        }
+
+      
+        cg176: createGame(data: {
+          title: "Pathfinder Adventure Card Game: Rise of the Runelords – Base Set"
+        }) {
+          id
+        }
+
+      
+        cg177: createGame(data: {
+          title: "Ethnos"
+        }) {
+          id
+        }
+
+      
+        cg178: createGame(data: {
+          title: "Innovation"
+        }) {
+          id
+        }
+
+      
+        cg179: createGame(data: {
+          title: "Star Wars: Destiny"
+        }) {
+          id
+        }
+
+      
+        cg180: createGame(data: {
+          title: "Millennium Blades"
+        }) {
+          id
+        }
+
+      
+        cg181: createGame(data: {
+          title: "Time's Up! Title Recall!"
+        }) {
+          id
+        }
+
+      
+        cg182: createGame(data: {
+          title: "The Grizzled"
+        }) {
+          id
+        }
+
+      
+        cg183: createGame(data: {
+          title: "San Juan (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg184: createGame(data: {
+          title: "Biblios"
+        }) {
+          id
+        }
+
+      
+        cg185: createGame(data: {
+          title: "Legends of Andor"
+        }) {
+          id
+        }
+
+      
+        cg186: createGame(data: {
+          title: "Tyrants of the Underdark"
+        }) {
+          id
+        }
+
+      
+        cg187: createGame(data: {
+          title: "Vinhos"
+        }) {
+          id
+        }
+
+      
+        cg188: createGame(data: {
+          title: "Labyrinth: The War on Terror, 2001 – ?"
+        }) {
+          id
+        }
+
+      
+        cg189: createGame(data: {
+          title: "Airlines Europe"
+        }) {
+          id
+        }
+
+      
+        cg190: createGame(data: {
+          title: "Stockpile"
+        }) {
+          id
+        }
+
+      
+        cg191: createGame(data: {
+          title: "Libertalia"
+        }) {
+          id
+        }
+
+      
+        cg192: createGame(data: {
+          title: "Commands & Colors: Napoleonics"
+        }) {
+          id
+        }
+
+      
+        cg193: createGame(data: {
+          title: "Colt Express"
+        }) {
+          id
+        }
+
+      
+        cg194: createGame(data: {
+          title: "Hammer of the Scots"
+        }) {
+          id
+        }
+
+      
+        cg195: createGame(data: {
+          title: "Lost Cities"
+        }) {
+          id
+        }
+
+      
+        cg196: createGame(data: {
+          title: "Thunderstone Advance: Towers of Ruin"
+        }) {
+          id
+        }
+
+      
+        cg197: createGame(data: {
+          title: "A Game of Thrones: The Card Game (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg198: createGame(data: {
+          title: "Deus"
+        }) {
+          id
+        }
+
+      
+        cg199: createGame(data: {
+          title: "Paperback"
+        }) {
+          id
+        }
+
+      
+        cg200: createGame(data: {
+          title: "The Lord of the Rings: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg201: createGame(data: {
+          title: "Jaipur"
+        }) {
+          id
+        }
+
+      
+        cg202: createGame(data: {
+          title: "Hansa Teutonica"
+        }) {
+          id
+        }
+
+      
+        cg203: createGame(data: {
+          title: "Zombicide: Black Plague"
+        }) {
+          id
+        }
+
+      
+        cg204: createGame(data: {
+          title: "La Granja"
+        }) {
+          id
+        }
+
+      
+        cg205: createGame(data: {
+          title: "Steam"
+        }) {
+          id
+        }
+
+      
+        cg206: createGame(data: {
+          title: "Village"
+        }) {
+          id
+        }
+
+      
+        cg207: createGame(data: {
+          title: "Age of Steam"
+        }) {
+          id
+        }
+
+      
+        cg208: createGame(data: {
+          title: "Splendor"
+        }) {
+          id
+        }
+
+      
+        cg209: createGame(data: {
+          title: "Ticket to Ride: Nordic Countries"
+        }) {
+          id
+        }
+
+      
+        cg210: createGame(data: {
+          title: "The Princes of Florence"
+        }) {
+          id
+        }
+
+      
+        cg211: createGame(data: {
+          title: "Viticulture"
+        }) {
+          id
+        }
+
+      
+        cg212: createGame(data: {
+          title: "Tichu"
+        }) {
+          id
+        }
+
+      
+        cg213: createGame(data: {
+          title: "Memoir '44"
+        }) {
+          id
+        }
+
+      
+        cg214: createGame(data: {
+          title: "Grand Austria Hotel"
+        }) {
+          id
+        }
+
+      
+        cg215: createGame(data: {
+          title: "Yokohama"
+        }) {
+          id
+        }
+
+      
+        cg216: createGame(data: {
+          title: "Go"
+        }) {
+          id
+        }
+
+      
+        cg217: createGame(data: {
+          title: "Legendary: A Marvel Deck Building Game"
+        }) {
+          id
+        }
+
+      
+        cg218: createGame(data: {
+          title: "Champions of Midgard"
+        }) {
+          id
+        }
+
+      
+        cg219: createGame(data: {
+          title: "Ticket to Ride"
+        }) {
+          id
+        }
+
+      
+        cg220: createGame(data: {
+          title: "Imperial Settlers"
+        }) {
+          id
+        }
+
+      
+        cg221: createGame(data: {
+          title: "Inis"
+        }) {
+          id
+        }
+
+      
+        cg222: createGame(data: {
+          title: "Shogun"
+        }) {
+          id
+        }
+
+      
+        cg223: createGame(data: {
+          title: "Galaxy Trucker"
+        }) {
+          id
+        }
+
+      
+        cg224: createGame(data: {
+          title: "BattleLore (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg225: createGame(data: {
+          title: "Cyclades"
+        }) {
+          id
+        }
+
+      
+        cg226: createGame(data: {
+          title: "Mage Wars Arena"
+        }) {
+          id
+        }
+
+      
+        cg227: createGame(data: {
+          title: "YINSH"
+        }) {
+          id
+        }
+
+      
+        cg228: createGame(data: {
+          title: "Charterstone"
+        }) {
+          id
+        }
+
+      
+        cg229: createGame(data: {
+          title: "Hannibal: Rome vs. Carthage"
+        }) {
+          id
+        }
+
+      
+        cg230: createGame(data: {
+          title: "Lewis & Clark"
+        }) {
+          id
+        }
+
+      
+        cg231: createGame(data: {
+          title: "Dungeon Petz"
+        }) {
+          id
+        }
+
+      
+        cg232: createGame(data: {
+          title: "Age of Empires III: The Age of Discovery"
+        }) {
+          id
+        }
+
+      
+        cg233: createGame(data: {
+          title: "Ra"
+        }) {
+          id
+        }
+
+      
+        cg234: createGame(data: {
+          title: "Summoner Wars: Master Set"
+        }) {
+          id
+        }
+
+      
+        cg235: createGame(data: {
+          title: "Imperial"
+        }) {
+          id
+        }
+
+      
+        cg236: createGame(data: {
+          title: "Carcassonne"
+        }) {
+          id
+        }
+
+      
+        cg237: createGame(data: {
+          title: "Runewars"
+        }) {
+          id
+        }
+
+      
+        cg238: createGame(data: {
+          title: "Space Alert"
+        }) {
+          id
+        }
+
+      
+        cg239: createGame(data: {
+          title: "Dead of Winter: The Long Night"
+        }) {
+          id
+        }
+
+      
+        cg240: createGame(data: {
+          title: "Mysterium"
+        }) {
+          id
+        }
+
+      
+        cg241: createGame(data: {
+          title: "Glory to Rome"
+        }) {
+          id
+        }
+
+      
+        cg242: createGame(data: {
+          title: "Sekigahara: The Unification of Japan"
+        }) {
+          id
+        }
+
+      
+        cg243: createGame(data: {
+          title: "Sushi Go Party!"
+        }) {
+          id
+        }
+
+      
+        cg244: createGame(data: {
+          title: "Targi"
+        }) {
+          id
+        }
+
+      
+        cg245: createGame(data: {
+          title: "Bora Bora"
+        }) {
+          id
+        }
+
+      
+        cg246: createGame(data: {
+          title: "Above and Below"
+        }) {
+          id
+        }
+
+      
+        cg247: createGame(data: {
+          title: "Isle of Skye: From Chieftain to King"
+        }) {
+          id
+        }
+
+      
+        cg248: createGame(data: {
+          title: "Alien Frontiers"
+        }) {
+          id
+        }
+
+      
+        cg249: createGame(data: {
+          title: "1960: The Making of the President"
+        }) {
+          id
+        }
+
+      
+        cg250: createGame(data: {
+          title: "Seasons"
+        }) {
+          id
+        }
+
+      
+        cg251: createGame(data: {
+          title: "Power Grid Deluxe: Europe/North America"
+        }) {
+          id
+        }
+
+      
+        cg252: createGame(data: {
+          title: "Magic: The Gathering"
+        }) {
+          id
+        }
+
+      
+        cg253: createGame(data: {
+          title: "Fury of Dracula (third edition)"
+        }) {
+          id
+        }
+
+      
+        cg254: createGame(data: {
+          title: "Xia: Legends of a Drift System"
+        }) {
+          id
+        }
+
+      
+        cg255: createGame(data: {
+          title: "Dixit: Odyssey"
+        }) {
+          id
+        }
+
+      
+        cg256: createGame(data: {
+          title: "Spirit Island"
+        }) {
+          id
+        }
+
+      
+        cg257: createGame(data: {
+          title: "Navegador"
+        }) {
+          id
+        }
+
+      
+        cg258: createGame(data: {
+          title: "Here I Stand"
+        }) {
+          id
+        }
+
+      
+        cg259: createGame(data: {
+          title: "Imperial 2030"
+        }) {
+          id
+        }
+
+      
+        cg260: createGame(data: {
+          title: "1830: Railways & Robber Barons"
+        }) {
+          id
+        }
+
+      
+        cg261: createGame(data: {
+          title: "The Resistance"
+        }) {
+          id
+        }
+
+      
+        cg262: createGame(data: {
+          title: "Sid Meier's Civilization: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg263: createGame(data: {
+          title: "Codenames Duet"
+        }) {
+          id
+        }
+
+      
+        cg264: createGame(data: {
+          title: "Samurai"
+        }) {
+          id
+        }
+
+      
+        cg265: createGame(data: {
+          title: "Near and Far"
+        }) {
+          id
+        }
+
+      
+        cg266: createGame(data: {
+          title: "Agricola: All Creatures Big and Small"
+        }) {
+          id
+        }
+
+      
+        cg267: createGame(data: {
+          title: "Deception: Murder in Hong Kong"
+        }) {
+          id
+        }
+
+      
+        cg268: createGame(data: {
+          title: "Lisboa"
+        }) {
+          id
+        }
+
+      
+        cg269: createGame(data: {
+          title: "Battle Line"
+        }) {
+          id
+        }
+
+      
+        cg270: createGame(data: {
+          title: "Dungeon Lords"
+        }) {
+          id
+        }
+
+      
+        cg271: createGame(data: {
+          title: "Small World"
+        }) {
+          id
+        }
+
+      
+        cg272: createGame(data: {
+          title: "Letters from Whitechapel"
+        }) {
+          id
+        }
+
+      
+        cg273: createGame(data: {
+          title: "Star Wars: Armada"
+        }) {
+          id
+        }
+
+      
+        cg274: createGame(data: {
+          title: "Die Macher"
+        }) {
+          id
+        }
+
+      
+        cg275: createGame(data: {
+          title: "Trickerion: Legends of Illusion"
+        }) {
+          id
+        }
+
+      
+        cg276: createGame(data: {
+          title: "Star Realms: Colony Wars"
+        }) {
+          id
+        }
+
+      
+        cg277: createGame(data: {
+          title: "Claustrophobia"
+        }) {
+          id
+        }
+
+      
+        cg278: createGame(data: {
+          title: "Mission: Red Planet (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg279: createGame(data: {
+          title: "Onitama"
+        }) {
+          id
+        }
+
+      
+        cg280: createGame(data: {
+          title: "Agricola (revised edition)"
+        }) {
+          id
+        }
+
+      
+        cg281: createGame(data: {
+          title: "Blood Bowl: Living Rulebook"
+        }) {
+          id
+        }
+
+      
+        cg282: createGame(data: {
+          title: "Dixit"
+        }) {
+          id
+        }
+
+      
+        cg283: createGame(data: {
+          title: "Ghost Stories"
+        }) {
+          id
+        }
+
+      
+        cg284: createGame(data: {
+          title: "Raiders of the North Sea"
+        }) {
+          id
+        }
+
+      
+        cg285: createGame(data: {
+          title: "Kingdomino"
+        }) {
+          id
+        }
+
+      
+        cg286: createGame(data: {
+          title: "Codenames: Pictures"
+        }) {
+          id
+        }
+
+      
+        cg287: createGame(data: {
+          title: "Advanced Squad Leader"
+        }) {
+          id
+        }
+
+      
+        cg288: createGame(data: {
+          title: "Bruges"
+        }) {
+          id
+        }
+
+      
+        cg289: createGame(data: {
+          title: "Merchants & Marauders"
+        }) {
+          id
+        }
+
+      
+        cg290: createGame(data: {
+          title: "Lorenzo il Magnifico"
+        }) {
+          id
+        }
+
+      
+        cg291: createGame(data: {
+          title: "BattleCON: Devastation of Indines"
+        }) {
+          id
+        }
+
+      
+        cg292: createGame(data: {
+          title: "Secret Hitler"
+        }) {
+          id
+        }
+
+      
+        cg293: createGame(data: {
+          title: "Endeavor"
+        }) {
+          id
+        }
+
+      
+        cg294: createGame(data: {
+          title: "Mice and Mystics"
+        }) {
+          id
+        }
+
+      
+        cg295: createGame(data: {
+          title: "Indonesia"
+        }) {
+          id
+        }
+
+      
+        cg296: createGame(data: {
+          title: "Rococo"
+        }) {
+          id
+        }
+
+      
+        cg297: createGame(data: {
+          title: "Clash of Cultures"
+        }) {
+          id
+        }
+
+      
+        cg298: createGame(data: {
+          title: "Takenoko"
+        }) {
+          id
+        }
+
+      
+        cg299: createGame(data: {
+          title: "Hive"
+        }) {
+          id
+        }
+
+      
+        cg300: createGame(data: {
+          title: "Wyatt Earp"
+        }) {
+          id
+        }
+
+      
+        cg301: createGame(data: {
+          title: "Dream Home"
+        }) {
+          id
+        }
+
+      
+        cg302: createGame(data: {
+          title: "Doomtown: Reloaded"
+        }) {
+          id
+        }
+
+      
+        cg303: createGame(data: {
+          title: "Legend of the Five Rings: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg304: createGame(data: {
+          title: "Mü & More"
+        }) {
+          id
+        }
+
+      
+        cg305: createGame(data: {
+          title: "Ascension: Immortal Heroes"
+        }) {
+          id
+        }
+
+      
+        cg306: createGame(data: {
+          title: "Vikings Gone Wild"
+        }) {
+          id
+        }
+
+      
+        cg307: createGame(data: {
+          title: "Wars of the Roses: Lancaster vs. York"
+        }) {
+          id
+        }
+
+      
+        cg308: createGame(data: {
+          title: "Necromunda"
+        }) {
+          id
+        }
+
+      
+        cg309: createGame(data: {
+          title: "Aladdin's Dragons"
+        }) {
+          id
+        }
+
+      
+        cg310: createGame(data: {
+          title: "Dungeons & Dragons Dice Masters: Battle for Faerûn"
+        }) {
+          id
+        }
+
+      
+        cg311: createGame(data: {
+          title: "Murano"
+        }) {
+          id
+        }
+
+      
+        cg312: createGame(data: {
+          title: "Bausack"
+        }) {
+          id
+        }
+
+      
+        cg313: createGame(data: {
+          title: "Ubongo"
+        }) {
+          id
+        }
+
+      
+        cg314: createGame(data: {
+          title: "Aeon's End: War Eternal"
+        }) {
+          id
+        }
+
+      
+        cg315: createGame(data: {
+          title: "Aton"
+        }) {
+          id
+        }
+
+      
+        cg316: createGame(data: {
+          title: "In the Shadow of the Emperor"
+        }) {
+          id
+        }
+
+      
+        cg317: createGame(data: {
+          title: "Pixel Tactics"
+        }) {
+          id
+        }
+
+      
+        cg318: createGame(data: {
+          title: "Tides of Time"
+        }) {
+          id
+        }
+
+      
+        cg319: createGame(data: {
+          title: "Quarto"
+        }) {
+          id
+        }
+
+      
+        cg320: createGame(data: {
+          title: "Warrior Knights"
+        }) {
+          id
+        }
+
+      
+        cg321: createGame(data: {
+          title: "Axis & Allies Europe 1940"
+        }) {
+          id
+        }
+
+      
+        cg322: createGame(data: {
+          title: "The Scepter of Zavandor"
+        }) {
+          id
+        }
+
+      
+        cg323: createGame(data: {
+          title: "The Prodigals Club"
+        }) {
+          id
+        }
+
+      
+        cg324: createGame(data: {
+          title: "Sword of Rome"
+        }) {
+          id
+        }
+
+      
+        cg325: createGame(data: {
+          title: "Starfarers of Catan"
+        }) {
+          id
+        }
+
+      
+        cg326: createGame(data: {
+          title: "Mega Civilization"
+        }) {
+          id
+        }
+
+      
+        cg327: createGame(data: {
+          title: "Room 25"
+        }) {
+          id
+        }
+
+      
+        cg328: createGame(data: {
+          title: "Kremlin"
+        }) {
+          id
+        }
+
+      
+        cg329: createGame(data: {
+          title: "BattleTech"
+        }) {
+          id
+        }
+
+      
+        cg330: createGame(data: {
+          title: "Cartagena"
+        }) {
+          id
+        }
+
+      
+        cg331: createGame(data: {
+          title: "Saboteur"
+        }) {
+          id
+        }
+
+      
+        cg332: createGame(data: {
+          title: "Roma"
+        }) {
+          id
+        }
+
+      
+        cg333: createGame(data: {
+          title: "Royals"
+        }) {
+          id
+        }
+
+      
+        cg334: createGame(data: {
+          title: "Aquaretto"
+        }) {
+          id
+        }
+
+      
+        cg335: createGame(data: {
+          title: "D-Day Dice"
+        }) {
+          id
+        }
+
+      
+        cg336: createGame(data: {
+          title: "Galaxy Defenders"
+        }) {
+          id
+        }
+
+      
+        cg337: createGame(data: {
+          title: "Ingenious: Travel Edition"
+        }) {
+          id
+        }
+
+      
+        cg338: createGame(data: {
+          title: "Gravwell: Escape from the 9th Dimension"
+        }) {
+          id
+        }
+
+      
+        cg339: createGame(data: {
+          title: "Spot it!"
+        }) {
+          id
+        }
+
+      
+        cg340: createGame(data: {
+          title: "Dice City"
+        }) {
+          id
+        }
+
+      
+        cg341: createGame(data: {
+          title: "The Magic Labyrinth"
+        }) {
+          id
+        }
+
+      
+        cg342: createGame(data: {
+          title: "Rune Age"
+        }) {
+          id
+        }
+
+      
+        cg343: createGame(data: {
+          title: "Timeline: Inventions"
+        }) {
+          id
+        }
+
+      
+        cg344: createGame(data: {
+          title: "Factory Fun"
+        }) {
+          id
+        }
+
+      
+        cg345: createGame(data: {
+          title: "Rise of Empires"
+        }) {
+          id
+        }
+
+      
+        cg346: createGame(data: {
+          title: "1856: Railroading in Upper Canada from 1856"
+        }) {
+          id
+        }
+
+      
+        cg347: createGame(data: {
+          title: "Puzzle Strike (Third Edition)"
+        }) {
+          id
+        }
+
+      
+        cg348: createGame(data: {
+          title: "Power Struggle"
+        }) {
+          id
+        }
+
+      
+        cg349: createGame(data: {
+          title: "Plague Inc.: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg350: createGame(data: {
+          title: "High Society"
+        }) {
+          id
+        }
+
+      
+        cg351: createGame(data: {
+          title: "Liberty or Death: The American Insurrection"
+        }) {
+          id
+        }
+
+      
+        cg352: createGame(data: {
+          title: "Olympos"
+        }) {
+          id
+        }
+
+      
+        cg353: createGame(data: {
+          title: "Power Grid: The First Sparks"
+        }) {
+          id
+        }
+
+      
+        cg354: createGame(data: {
+          title: "Warhammer Underworlds: Shadespire"
+        }) {
+          id
+        }
+
+      
+        cg355: createGame(data: {
+          title: "Blue Moon"
+        }) {
+          id
+        }
+
+      
+        cg356: createGame(data: {
+          title: "Poker"
+        }) {
+          id
+        }
+
+      
+        cg357: createGame(data: {
+          title: "Europe Engulfed"
+        }) {
+          id
+        }
+
+      
+        cg358: createGame(data: {
+          title: "Medina (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg359: createGame(data: {
+          title: "Giants"
+        }) {
+          id
+        }
+
+      
+        cg360: createGame(data: {
+          title: "The Little Prince: Make Me a Planet"
+        }) {
+          id
+        }
+
+      
+        cg361: createGame(data: {
+          title: "Age of Renaissance"
+        }) {
+          id
+        }
+
+      
+        cg362: createGame(data: {
+          title: "Mascarade"
+        }) {
+          id
+        }
+
+      
+        cg363: createGame(data: {
+          title: "Bunny Kingdom"
+        }) {
+          id
+        }
+
+      
+        cg364: createGame(data: {
+          title: "Blokus 3D"
+        }) {
+          id
+        }
+
+      
+        cg365: createGame(data: {
+          title: "The Staufer Dynasty"
+        }) {
+          id
+        }
+
+      
+        cg366: createGame(data: {
+          title: "Ca$h 'n Gun$"
+        }) {
+          id
+        }
+
+      
+        cg367: createGame(data: {
+          title: "Call of Cthulhu: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg368: createGame(data: {
+          title: "Watson & Holmes"
+        }) {
+          id
+        }
+
+      
+        cg369: createGame(data: {
+          title: "CV"
+        }) {
+          id
+        }
+
+      
+        cg370: createGame(data: {
+          title: "A Fake Artist Goes to New York"
+        }) {
+          id
+        }
+
+      
+        cg371: createGame(data: {
+          title: "Carolus Magnus"
+        }) {
+          id
+        }
+
+      
+        cg372: createGame(data: {
+          title: "Star Wars: Epic Duels"
+        }) {
+          id
+        }
+
+      
+        cg373: createGame(data: {
+          title: "Codex: Card-Time Strategy – Deluxe Set"
+        }) {
+          id
+        }
+
+      
+        cg374: createGame(data: {
+          title: "Ghost Blitz"
+        }) {
+          id
+        }
+
+      
+        cg375: createGame(data: {
+          title: "Tak"
+        }) {
+          id
+        }
+
+      
+        cg376: createGame(data: {
+          title: "Dead Men Tell No Tales"
+        }) {
+          id
+        }
+
+      
+        cg377: createGame(data: {
+          title: "Blokus Trigon"
+        }) {
+          id
+        }
+
+      
+        cg378: createGame(data: {
+          title: "Ulm"
+        }) {
+          id
+        }
+
+      
+        cg379: createGame(data: {
+          title: "Star Trek: Attack Wing"
+        }) {
+          id
+        }
+
+      
+        cg380: createGame(data: {
+          title: "Ad Astra"
+        }) {
+          id
+        }
+
+      
+        cg381: createGame(data: {
+          title: "Successors (third edition)"
+        }) {
+          id
+        }
+
+      
+        cg382: createGame(data: {
+          title: "Ys"
+        }) {
+          id
+        }
+
+      
+        cg383: createGame(data: {
+          title: "TransAmerica"
+        }) {
+          id
+        }
+
+      
+        cg384: createGame(data: {
+          title: "Coup: Rebellion G54"
+        }) {
+          id
+        }
+
+      
+        cg385: createGame(data: {
+          title: "Himalaya"
+        }) {
+          id
+        }
+
+      
+        cg386: createGame(data: {
+          title: "The Game"
+        }) {
+          id
+        }
+
+      
+        cg387: createGame(data: {
+          title: "The Civil War"
+        }) {
+          id
+        }
+
+      
+        cg388: createGame(data: {
+          title: "Balloon Cup"
+        }) {
+          id
+        }
+
+      
+        cg389: createGame(data: {
+          title: "Battle Cry: 150th Civil War Anniversary Edition"
+        }) {
+          id
+        }
+
+      
+        cg390: createGame(data: {
+          title: "Kodama: The Tree Spirits"
+        }) {
+          id
+        }
+
+      
+        cg391: createGame(data: {
+          title: "Forge War"
+        }) {
+          id
+        }
+
+      
+        cg392: createGame(data: {
+          title: "Magic Realm"
+        }) {
+          id
+        }
+
+      
+        cg393: createGame(data: {
+          title: "Krosmaster: Arena"
+        }) {
+          id
+        }
+
+      
+        cg394: createGame(data: {
+          title: "The Hunters: German U-Boats at War, 1939-43"
+        }) {
+          id
+        }
+
+      
+        cg395: createGame(data: {
+          title: "Havana"
+        }) {
+          id
+        }
+
+      
+        cg396: createGame(data: {
+          title: "Walnut Grove"
+        }) {
+          id
+        }
+
+      
+        cg397: createGame(data: {
+          title: "51st State"
+        }) {
+          id
+        }
+
+      
+        cg398: createGame(data: {
+          title: "Warmachine Prime Mk II"
+        }) {
+          id
+        }
+
+      
+        cg399: createGame(data: {
+          title: "Kahuna"
+        }) {
+          id
+        }
+
+      
+        cg400: createGame(data: {
+          title: "Vegas Showdown"
+        }) {
+          id
+        }
+
+      
+        cg401: createGame(data: {
+          title: "Lord of the Rings: The Confrontation"
+        }) {
+          id
+        }
+
+      
+        cg402: createGame(data: {
+          title: "Mr. Jack"
+        }) {
+          id
+        }
+
+      
+        cg403: createGame(data: {
+          title: "Betrayal at House on the Hill"
+        }) {
+          id
+        }
+
+      
+        cg404: createGame(data: {
+          title: "King of New York"
+        }) {
+          id
+        }
+
+      
+        cg405: createGame(data: {
+          title: "Cuba"
+        }) {
+          id
+        }
+
+      
+        cg406: createGame(data: {
+          title: "Broom Service"
+        }) {
+          id
+        }
+
+      
+        cg407: createGame(data: {
+          title: "Photosynthesis"
+        }) {
+          id
+        }
+
+      
+        cg408: createGame(data: {
+          title: "Marvel Dice Masters: Avengers vs. X-Men"
+        }) {
+          id
+        }
+
+      
+        cg409: createGame(data: {
+          title: "Escape: The Curse of the Temple"
+        }) {
+          id
+        }
+
+      
+        cg410: createGame(data: {
+          title: "Taluva"
+        }) {
+          id
+        }
+
+      
+        cg411: createGame(data: {
+          title: "Chess"
+        }) {
+          id
+        }
+
+      
+        cg412: createGame(data: {
+          title: "Mare Nostrum: Empires"
+        }) {
+          id
+        }
+
+      
+        cg413: createGame(data: {
+          title: "Port Royal"
+        }) {
+          id
+        }
+
+      
+        cg414: createGame(data: {
+          title: "Steampunk Rally"
+        }) {
+          id
+        }
+
+      
+        cg415: createGame(data: {
+          title: "Sherlock Holmes Consulting Detective: Jack the Ripper & West End Adventures"
+        }) {
+          id
+        }
+
+      
+        cg416: createGame(data: {
+          title: "Potion Explosion"
+        }) {
+          id
+        }
+
+      
+        cg417: createGame(data: {
+          title: "Eminent Domain"
+        }) {
+          id
+        }
+
+      
+        cg418: createGame(data: {
+          title: "Washington's War"
+        }) {
+          id
+        }
+
+      
+        cg419: createGame(data: {
+          title: "Among the Stars"
+        }) {
+          id
+        }
+
+      
+        cg420: createGame(data: {
+          title: "Combat Commander: Pacific"
+        }) {
+          id
+        }
+
+      
+        cg421: createGame(data: {
+          title: "Space Hulk"
+        }) {
+          id
+        }
+
+      
+        cg422: createGame(data: {
+          title: "Middle-Earth Quest"
+        }) {
+          id
+        }
+
+      
+        cg423: createGame(data: {
+          title: "Formula D"
+        }) {
+          id
+        }
+
+      
+        cg424: createGame(data: {
+          title: "Runebound (Third Edition)"
+        }) {
+          id
+        }
+
+      
+        cg425: createGame(data: {
+          title: "Triumph & Tragedy"
+        }) {
+          id
+        }
+
+      
+        cg426: createGame(data: {
+          title: "Love Letter: Batman"
+        }) {
+          id
+        }
+
+      
+        cg427: createGame(data: {
+          title: "Shipyard"
+        }) {
+          id
+        }
+
+      
+        cg428: createGame(data: {
+          title: "Summoner Wars: Phoenix Elves vs Tundra Orcs"
+        }) {
+          id
+        }
+
+      
+        cg429: createGame(data: {
+          title: "Vasco da Gama"
+        }) {
+          id
+        }
+
+      
+        cg430: createGame(data: {
+          title: "Shakespeare"
+        }) {
+          id
+        }
+
+      
+        cg431: createGame(data: {
+          title: "Tokaido"
+        }) {
+          id
+        }
+
+      
+        cg432: createGame(data: {
+          title: "Star Wars: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg433: createGame(data: {
+          title: "Yspahan"
+        }) {
+          id
+        }
+
+      
+        cg434: createGame(data: {
+          title: "Bärenpark"
+        }) {
+          id
+        }
+
+      
+        cg435: createGame(data: {
+          title: "Through the Desert"
+        }) {
+          id
+        }
+
+      
+        cg436: createGame(data: {
+          title: "Legendary: Villains – A Marvel Deck Building Game"
+        }) {
+          id
+        }
+
+      
+        cg437: createGame(data: {
+          title: "Warhammer: Invasion"
+        }) {
+          id
+        }
+
+      
+        cg438: createGame(data: {
+          title: "Medici"
+        }) {
+          id
+        }
+
+      
+        cg439: createGame(data: {
+          title: "Yedo"
+        }) {
+          id
+        }
+
+      
+        cg440: createGame(data: {
+          title: "Summoner Wars: Guild Dwarves vs Cave Goblins"
+        }) {
+          id
+        }
+
+      
+        cg441: createGame(data: {
+          title: "Space Empires: 4X"
+        }) {
+          id
+        }
+
+      
+        cg442: createGame(data: {
+          title: "Age of Industry"
+        }) {
+          id
+        }
+
+      
+        cg443: createGame(data: {
+          title: "World Without End"
+        }) {
+          id
+        }
+
+      
+        cg444: createGame(data: {
+          title: "Kingdom Builder"
+        }) {
+          id
+        }
+
+      
+        cg445: createGame(data: {
+          title: "The Downfall of Pompeii"
+        }) {
+          id
+        }
+
+      
+        cg446: createGame(data: {
+          title: "Tinners' Trail"
+        }) {
+          id
+        }
+
+      
+        cg447: createGame(data: {
+          title: "Virgin Queen"
+        }) {
+          id
+        }
+
+      
+        cg448: createGame(data: {
+          title: "Onirim (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg449: createGame(data: {
+          title: "Summoner Wars: Alliances Master Set"
+        }) {
+          id
+        }
+
+      
+        cg450: createGame(data: {
+          title: "K2"
+        }) {
+          id
+        }
+
+      
+        cg451: createGame(data: {
+          title: "Tash-Kalar: Arena of Legends"
+        }) {
+          id
+        }
+
+      
+        cg452: createGame(data: {
+          title: "Conflict of Heroes: Awakening the Bear! (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg453: createGame(data: {
+          title: "Brew Crafters"
+        }) {
+          id
+        }
+
+      
+        cg454: createGame(data: {
+          title: "Smash Up: Science Fiction Double Feature"
+        }) {
+          id
+        }
+
+      
+        cg455: createGame(data: {
+          title: "BANG! The Dice Game"
+        }) {
+          id
+        }
+
+      
+        cg456: createGame(data: {
+          title: "Dungeons & Dragons: The Legend of Drizzt Board Game"
+        }) {
+          id
+        }
+
+      
+        cg457: createGame(data: {
+          title: "Friedrich"
+        }) {
+          id
+        }
+
+      
+        cg458: createGame(data: {
+          title: "Skull"
+        }) {
+          id
+        }
+
+      
+        cg459: createGame(data: {
+          title: "Tribune: Primus Inter Pares"
+        }) {
+          id
+        }
+
+      
+        cg460: createGame(data: {
+          title: "The Godfather: Corleone's Empire"
+        }) {
+          id
+        }
+
+      
+        cg461: createGame(data: {
+          title: "Panamax"
+        }) {
+          id
+        }
+
+      
+        cg462: createGame(data: {
+          title: "Elder Sign"
+        }) {
+          id
+        }
+
+      
+        cg463: createGame(data: {
+          title: "Union Pacific"
+        }) {
+          id
+        }
+
+      
+        cg464: createGame(data: {
+          title: "Argent: The Consortium"
+        }) {
+          id
+        }
+
+      
+        cg465: createGame(data: {
+          title: "Marvel Dice Masters: Uncanny X-Men"
+        }) {
+          id
+        }
+
+      
+        cg466: createGame(data: {
+          title: "Squad Leader"
+        }) {
+          id
+        }
+
+      
+        cg467: createGame(data: {
+          title: "XCOM: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg468: createGame(data: {
+          title: "ZÈRTZ"
+        }) {
+          id
+        }
+
+      
+        cg469: createGame(data: {
+          title: "D-Day at Omaha Beach"
+        }) {
+          id
+        }
+
+      
+        cg470: createGame(data: {
+          title: "Saint Petersburg (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg471: createGame(data: {
+          title: "Heroscape Master Set: Swarm of the Marro"
+        }) {
+          id
+        }
+
+      
+        cg472: createGame(data: {
+          title: "Coal Baron"
+        }) {
+          id
+        }
+
+      
+        cg473: createGame(data: {
+          title: "Spyrium"
+        }) {
+          id
+        }
+
+      
+        cg474: createGame(data: {
+          title: "Reef Encounter"
+        }) {
+          id
+        }
+
+      
+        cg475: createGame(data: {
+          title: "Coloretto"
+        }) {
+          id
+        }
+
+      
+        cg476: createGame(data: {
+          title: "Between Two Cities"
+        }) {
+          id
+        }
+
+      
+        cg477: createGame(data: {
+          title: "Empires: Age of Discovery"
+        }) {
+          id
+        }
+
+      
+        cg478: createGame(data: {
+          title: "Homesteaders"
+        }) {
+          id
+        }
+
+      
+        cg479: createGame(data: {
+          title: "Cuba Libre"
+        }) {
+          id
+        }
+
+      
+        cg480: createGame(data: {
+          title: "Bridge"
+        }) {
+          id
+        }
+
+      
+        cg481: createGame(data: {
+          title: "Jambo"
+        }) {
+          id
+        }
+
+      
+        cg482: createGame(data: {
+          title: "Ca$h 'n Guns (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg483: createGame(data: {
+          title: "Las Vegas"
+        }) {
+          id
+        }
+
+      
+        cg484: createGame(data: {
+          title: "Tragedy Looper"
+        }) {
+          id
+        }
+
+      
+        cg485: createGame(data: {
+          title: "Genoa"
+        }) {
+          id
+        }
+
+      
+        cg486: createGame(data: {
+          title: "Blue Moon City"
+        }) {
+          id
+        }
+
+      
+        cg487: createGame(data: {
+          title: "Carcassonne: The Castle"
+        }) {
+          id
+        }
+
+      
+        cg488: createGame(data: {
+          title: "Vast: The Crystal Caverns"
+        }) {
+          id
+        }
+
+      
+        cg489: createGame(data: {
+          title: "Monikers"
+        }) {
+          id
+        }
+
+      
+        cg490: createGame(data: {
+          title: "Maharaja: The Game of Palace Building in India"
+        }) {
+          id
+        }
+
+      
+        cg491: createGame(data: {
+          title: "Ascension: Deckbuilding Game"
+        }) {
+          id
+        }
+
+      
+        cg492: createGame(data: {
+          title: "Diplomacy"
+        }) {
+          id
+        }
+
+      
+        cg493: createGame(data: {
+          title: "Carcassonne: The City"
+        }) {
+          id
+        }
+
+      
+        cg494: createGame(data: {
+          title: "Wits & Wagers"
+        }) {
+          id
+        }
+
+      
+        cg495: createGame(data: {
+          title: "Cacao"
+        }) {
+          id
+        }
+
+      
+        cg496: createGame(data: {
+          title: "Web of Power"
+        }) {
+          id
+        }
+
+      
+        cg497: createGame(data: {
+          title: "Polis: Fight for the Hegemony"
+        }) {
+          id
+        }
+
+      
+        cg498: createGame(data: {
+          title: "Super Motherload"
+        }) {
+          id
+        }
+
+      
+        cg499: createGame(data: {
+          title: "Core Worlds"
+        }) {
+          id
+        }
+
+      
+        cg500: createGame(data: {
+          title: "Friday"
+        }) {
+          id
+        }
+
+      
+        cg501: createGame(data: {
+          title: "Taj Mahal"
+        }) {
+          id
+        }
+
+      
+        cg502: createGame(data: {
+          title: "Tales of the Arabian Nights"
+        }) {
+          id
+        }
+
+      
+        cg503: createGame(data: {
+          title: "Pandemic: Reign of Cthulhu"
+        }) {
+          id
+        }
+
+      
+        cg504: createGame(data: {
+          title: "Freedom: The Underground Railroad"
+        }) {
+          id
+        }
+
+      
+        cg505: createGame(data: {
+          title: "Madeira"
+        }) {
+          id
+        }
+
+      
+        cg506: createGame(data: {
+          title: "A Game of Thrones (first edition)"
+        }) {
+          id
+        }
+
+      
+        cg507: createGame(data: {
+          title: "Vikings"
+        }) {
+          id
+        }
+
+      
+        cg508: createGame(data: {
+          title: "Euphoria: Build a Better Dystopia"
+        }) {
+          id
+        }
+
+      
+        cg509: createGame(data: {
+          title: "Elysium"
+        }) {
+          id
+        }
+
+      
+        cg510: createGame(data: {
+          title: "Ginkgopolis"
+        }) {
+          id
+        }
+
+      
+        cg511: createGame(data: {
+          title: "Zombicide"
+        }) {
+          id
+        }
+
+      
+        cg512: createGame(data: {
+          title: "Citadels"
+        }) {
+          id
+        }
+
+      
+        cg513: createGame(data: {
+          title: "Shadows over Camelot"
+        }) {
+          id
+        }
+
+      
+        cg514: createGame(data: {
+          title: "Harry Potter: Hogwarts Battle"
+        }) {
+          id
+        }
+
+      
+        cg515: createGame(data: {
+          title: "Automobile"
+        }) {
+          id
+        }
+
+      
+        cg516: createGame(data: {
+          title: "PitchCar"
+        }) {
+          id
+        }
+
+      
+        cg517: createGame(data: {
+          title: "Last Will"
+        }) {
+          id
+        }
+
+      
+        cg518: createGame(data: {
+          title: "Struggle of Empires"
+        }) {
+          id
+        }
+
+      
+        cg519: createGame(data: {
+          title: "Evolution"
+        }) {
+          id
+        }
+
+      
+        cg520: createGame(data: {
+          title: "Abyss"
+        }) {
+          id
+        }
+
+      
+        cg521: createGame(data: {
+          title: "Ingenious"
+        }) {
+          id
+        }
+
+      
+        cg522: createGame(data: {
+          title: "Carson City"
+        }) {
+          id
+        }
+
+      
+        cg523: createGame(data: {
+          title: "The Colonists"
+        }) {
+          id
+        }
+
+      
+        cg524: createGame(data: {
+          title: "Francis Drake"
+        }) {
+          id
+        }
+
+      
+        cg525: createGame(data: {
+          title: "Nexus Ops"
+        }) {
+          id
+        }
+
+      
+        cg526: createGame(data: {
+          title: "Wallenstein (first edition)"
+        }) {
+          id
+        }
+
+      
+        cg527: createGame(data: {
+          title: "RoboRally"
+        }) {
+          id
+        }
+
+      
+        cg528: createGame(data: {
+          title: "Sushi Go!"
+        }) {
+          id
+        }
+
+      
+        cg529: createGame(data: {
+          title: "TZAAR"
+        }) {
+          id
+        }
+
+      
+        cg530: createGame(data: {
+          title: "The Republic of Rome"
+        }) {
+          id
+        }
+
+      
+        cg531: createGame(data: {
+          title: "StarCraft: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg532: createGame(data: {
+          title: "Too Many Bones"
+        }) {
+          id
+        }
+
+      
+        cg533: createGame(data: {
+          title: "Gears of War: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg534: createGame(data: {
+          title: "Cry Havoc"
+        }) {
+          id
+        }
+
+      
+        cg535: createGame(data: {
+          title: "AquaSphere"
+        }) {
+          id
+        }
+
+      
+        cg536: createGame(data: {
+          title: "DVONN"
+        }) {
+          id
+        }
+
+      
+        cg537: createGame(data: {
+          title: "Thurn and Taxis"
+        }) {
+          id
+        }
+
+      
+        cg538: createGame(data: {
+          title: "Raptor"
+        }) {
+          id
+        }
+
+      
+        cg539: createGame(data: {
+          title: "Smash Up: Awesome Level 9000"
+        }) {
+          id
+        }
+
+      
+        cg540: createGame(data: {
+          title: "Warhammer Quest: The Adventure Card Game"
+        }) {
+          id
+        }
+
+      
+        cg541: createGame(data: {
+          title: "Conan"
+        }) {
+          id
+        }
+
+      
+        cg542: createGame(data: {
+          title: "Imhotep"
+        }) {
+          id
+        }
+
+      
+        cg543: createGame(data: {
+          title: "Snowdonia"
+        }) {
+          id
+        }
+
+      
+        cg544: createGame(data: {
+          title: "Lords of Vegas"
+        }) {
+          id
+        }
+
+      
+        cg545: createGame(data: {
+          title: "Magic Maze"
+        }) {
+          id
+        }
+
+      
+        cg546: createGame(data: {
+          title: "Hanamikoji"
+        }) {
+          id
+        }
+
+      
+        cg547: createGame(data: {
+          title: "Colosseum"
+        }) {
+          id
+        }
+
+      
+        cg548: createGame(data: {
+          title: "Belfort"
+        }) {
+          id
+        }
+
+      
+        cg549: createGame(data: {
+          title: "First Class"
+        }) {
+          id
+        }
+
+      
+        cg550: createGame(data: {
+          title: "Dixit: Journey"
+        }) {
+          id
+        }
+
+      
+        cg551: createGame(data: {
+          title: "Arboretum"
+        }) {
+          id
+        }
+
+      
+        cg552: createGame(data: {
+          title: "Defenders of the Realm"
+        }) {
+          id
+        }
+
+      
+        cg553: createGame(data: {
+          title: "Clank! In! Space!"
+        }) {
+          id
+        }
+
+      
+        cg554: createGame(data: {
+          title: "Chicago Express"
+        }) {
+          id
+        }
+
+      
+        cg555: createGame(data: {
+          title: "The Great Zimbabwe"
+        }) {
+          id
+        }
+
+      
+        cg556: createGame(data: {
+          title: "Chinatown"
+        }) {
+          id
+        }
+
+      
+        cg557: createGame(data: {
+          title: "Summoner Wars"
+        }) {
+          id
+        }
+
+      
+        cg558: createGame(data: {
+          title: "Trains"
+        }) {
+          id
+        }
+
+      
+        cg559: createGame(data: {
+          title: "Up Front"
+        }) {
+          id
+        }
+
+      
+        cg560: createGame(data: {
+          title: "Coup"
+        }) {
+          id
+        }
+
+      
+        cg561: createGame(data: {
+          title: "Bohnanza"
+        }) {
+          id
+        }
+
+      
+        cg562: createGame(data: {
+          title: "Quantum"
+        }) {
+          id
+        }
+
+      
+        cg563: createGame(data: {
+          title: "Ashes: Rise of the Phoenixborn"
+        }) {
+          id
+        }
+
+      
+        cg564: createGame(data: {
+          title: "Spyfall"
+        }) {
+          id
+        }
+
+      
+        cg565: createGame(data: {
+          title: "Napoleon's Triumph"
+        }) {
+          id
+        }
+
+      
+        cg566: createGame(data: {
+          title: "Thebes"
+        }) {
+          id
+        }
+
+      
+        cg567: createGame(data: {
+          title: "The Battle of Five Armies"
+        }) {
+          id
+        }
+
+      
+        cg568: createGame(data: {
+          title: "One Night Ultimate Werewolf Daybreak"
+        }) {
+          id
+        }
+
+      
+        cg569: createGame(data: {
+          title: "Baseball Highlights: 2045"
+        }) {
+          id
+        }
+
+      
+        cg570: createGame(data: {
+          title: "Dice Forge"
+        }) {
+          id
+        }
+
+      
+        cg571: createGame(data: {
+          title: "Flamme Rouge"
+        }) {
+          id
+        }
+
+      
+        cg572: createGame(data: {
+          title: "Conflict of Heroes: Awakening the Bear! – Russia 1941-42"
+        }) {
+          id
+        }
+
+      
+        cg573: createGame(data: {
+          title: "Schotten Totten"
+        }) {
+          id
+        }
+
+      
+        cg574: createGame(data: {
+          title: "Camel Up"
+        }) {
+          id
+        }
+
+      
+        cg575: createGame(data: {
+          title: "Pax Porfiriana"
+        }) {
+          id
+        }
+
+      
+        cg576: createGame(data: {
+          title: "Time's Up!"
+        }) {
+          id
+        }
+
+      
+        cg577: createGame(data: {
+          title: "Specter Ops"
+        }) {
+          id
+        }
+
+      
+        cg578: createGame(data: {
+          title: "Karuba"
+        }) {
+          id
+        }
+
+      
+        cg579: createGame(data: {
+          title: "Shadows of Brimstone: Swamps of Death"
+        }) {
+          id
+        }
+
+      
+        cg580: createGame(data: {
+          title: "Star Trek: Fleet Captains"
+        }) {
+          id
+        }
+
+      
+        cg581: createGame(data: {
+          title: "The Duke"
+        }) {
+          id
+        }
+
+      
+        cg582: createGame(data: {
+          title: "1989: Dawn of Freedom"
+        }) {
+          id
+        }
+
+      
+        cg583: createGame(data: {
+          title: "Tobago"
+        }) {
+          id
+        }
+
+      
+        cg584: createGame(data: {
+          title: "Carcassonne: Hunters and Gatherers"
+        }) {
+          id
+        }
+
+      
+        cg585: createGame(data: {
+          title: "Tajemnicze Domostwo"
+        }) {
+          id
+        }
+
+      
+        cg586: createGame(data: {
+          title: "Fury of Dracula (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg587: createGame(data: {
+          title: "Advanced Squad Leader: Starter Kit #1"
+        }) {
+          id
+        }
+
+      
+        cg588: createGame(data: {
+          title: "Luna"
+        }) {
+          id
+        }
+
+      
+        cg589: createGame(data: {
+          title: "No Thanks!"
+        }) {
+          id
+        }
+
+      
+        cg590: createGame(data: {
+          title: "Alhambra"
+        }) {
+          id
+        }
+
+      
+        cg591: createGame(data: {
+          title: "Zombicide Season 2: Prison Outbreak"
+        }) {
+          id
+        }
+
+      
+        cg592: createGame(data: {
+          title: "Roll Player"
+        }) {
+          id
+        }
+
+      
+        cg593: createGame(data: {
+          title: "ZhanGuo"
+        }) {
+          id
+        }
+
+      
+        cg594: createGame(data: {
+          title: "Torres"
+        }) {
+          id
+        }
+
+      
+        cg595: createGame(data: {
+          title: "Myrmes"
+        }) {
+          id
+        }
+
+      
+        cg596: createGame(data: {
+          title: "Fire in the Lake"
+        }) {
+          id
+        }
+
+      
+        cg597: createGame(data: {
+          title: "Jamaica"
+        }) {
+          id
+        }
+
+      
+        cg598: createGame(data: {
+          title: "Discworld: Ankh-Morpork"
+        }) {
+          id
+        }
+
+      
+        cg599: createGame(data: {
+          title: "Mystic Vale"
+        }) {
+          id
+        }
+
+      
+        cg600: createGame(data: {
+          title: "Fearsome Floors"
+        }) {
+          id
+        }
+
+      
+        cg601: createGame(data: {
+          title: "DC Comics Deck-Building Game: Heroes Unite"
+        }) {
+          id
+        }
+
+      
+        cg602: createGame(data: {
+          title: "Space Cadets: Dice Duel"
+        }) {
+          id
+        }
+
+      
+        cg603: createGame(data: {
+          title: "Turn the Tide"
+        }) {
+          id
+        }
+
+      
+        cg604: createGame(data: {
+          title: "Middle-earth"
+        }) {
+          id
+        }
+
+      
+        cg605: createGame(data: {
+          title: "Arctic Scavengers"
+        }) {
+          id
+        }
+
+      
+        cg606: createGame(data: {
+          title: "Onirim"
+        }) {
+          id
+        }
+
+      
+        cg607: createGame(data: {
+          title: "I'm the Boss!"
+        }) {
+          id
+        }
+
+      
+        cg608: createGame(data: {
+          title: "Ticket to Ride: Rails & Sails"
+        }) {
+          id
+        }
+
+      
+        cg609: createGame(data: {
+          title: "The Ancient World"
+        }) {
+          id
+        }
+
+      
+        cg610: createGame(data: {
+          title: "Thunderstone Advance: Numenera"
+        }) {
+          id
+        }
+
+      
+        cg611: createGame(data: {
+          title: "World in Flames"
+        }) {
+          id
+        }
+
+      
+        cg612: createGame(data: {
+          title: "NMBR 9"
+        }) {
+          id
+        }
+
+      
+        cg613: createGame(data: {
+          title: "Breakout: Normandy"
+        }) {
+          id
+        }
+
+      
+        cg614: createGame(data: {
+          title: "Timeline: Historical Events"
+        }) {
+          id
+        }
+
+      
+        cg615: createGame(data: {
+          title: "Valley of the Kings: Afterlife"
+        }) {
+          id
+        }
+
+      
+        cg616: createGame(data: {
+          title: "Duel of Ages II"
+        }) {
+          id
+        }
+
+      
+        cg617: createGame(data: {
+          title: "Traders of Osaka"
+        }) {
+          id
+        }
+
+      
+        cg618: createGame(data: {
+          title: "Dead Man's Draw"
+        }) {
+          id
+        }
+
+      
+        cg619: createGame(data: {
+          title: "A Victory Lost"
+        }) {
+          id
+        }
+
+      
+        cg620: createGame(data: {
+          title: "Lost Cities: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg621: createGame(data: {
+          title: "Gulo Gulo"
+        }) {
+          id
+        }
+
+      
+        cg622: createGame(data: {
+          title: "Thunderstone Advance: Worlds Collide"
+        }) {
+          id
+        }
+
+      
+        cg623: createGame(data: {
+          title: "My Village"
+        }) {
+          id
+        }
+
+      
+        cg624: createGame(data: {
+          title: "A House Divided"
+        }) {
+          id
+        }
+
+      
+        cg625: createGame(data: {
+          title: "Pulsar 2849"
+        }) {
+          id
+        }
+
+      
+        cg626: createGame(data: {
+          title: "Sleuth"
+        }) {
+          id
+        }
+
+      
+        cg627: createGame(data: {
+          title: "Vampire: The Eternal Struggle"
+        }) {
+          id
+        }
+
+      
+        cg628: createGame(data: {
+          title: "Archaeology: The New Expedition"
+        }) {
+          id
+        }
+
+      
+        cg629: createGame(data: {
+          title: "Steel Driver"
+        }) {
+          id
+        }
+
+      
+        cg630: createGame(data: {
+          title: "Stronghold (2nd edition)"
+        }) {
+          id
+        }
+
+      
+        cg631: createGame(data: {
+          title: "Omen: A Reign of War"
+        }) {
+          id
+        }
+
+      
+        cg632: createGame(data: {
+          title: "Empires in Arms"
+        }) {
+          id
+        }
+
+      
+        cg633: createGame(data: {
+          title: "Villages of Valeria"
+        }) {
+          id
+        }
+
+      
+        cg634: createGame(data: {
+          title: "On the Underground"
+        }) {
+          id
+        }
+
+      
+        cg635: createGame(data: {
+          title: "Junta"
+        }) {
+          id
+        }
+
+      
+        cg636: createGame(data: {
+          title: "Helvetia"
+        }) {
+          id
+        }
+
+      
+        cg637: createGame(data: {
+          title: "Warhammer: Diskwars"
+        }) {
+          id
+        }
+
+      
+        cg638: createGame(data: {
+          title: "Leonardo da Vinci"
+        }) {
+          id
+        }
+
+      
+        cg639: createGame(data: {
+          title: "Diamonds Club"
+        }) {
+          id
+        }
+
+      
+        cg640: createGame(data: {
+          title: "Empire Builder"
+        }) {
+          id
+        }
+
+      
+        cg641: createGame(data: {
+          title: "Haspelknecht"
+        }) {
+          id
+        }
+
+      
+        cg642: createGame(data: {
+          title: "Pergamon"
+        }) {
+          id
+        }
+
+      
+        cg643: createGame(data: {
+          title: "Escape from the Aliens in Outer Space"
+        }) {
+          id
+        }
+
+      
+        cg644: createGame(data: {
+          title: "Eight-Minute Empire"
+        }) {
+          id
+        }
+
+      
+        cg645: createGame(data: {
+          title: "Historia"
+        }) {
+          id
+        }
+
+      
+        cg646: createGame(data: {
+          title: "Dungeons & Dragons: Temple of Elemental Evil Board Game"
+        }) {
+          id
+        }
+
+      
+        cg647: createGame(data: {
+          title: "Ogre"
+        }) {
+          id
+        }
+
+      
+        cg648: createGame(data: {
+          title: "Tiny Epic Kingdoms"
+        }) {
+          id
+        }
+
+      
+        cg649: createGame(data: {
+          title: "New Angeles"
+        }) {
+          id
+        }
+
+      
+        cg650: createGame(data: {
+          title: "Timeline: Diversity"
+        }) {
+          id
+        }
+
+      
+        cg651: createGame(data: {
+          title: "The Lost Expedition"
+        }) {
+          id
+        }
+
+      
+        cg652: createGame(data: {
+          title: "Masmorra: Dungeons of Arcadia"
+        }) {
+          id
+        }
+
+      
+        cg653: createGame(data: {
+          title: "Ascension: Rise of Vigil"
+        }) {
+          id
+        }
+
+      
+        cg654: createGame(data: {
+          title: "Hab & Gut"
+        }) {
+          id
+        }
+
+      
+        cg655: createGame(data: {
+          title: "Theseus: The Dark Orbit"
+        }) {
+          id
+        }
+
+      
+        cg656: createGame(data: {
+          title: "Big City"
+        }) {
+          id
+        }
+
+      
+        cg657: createGame(data: {
+          title: "Exodus: Proxima Centauri"
+        }) {
+          id
+        }
+
+      
+        cg658: createGame(data: {
+          title: "Evo (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg659: createGame(data: {
+          title: "Ground Floor"
+        }) {
+          id
+        }
+
+      
+        cg660: createGame(data: {
+          title: "Tides of Madness"
+        }) {
+          id
+        }
+
+      
+        cg661: createGame(data: {
+          title: "Samurai Spirit"
+        }) {
+          id
+        }
+
+      
+        cg662: createGame(data: {
+          title: "Marvel Dice Masters: Age of Ultron"
+        }) {
+          id
+        }
+
+      
+        cg663: createGame(data: {
+          title: "Oregon"
+        }) {
+          id
+        }
+
+      
+        cg664: createGame(data: {
+          title: "Three Kingdoms Redux"
+        }) {
+          id
+        }
+
+      
+        cg665: createGame(data: {
+          title: "Prêt-à-Porter"
+        }) {
+          id
+        }
+
+      
+        cg666: createGame(data: {
+          title: "Heaven & Ale"
+        }) {
+          id
+        }
+
+      
+        cg667: createGame(data: {
+          title: "The Great Heartland Hauling Co."
+        }) {
+          id
+        }
+
+      
+        cg668: createGame(data: {
+          title: "König von Siam"
+        }) {
+          id
+        }
+
+      
+        cg669: createGame(data: {
+          title: "Ponzi Scheme"
+        }) {
+          id
+        }
+
+      
+        cg670: createGame(data: {
+          title: "Revolution!"
+        }) {
+          id
+        }
+
+      
+        cg671: createGame(data: {
+          title: "Axis & Allies Pacific 1940"
+        }) {
+          id
+        }
+
+      
+        cg672: createGame(data: {
+          title: "The Rose King"
+        }) {
+          id
+        }
+
+      
+        cg673: createGame(data: {
+          title: "Nefertiti"
+        }) {
+          id
+        }
+
+      
+        cg674: createGame(data: {
+          title: "Antike Duellum"
+        }) {
+          id
+        }
+
+      
+        cg675: createGame(data: {
+          title: "Quoridor"
+        }) {
+          id
+        }
+
+      
+        cg676: createGame(data: {
+          title: "Founding Fathers"
+        }) {
+          id
+        }
+
+      
+        cg677: createGame(data: {
+          title: "Porta Nigra"
+        }) {
+          id
+        }
+
+      
+        cg678: createGame(data: {
+          title: "Mordheim: City of the Damned"
+        }) {
+          id
+        }
+
+      
+        cg679: createGame(data: {
+          title: "Manhattan"
+        }) {
+          id
+        }
+
+      
+        cg680: createGame(data: {
+          title: "Smash Up: The Obligatory Cthulhu Set"
+        }) {
+          id
+        }
+
+      
+        cg681: createGame(data: {
+          title: "Guillotine"
+        }) {
+          id
+        }
+
+      
+        cg682: createGame(data: {
+          title: "Artifacts, Inc."
+        }) {
+          id
+        }
+
+      
+        cg683: createGame(data: {
+          title: "Xiangqi"
+        }) {
+          id
+        }
+
+      
+        cg684: createGame(data: {
+          title: "Barony"
+        }) {
+          id
+        }
+
+      
+        cg685: createGame(data: {
+          title: "Android"
+        }) {
+          id
+        }
+
+      
+        cg686: createGame(data: {
+          title: "Oceanos"
+        }) {
+          id
+        }
+
+      
+        cg687: createGame(data: {
+          title: "PitchCar Mini"
+        }) {
+          id
+        }
+
+      
+        cg688: createGame(data: {
+          title: "The Captain Is Dead"
+        }) {
+          id
+        }
+
+      
+        cg689: createGame(data: {
+          title: "Edo"
+        }) {
+          id
+        }
+
+      
+        cg690: createGame(data: {
+          title: "Ex Libris"
+        }) {
+          id
+        }
+
+      
+        cg691: createGame(data: {
+          title: "The Fox in the Forest"
+        }) {
+          id
+        }
+
+      
+        cg692: createGame(data: {
+          title: "Québec"
+        }) {
+          id
+        }
+
+      
+        cg693: createGame(data: {
+          title: "Sun Tzu"
+        }) {
+          id
+        }
+
+      
+        cg694: createGame(data: {
+          title: "Race! Formula 90"
+        }) {
+          id
+        }
+
+      
+        cg695: createGame(data: {
+          title: "Napoleon: The Waterloo Campaign, 1815"
+        }) {
+          id
+        }
+
+      
+        cg696: createGame(data: {
+          title: "Pueblo"
+        }) {
+          id
+        }
+
+      
+        cg697: createGame(data: {
+          title: "Stephenson's Rocket"
+        }) {
+          id
+        }
+
+      
+        cg698: createGame(data: {
+          title: "A Study in Emerald (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg699: createGame(data: {
+          title: "Pirate's Cove"
+        }) {
+          id
+        }
+
+      
+        cg700: createGame(data: {
+          title: "DC Comics Deck-Building Game"
+        }) {
+          id
+        }
+
+      
+        cg701: createGame(data: {
+          title: "Zendo"
+        }) {
+          id
+        }
+
+      
+        cg702: createGame(data: {
+          title: "Julius Caesar"
+        }) {
+          id
+        }
+
+      
+        cg703: createGame(data: {
+          title: "La Isla"
+        }) {
+          id
+        }
+
+      
+        cg704: createGame(data: {
+          title: "GIPF"
+        }) {
+          id
+        }
+
+      
+        cg705: createGame(data: {
+          title: "Heroes of Normandie"
+        }) {
+          id
+        }
+
+      
+        cg706: createGame(data: {
+          title: "Pax Renaissance"
+        }) {
+          id
+        }
+
+      
+        cg707: createGame(data: {
+          title: "Animal Upon Animal"
+        }) {
+          id
+        }
+
+      
+        cg708: createGame(data: {
+          title: "Shadow Hunters"
+        }) {
+          id
+        }
+
+      
+        cg709: createGame(data: {
+          title: "Arkadia"
+        }) {
+          id
+        }
+
+      
+        cg710: createGame(data: {
+          title: "Dice Town"
+        }) {
+          id
+        }
+
+      
+        cg711: createGame(data: {
+          title: "Fortune and Glory: The Cliffhanger Game"
+        }) {
+          id
+        }
+
+      
+        cg712: createGame(data: {
+          title: "Machi Koro"
+        }) {
+          id
+        }
+
+      
+        cg713: createGame(data: {
+          title: "Mission: Red Planet"
+        }) {
+          id
+        }
+
+      
+        cg714: createGame(data: {
+          title: "A Touch of Evil: The Supernatural Game"
+        }) {
+          id
+        }
+
+      
+        cg715: createGame(data: {
+          title: "New York 1901"
+        }) {
+          id
+        }
+
+      
+        cg716: createGame(data: {
+          title: "Medina"
+        }) {
+          id
+        }
+
+      
+        cg717: createGame(data: {
+          title: "Sons of Anarchy: Men of Mayhem"
+        }) {
+          id
+        }
+
+      
+        cg718: createGame(data: {
+          title: "Advanced Squad Leader: Starter Kit #2"
+        }) {
+          id
+        }
+
+      
+        cg719: createGame(data: {
+          title: "The Golden Ages"
+        }) {
+          id
+        }
+
+      
+        cg720: createGame(data: {
+          title: "Blueprints"
+        }) {
+          id
+        }
+
+      
+        cg721: createGame(data: {
+          title: "The Werewolves of Miller's Hollow"
+        }) {
+          id
+        }
+
+      
+        cg722: createGame(data: {
+          title: "Outlive"
+        }) {
+          id
+        }
+
+      
+        cg723: createGame(data: {
+          title: "Andean Abyss"
+        }) {
+          id
+        }
+
+      
+        cg724: createGame(data: {
+          title: "Catan Card Game"
+        }) {
+          id
+        }
+
+      
+        cg725: createGame(data: {
+          title: "Firenze"
+        }) {
+          id
+        }
+
+      
+        cg726: createGame(data: {
+          title: "Fairy Tale"
+        }) {
+          id
+        }
+
+      
+        cg727: createGame(data: {
+          title: "Empire of the Sun"
+        }) {
+          id
+        }
+
+      
+        cg728: createGame(data: {
+          title: "Dark Moon"
+        }) {
+          id
+        }
+
+      
+        cg729: createGame(data: {
+          title: "Carcassonne: South Seas"
+        }) {
+          id
+        }
+
+      
+        cg730: createGame(data: {
+          title: "Two Rooms and a Boom"
+        }) {
+          id
+        }
+
+      
+        cg731: createGame(data: {
+          title: "Catacombs (third edition)"
+        }) {
+          id
+        }
+
+      
+        cg732: createGame(data: {
+          title: "Nations: The Dice Game"
+        }) {
+          id
+        }
+
+      
+        cg733: createGame(data: {
+          title: "Colossal Arena"
+        }) {
+          id
+        }
+
+      
+        cg734: createGame(data: {
+          title: "Coconuts"
+        }) {
+          id
+        }
+
+      
+        cg735: createGame(data: {
+          title: "Rialto"
+        }) {
+          id
+        }
+
+      
+        cg736: createGame(data: {
+          title: "Santiago de Cuba"
+        }) {
+          id
+        }
+
+      
+        cg737: createGame(data: {
+          title: "Yomi"
+        }) {
+          id
+        }
+
+      
+        cg738: createGame(data: {
+          title: "Automania"
+        }) {
+          id
+        }
+
+      
+        cg739: createGame(data: {
+          title: "The New Era"
+        }) {
+          id
+        }
+
+      
+        cg740: createGame(data: {
+          title: "Evo"
+        }) {
+          id
+        }
+
+      
+        cg741: createGame(data: {
+          title: "Fire & Axe: A Viking Saga"
+        }) {
+          id
+        }
+
+      
+        cg742: createGame(data: {
+          title: "Nothing Personal"
+        }) {
+          id
+        }
+
+      
+        cg743: createGame(data: {
+          title: "Tournay"
+        }) {
+          id
+        }
+
+      
+        cg744: createGame(data: {
+          title: "Cleopatra and the Society of Architects"
+        }) {
+          id
+        }
+
+      
+        cg745: createGame(data: {
+          title: "Axis & Allies Anniversary Edition"
+        }) {
+          id
+        }
+
+      
+        cg746: createGame(data: {
+          title: "Mottainai"
+        }) {
+          id
+        }
+
+      
+        cg747: createGame(data: {
+          title: "Ascending Empires"
+        }) {
+          id
+        }
+
+      
+        cg748: createGame(data: {
+          title: "Honshu"
+        }) {
+          id
+        }
+
+      
+        cg749: createGame(data: {
+          title: "Dungeon Twister"
+        }) {
+          id
+        }
+
+      
+        cg750: createGame(data: {
+          title: "Smash Up: It's Your Fault!"
+        }) {
+          id
+        }
+
+      
+        cg751: createGame(data: {
+          title: "Fief: France 1429"
+        }) {
+          id
+        }
+
+      
+        cg752: createGame(data: {
+          title: "Rattus"
+        }) {
+          id
+        }
+
+      
+        cg753: createGame(data: {
+          title: "Dungeon Fighter"
+        }) {
+          id
+        }
+
+      
+        cg754: createGame(data: {
+          title: "Blokus Duo"
+        }) {
+          id
+        }
+
+      
+        cg755: createGame(data: {
+          title: "Medieval Academy"
+        }) {
+          id
+        }
+
+      
+        cg756: createGame(data: {
+          title: "Rise of Augustus"
+        }) {
+          id
+        }
+
+      
+        cg757: createGame(data: {
+          title: "Tsuro"
+        }) {
+          id
+        }
+
+      
+        cg758: createGame(data: {
+          title: "De Vulgari Eloquentia"
+        }) {
+          id
+        }
+
+      
+        cg759: createGame(data: {
+          title: "Patchistory"
+        }) {
+          id
+        }
+
+      
+        cg760: createGame(data: {
+          title: "High Frontier"
+        }) {
+          id
+        }
+
+      
+        cg761: createGame(data: {
+          title: "Wallenstein (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg762: createGame(data: {
+          title: "Carcassonne: Winter Edition"
+        }) {
+          id
+        }
+
+      
+        cg763: createGame(data: {
+          title: "Falling Sky: The Gallic Revolt Against Caesar"
+        }) {
+          id
+        }
+
+      
+        cg764: createGame(data: {
+          title: "Wings of War: Famous Aces"
+        }) {
+          id
+        }
+
+      
+        cg765: createGame(data: {
+          title: "Advanced Squad Leader: Starter Kit #3"
+        }) {
+          id
+        }
+
+      
+        cg766: createGame(data: {
+          title: "XenoShyft: Onslaught"
+        }) {
+          id
+        }
+
+      
+        cg767: createGame(data: {
+          title: "Mykerinos"
+        }) {
+          id
+        }
+
+      
+        cg768: createGame(data: {
+          title: "Sylvion"
+        }) {
+          id
+        }
+
+      
+        cg769: createGame(data: {
+          title: "Fugitive"
+        }) {
+          id
+        }
+
+      
+        cg770: createGame(data: {
+          title: "Mystery Rummy: Jack the Ripper"
+        }) {
+          id
+        }
+
+      
+        cg771: createGame(data: {
+          title: "Amyitis"
+        }) {
+          id
+        }
+
+      
+        cg772: createGame(data: {
+          title: "5-Minute Dungeon"
+        }) {
+          id
+        }
+
+      
+        cg773: createGame(data: {
+          title: "DC Comics Dice Masters: Justice League"
+        }) {
+          id
+        }
+
+      
+        cg774: createGame(data: {
+          title: "Titan"
+        }) {
+          id
+        }
+
+      
+        cg775: createGame(data: {
+          title: "Downforce"
+        }) {
+          id
+        }
+
+      
+        cg776: createGame(data: {
+          title: "Elfenland"
+        }) {
+          id
+        }
+
+      
+        cg777: createGame(data: {
+          title: "Löwenherz"
+        }) {
+          id
+        }
+
+      
+        cg778: createGame(data: {
+          title: "Hostage Negotiator"
+        }) {
+          id
+        }
+
+      
+        cg779: createGame(data: {
+          title: "Meuterer"
+        }) {
+          id
+        }
+
+      
+        cg780: createGame(data: {
+          title: "Welcome to the Dungeon"
+        }) {
+          id
+        }
+
+      
+        cg781: createGame(data: {
+          title: "Doom: The Boardgame"
+        }) {
+          id
+        }
+
+      
+        cg782: createGame(data: {
+          title: "Say Anything"
+        }) {
+          id
+        }
+
+      
+        cg783: createGame(data: {
+          title: "Condottiere"
+        }) {
+          id
+        }
+
+      
+        cg784: createGame(data: {
+          title: "Cosmic Encounter"
+        }) {
+          id
+        }
+
+      
+        cg785: createGame(data: {
+          title: "Asara"
+        }) {
+          id
+        }
+
+      
+        cg786: createGame(data: {
+          title: "Ice Cool"
+        }) {
+          id
+        }
+
+      
+        cg787: createGame(data: {
+          title: "Kraftwagen"
+        }) {
+          id
+        }
+
+      
+        cg788: createGame(data: {
+          title: "Fields of Green"
+        }) {
+          id
+        }
+
+      
+        cg789: createGame(data: {
+          title: "Sticheln"
+        }) {
+          id
+        }
+
+      
+        cg790: createGame(data: {
+          title: "Starship Catan"
+        }) {
+          id
+        }
+
+      
+        cg791: createGame(data: {
+          title: "Star Trek: Catan"
+        }) {
+          id
+        }
+
+      
+        cg792: createGame(data: {
+          title: "Le Havre: The Inland Port"
+        }) {
+          id
+        }
+
+      
+        cg793: createGame(data: {
+          title: "Dale of Merchants"
+        }) {
+          id
+        }
+
+      
+        cg794: createGame(data: {
+          title: "Castle Panic"
+        }) {
+          id
+        }
+
+      
+        cg795: createGame(data: {
+          title: "Merkator"
+        }) {
+          id
+        }
+
+      
+        cg796: createGame(data: {
+          title: "Star Trek: Frontiers"
+        }) {
+          id
+        }
+
+      
+        cg797: createGame(data: {
+          title: "City of Iron"
+        }) {
+          id
+        }
+
+      
+        cg798: createGame(data: {
+          title: "Escape Room: The Game"
+        }) {
+          id
+        }
+
+      
+        cg799: createGame(data: {
+          title: "Thunderbirds"
+        }) {
+          id
+        }
+
+      
+        cg800: createGame(data: {
+          title: "San Marco"
+        }) {
+          id
+        }
+
+      
+        cg801: createGame(data: {
+          title: "Ascension: Storm of Souls"
+        }) {
+          id
+        }
+
+      
+        cg802: createGame(data: {
+          title: "Churchill"
+        }) {
+          id
+        }
+
+      
+        cg803: createGame(data: {
+          title: "Flick 'em Up!"
+        }) {
+          id
+        }
+
+      
+        cg804: createGame(data: {
+          title: "Santiago"
+        }) {
+          id
+        }
+
+      
+        cg805: createGame(data: {
+          title: "Hyperborea"
+        }) {
+          id
+        }
+
+      
+        cg806: createGame(data: {
+          title: "Mexica"
+        }) {
+          id
+        }
+
+      
+        cg807: createGame(data: {
+          title: "Arcadia Quest: Inferno"
+        }) {
+          id
+        }
+
+      
+        cg808: createGame(data: {
+          title: "Legacy: The Testament of Duke de Crecy"
+        }) {
+          id
+        }
+
+      
+        cg809: createGame(data: {
+          title: "Blokus"
+        }) {
+          id
+        }
+
+      
+        cg810: createGame(data: {
+          title: "Louis XIV"
+        }) {
+          id
+        }
+
+      
+        cg811: createGame(data: {
+          title: "Dinosaur Island"
+        }) {
+          id
+        }
+
+      
+        cg812: createGame(data: {
+          title: "The Oracle of Delphi"
+        }) {
+          id
+        }
+
+      
+        cg813: createGame(data: {
+          title: "Dungeons & Dragons: Wrath of Ashardalon Board Game"
+        }) {
+          id
+        }
+
+      
+        cg814: createGame(data: {
+          title: "Scoville"
+        }) {
+          id
+        }
+
+      
+        cg815: createGame(data: {
+          title: "Lords of Xidit"
+        }) {
+          id
+        }
+
+      
+        cg816: createGame(data: {
+          title: "Hawaii"
+        }) {
+          id
+        }
+
+      
+        cg817: createGame(data: {
+          title: "Space Hulk: Death Angel – The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg818: createGame(data: {
+          title: "Thunderstone"
+        }) {
+          id
+        }
+
+      
+        cg819: createGame(data: {
+          title: "Last Night on Earth: The Zombie Game"
+        }) {
+          id
+        }
+
+      
+        cg820: createGame(data: {
+          title: "Thunderstone: Dragonspire"
+        }) {
+          id
+        }
+
+      
+        cg821: createGame(data: {
+          title: "Finca"
+        }) {
+          id
+        }
+
+      
+        cg822: createGame(data: {
+          title: "KLASK"
+        }) {
+          id
+        }
+
+      
+        cg823: createGame(data: {
+          title: "The Palaces of Carrara"
+        }) {
+          id
+        }
+
+      
+        cg824: createGame(data: {
+          title: "Britannia"
+        }) {
+          id
+        }
+
+      
+        cg825: createGame(data: {
+          title: "CO₂"
+        }) {
+          id
+        }
+
+      
+        cg826: createGame(data: {
+          title: "Thunder Alley"
+        }) {
+          id
+        }
+
+      
+        cg827: createGame(data: {
+          title: "Red7"
+        }) {
+          id
+        }
+
+      
+        cg828: createGame(data: {
+          title: "Kanagawa"
+        }) {
+          id
+        }
+
+      
+        cg829: createGame(data: {
+          title: "The Quest for El Dorado"
+        }) {
+          id
+        }
+
+      
+        cg830: createGame(data: {
+          title: "Junk Art"
+        }) {
+          id
+        }
+
+      
+        cg831: createGame(data: {
+          title: "13 Days: The Cuban Missile Crisis"
+        }) {
+          id
+        }
+
+      
+        cg832: createGame(data: {
+          title: "Star Wars: The Queen's Gambit"
+        }) {
+          id
+        }
+
+      
+        cg833: createGame(data: {
+          title: "Wir sind das Volk!"
+        }) {
+          id
+        }
+
+      
+        cg834: createGame(data: {
+          title: "Adrenaline"
+        }) {
+          id
+        }
+
+      
+        cg835: createGame(data: {
+          title: "Tiny Epic Quest"
+        }) {
+          id
+        }
+
+      
+        cg836: createGame(data: {
+          title: "Stronghold"
+        }) {
+          id
+        }
+
+      
+        cg837: createGame(data: {
+          title: "Ascension: Return of the Fallen"
+        }) {
+          id
+        }
+
+      
+        cg838: createGame(data: {
+          title: "FUSE"
+        }) {
+          id
+        }
+
+      
+        cg839: createGame(data: {
+          title: "Deep Sea Adventure"
+        }) {
+          id
+        }
+
+      
+        cg840: createGame(data: {
+          title: "La Città"
+        }) {
+          id
+        }
+
+      
+        cg841: createGame(data: {
+          title: "BattleCON: War of Indines"
+        }) {
+          id
+        }
+
+      
+        cg842: createGame(data: {
+          title: "Blood Bowl (2016 edition)"
+        }) {
+          id
+        }
+
+      
+        cg843: createGame(data: {
+          title: "HeroQuest"
+        }) {
+          id
+        }
+
+      
+        cg844: createGame(data: {
+          title: "Legendary Encounters: A Predator Deck Building Game"
+        }) {
+          id
+        }
+
+      
+        cg845: createGame(data: {
+          title: "The Networks"
+        }) {
+          id
+        }
+
+      
+        cg846: createGame(data: {
+          title: "The Castles of Burgundy: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg847: createGame(data: {
+          title: "Antike"
+        }) {
+          id
+        }
+
+      
+        cg848: createGame(data: {
+          title: "Smash Up: Pretty Pretty Smash Up"
+        }) {
+          id
+        }
+
+      
+        cg849: createGame(data: {
+          title: "Attika"
+        }) {
+          id
+        }
+
+      
+        cg850: createGame(data: {
+          title: "Concept"
+        }) {
+          id
+        }
+
+      
+        cg851: createGame(data: {
+          title: "Liar's Dice"
+        }) {
+          id
+        }
+
+      
+        cg852: createGame(data: {
+          title: "Discoveries"
+        }) {
+          id
+        }
+
+      
+        cg853: createGame(data: {
+          title: "Smash Up: Monster Smash"
+        }) {
+          id
+        }
+
+      
+        cg854: createGame(data: {
+          title: "Cribbage"
+        }) {
+          id
+        }
+
+      
+        cg855: createGame(data: {
+          title: "Wilderness War"
+        }) {
+          id
+        }
+
+      
+        cg856: createGame(data: {
+          title: "Roll Through the Ages: The Bronze Age"
+        }) {
+          id
+        }
+
+      
+        cg857: createGame(data: {
+          title: "Ricochet Robots"
+        }) {
+          id
+        }
+
+      
+        cg858: createGame(data: {
+          title: "Tide of Iron"
+        }) {
+          id
+        }
+
+      
+        cg859: createGame(data: {
+          title: "Tammany Hall"
+        }) {
+          id
+        }
+
+      
+        cg860: createGame(data: {
+          title: "Dream Factory"
+        }) {
+          id
+        }
+
+      
+        cg861: createGame(data: {
+          title: "Netrunner"
+        }) {
+          id
+        }
+
+      
+        cg862: createGame(data: {
+          title: "Merchant of Venus (second edition)"
+        }) {
+          id
+        }
+
+      
+        cg863: createGame(data: {
+          title: "Lanterns: The Harvest Festival"
+        }) {
+          id
+        }
+
+      
+        cg864: createGame(data: {
+          title: "One Deck Dungeon"
+        }) {
+          id
+        }
+
+      
+        cg865: createGame(data: {
+          title: "The Others"
+        }) {
+          id
+        }
+
+      
+        cg866: createGame(data: {
+          title: "Battles of Westeros"
+        }) {
+          id
+        }
+
+      
+        cg867: createGame(data: {
+          title: "Telestrations: 12 Player Party Pack"
+        }) {
+          id
+        }
+
+      
+        cg868: createGame(data: {
+          title: "Morels"
+        }) {
+          id
+        }
+
+      
+        cg869: createGame(data: {
+          title: "Formula Dé"
+        }) {
+          id
+        }
+
+      
+        cg870: createGame(data: {
+          title: "6 nimmt!"
+        }) {
+          id
+        }
+
+      
+        cg871: createGame(data: {
+          title: "Princes of the Renaissance"
+        }) {
+          id
+        }
+
+      
+        cg872: createGame(data: {
+          title: "Container"
+        }) {
+          id
+        }
+
+      
+        cg873: createGame(data: {
+          title: "Not Alone"
+        }) {
+          id
+        }
+
+      
+        cg874: createGame(data: {
+          title: "Forbidden Island"
+        }) {
+          id
+        }
+
+      
+        cg875: createGame(data: {
+          title: "Celestia"
+        }) {
+          id
+        }
+
+      
+        cg876: createGame(data: {
+          title: "Pictomania"
+        }) {
+          id
+        }
+
+      
+        cg877: createGame(data: {
+          title: "Conflict of Heroes: Storms of Steel! – Kursk 1943"
+        }) {
+          id
+        }
+
+      
+        cg878: createGame(data: {
+          title: "A Study in Emerald"
+        }) {
+          id
+        }
+
+      
+        cg879: createGame(data: {
+          title: "Wiz-War (eighth edition)"
+        }) {
+          id
+        }
+
+      
+        cg880: createGame(data: {
+          title: "Tumblin-Dice"
+        }) {
+          id
+        }
+
+      
+        cg881: createGame(data: {
+          title: "Vinci"
+        }) {
+          id
+        }
+
+      
+        cg882: createGame(data: {
+          title: "The Speicherstadt"
+        }) {
+          id
+        }
+
+      
+        cg883: createGame(data: {
+          title: "Warhammer 40,000: Conquest"
+        }) {
+          id
+        }
+
+      
+        cg884: createGame(data: {
+          title: "History of the World"
+        }) {
+          id
+        }
+
+      
+        cg885: createGame(data: {
+          title: "Yamataï"
+        }) {
+          id
+        }
+
+      
+        cg886: createGame(data: {
+          title: "Mr. Jack in New York"
+        }) {
+          id
+        }
+
+      
+        cg887: createGame(data: {
+          title: "Rajas of the Ganges"
+        }) {
+          id
+        }
+
+      
+        cg888: createGame(data: {
+          title: "Snow Tails"
+        }) {
+          id
+        }
+
+      
+        cg889: createGame(data: {
+          title: "Rex: Final Days of an Empire"
+        }) {
+          id
+        }
+
+      
+        cg890: createGame(data: {
+          title: "Akrotiri"
+        }) {
+          id
+        }
+
+      
+        cg891: createGame(data: {
+          title: "Zombicide Season 3: Rue Morgue"
+        }) {
+          id
+        }
+
+      
+        cg892: createGame(data: {
+          title: "Mr. Jack Pocket"
+        }) {
+          id
+        }
+
+      
+        cg893: createGame(data: {
+          title: "Rhino Hero"
+        }) {
+          id
+        }
+
+      
+        cg894: createGame(data: {
+          title: "Sword & Sorcery"
+        }) {
+          id
+        }
+
+      
+        cg895: createGame(data: {
+          title: "Zooloretto"
+        }) {
+          id
+        }
+
+      
+        cg896: createGame(data: {
+          title: "Mythic Battles: Pantheon"
+        }) {
+          id
+        }
+
+      
+        cg897: createGame(data: {
+          title: "Valeria: Card Kingdoms"
+        }) {
+          id
+        }
+
+      
+        cg898: createGame(data: {
+          title: "Dungeons & Dragons: Castle Ravenloft Board Game"
+        }) {
+          id
+        }
+
+      
+        cg899: createGame(data: {
+          title: "Shadowrun: Crossfire"
+        }) {
+          id
+        }
+
+      
+        cg900: createGame(data: {
+          title: "Gloomhaven"
+        }) {
+          id
+        }
+
+      
+        cg901: createGame(data: {
+          title: "Pandemic Legacy: Season 1"
+        }) {
+          id
+        }
+
+      
+        cg902: createGame(data: {
+          title: "Through the Ages: A New Story of Civilization"
+        }) {
+          id
+        }
+
+      
+        cg903: createGame(data: {
+          title: "Twilight Struggle"
+        }) {
+          id
+        }
+
+      
+        cg904: createGame(data: {
+          title: "Terraforming Mars"
+        }) {
+          id
+        }
+
+      
+        cg905: createGame(data: {
+          title: "Star Wars: Rebellion"
+        }) {
+          id
+        }
+
+      
+        cg906: createGame(data: {
+          title: "Terra Mystica"
+        }) {
+          id
+        }
+
+      
+        cg907: createGame(data: {
+          title: "Scythe"
+        }) {
+          id
+        }
+
+      
+        cg908: createGame(data: {
+          title: "7 Wonders Duel"
+        }) {
+          id
+        }
+
+      
+        cg909: createGame(data: {
+          title: "Great Western Trail"
+        }) {
+          id
+        }
+
+      
+        cg910: createGame(data: {
+          title: "The Castles of Burgundy"
+        }) {
+          id
+        }
+
+      
+        cg911: createGame(data: {
+          title: "War of the Ring (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg912: createGame(data: {
+          title: "Caverna: The Cave Farmers"
+        }) {
+          id
+        }
+
+      
+        cg913: createGame(data: {
+          title: "Puerto Rico"
+        }) {
+          id
+        }
+
+      
+        cg914: createGame(data: {
+          title: "Agricola"
+        }) {
+          id
+        }
+
+      
+        cg915: createGame(data: {
+          title: "Mage Knight Board Game"
+        }) {
+          id
+        }
+
+      
+        cg916: createGame(data: {
+          title: "Blood Rage"
+        }) {
+          id
+        }
+
+      
+        cg917: createGame(data: {
+          title: "Arkham Horror: The Card Game"
+        }) {
+          id
+        }
+
+      
+        cg918: createGame(data: {
+          title: "Mansions of Madness: Second Edition"
+        }) {
+          id
+        }
+
+      
+        cg919: createGame(data: {
+          title: "Mechs vs. Minions"
+        }) {
+          id
+        }
+
+      
+        cg920: createGame(data: {
+          title: "Viticulture Essential Edition"
+        }) {
+          id
+        }
+
+      
+        cg921: createGame(data: {
+          title: "Through the Ages: A Story of Civilization"
+        }) {
+          id
+        }
+
+      
+        cg922: createGame(data: {
+          title: "Star Wars: Imperial Assault"
+        }) {
+          id
+        }
+
+      
+        cg923: createGame(data: {
+          title: "Concordia"
+        }) {
+          id
+        }
+
+      
+        cg924: createGame(data: {
+          title: "Orléans"
+        }) {
+          id
+        }
+
+      
+        cg925: createGame(data: {
+          title: "Power Grid"
+        }) {
+          id
+        }
+
+      
+        cg926: createGame(data: {
+          title: "Eclipse"
+        }) {
+          id
+        }
+
+      
+        cg927: createGame(data: {
+          title: "Food Chain Magnate"
+        }) {
+          id
+        }
+
+      
+        cg928: createGame(data: {
+          title: "A Feast for Odin"
+        }) {
+          id
+        }
+
+      
+        cg929: createGame(data: {
+          title: "Robinson Crusoe: Adventures on the Cursed Island"
+        }) {
+          id
+        }
+
+      
+        cg930: createGame(data: {
+          title: "Brass: Lancashire"
+        }) {
+          id
+        }
+
+      
+        cg931: createGame(data: {
+          title: "Tzolk'in: The Mayan Calendar"
+        }) {
+          id
+        }
+
+      
+        cg932: createGame(data: {
+          title: "Le Havre"
+        }) {
+          id
+        }
+
+      
+        cg933: createGame(data: {
+          title: "Kingdom Death: Monster"
+        }) {
+          id
+        }
+
+      
+        cg934: createGame(data: {
+          title: "Android: Netrunner"
+        }) {
+          id
+        }
+
+      
+        cg935: createGame(data: {
+          title: "The 7th Continent"
+        }) {
+          id
+        }
+
+      
+        cg936: createGame(data: {
+          title: "The Voyages of Marco Polo"
+        }) {
+          id
+        }
+
+      
+        cg937: createGame(data: {
+          title: "Codenames"
+        }) {
+          id
+        }
+
+      
+        cg938: createGame(data: {
+          title: "Keyflower"
+        }) {
+          id
+        }
+
+      
+        cg939: createGame(data: {
+          title: "7 Wonders"
+        }) {
+          id
+        }
+
+      
+        cg940: createGame(data: {
+          title: "T.I.M.E Stories"
+        }) {
+          id
+        }
+
+      
+        cg941: createGame(data: {
+          title: "Caylus"
+        }) {
+          id
+        }
+
+      
+        cg942: createGame(data: {
+          title: "Eldritch Horror"
+        }) {
+          id
+        }
+
+      
+        cg943: createGame(data: {
+          title: "Twilight Imperium (Third Edition)"
+        }) {
+          id
+        }
+
+      
+        cg944: createGame(data: {
+          title: "Gaia Project"
+        }) {
+          id
+        }
+
+      
+        cg945: createGame(data: {
+          title: "Race for the Galaxy"
+        }) {
+          id
+        }
+
+      
+        cg946: createGame(data: {
+          title: "Lords of Waterdeep"
+        }) {
+          id
+        }
+
+      
+        cg947: createGame(data: {
+          title: "Five Tribes"
+        }) {
+          id
+        }
+
+      
+        cg948: createGame(data: {
+          title: "Dominant Species"
+        }) {
+          id
+        }
+
+      
+        cg949: createGame(data: {
+          title: "Pandemic Legacy: Season 2"
+        }) {
+          id
+        }
+
+      
+        cg950: createGame(data: {
+          title: "El Grande"
+        }) {
+          id
+        }
+
+      
+        cg951: createGame(data: {
+          title: "Patchwork"
+        }) {
+          id
+        }
+
+      
+        cg952: createGame(data: {
+          title: "Roll for the Galaxy"
+        }) {
+          id
+        }
+
+      
+        cg953: createGame(data: {
+          title: "Fields of Arle"
+        }) {
+          id
+        }
+
+      
+        cg954: createGame(data: {
+          title: "Dominion: Intrigue"
+        }) {
+          id
+        }
+
+      
+        cg955: createGame(data: {
+          title: "Clank!: A Deck-Building Adventure"
+        }) {
+          id
+        }
+
+      
+        cg956: createGame(data: {
+          title: "Dead of Winter: A Crossroads Game"
+        }) {
+          id
+        }
+
+      
+        cg957: createGame(data: {
+          title: "Star Wars: X-Wing Miniatures Game"
+        }) {
+          id
+        }
+
+      
+        cg958: createGame(data: {
+          title: "Battlestar Galactica: The Board Game"
+        }) {
+          id
+        }
+
+      
+        cg959: createGame(data: {
+          title: "Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases"
+        }) {
+          id
+        }
+
+      
+        cg960: createGame(data: {
+          title: "Mombasa"
+        }) {
+          id
+        }
+
+      
+        cg961: createGame(data: {
+          title: "Trajan"
+        }) {
+          id
+        }
+
+      
+        cg962: createGame(data: {
+          title: "Troyes"
+        }) {
+          id
+        }
+
+      
+        cg963: createGame(data: {
+          title: "Dominion"
+        }) {
+          id
+        }
+
+      
+        cg964: createGame(data: {
+          title: "Russian Railroads"
+        }) {
+          id
+        }
+
+      
+        cg965: createGame(data: {
+          title: "Tigris & Euphrates"
+        }) {
+          id
+        }
+
+      
+        cg966: createGame(data: {
+          title: "Pandemic"
+        }) {
+          id
+        }
+
+      
+        cg967: createGame(data: {
+          title: "Santorini"
+        }) {
+          id
+        }
+
+      
+        cg968: createGame(data: {
+          title: "The Gallerist"
+        }) {
+          id
+        }
+
+      
+        cg969: createGame(data: {
+          title: "Crokinole"
+        }) {
+          id
+        }
+
+      
+        cg970: createGame(data: {
+          title: "Descent: Journeys in the Dark (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg971: createGame(data: {
+          title: "Clans of Caledonia"
+        }) {
+          id
+        }
+
+      
+        cg972: createGame(data: {
+          title: "Kemet"
+        }) {
+          id
+        }
+
+      
+        cg973: createGame(data: {
+          title: "Castles of Mad King Ludwig"
+        }) {
+          id
+        }
+
+      
+        cg974: createGame(data: {
+          title: "Stone Age"
+        }) {
+          id
+        }
+
+      
+        cg975: createGame(data: {
+          title: "War of the Ring (first edition)"
+        }) {
+          id
+        }
+
+      
+        cg976: createGame(data: {
+          title: "Alchemists"
+        }) {
+          id
+        }
+
+      
+        cg977: createGame(data: {
+          title: "A Game of Thrones: The Board Game (Second Edition)"
+        }) {
+          id
+        }
+
+      
+        cg978: createGame(data: {
+          title: "The Resistance: Avalon"
+        }) {
+          id
+        }
+
+      
+        cg979: createGame(data: {
+          title: "Forbidden Stars"
+        }) {
+          id
+        }
+
+      
+        cg980: createGame(data: {
+          title: "Legendary Encounters: An Alien Deck Building Game"
+        }) {
+          id
+        }
+
+      
+        cg981: createGame(data: {
+          title: "Arcadia Quest"
+        }) {
+          id
+        }
+
+      
+        cg982: createGame(data: {
+          title: "Twilight Imperium: Fourth Edition"
+        }) {
+          id
+        }
+
+      
+        cg983: createGame(data: {
+          title: "Star Realms"
+        }) {
+          id
+        }
+
+      
+        cg984: createGame(data: {
+          title: "Ora et Labora"
+        }) {
+          id
+        }
+
+      
+        cg985: createGame(data: {
+          title: "Nations"
+        }) {
+          id
+        }
+
+      
+        cg986: createGame(data: {
+          title: "Suburbia"
+        }) {
+          id
+        }
+
+      
+        cg987: createGame(data: {
+          title: "Ticket to Ride: Europe"
+        }) {
+          id
+        }
+
+      
+        cg988: createGame(data: {
+          title: "Azul"
+        }) {
+          id
+        }
+
+      
+        cg989: createGame(data: {
+          title: "Istanbul"
+        }) {
+          id
+        }
+
+      
+        cg990: createGame(data: {
+          title: "Chaos in the Old World"
+        }) {
+          id
+        }
+
+      
+        cg991: createGame(data: {
+          title: "Commands & Colors: Ancients"
+        }) {
+          id
+        }
+
+      
+        cg992: createGame(data: {
+          title: "Railways of the World"
+        }) {
+          id
+        }
+
+      
+        cg993: createGame(data: {
+          title: "Anachrony"
+        }) {
+          id
+        }
+
+      
+        cg994: createGame(data: {
+          title: "Paths of Glory"
+        }) {
+          id
+        }
+
+      
+        cg995: createGame(data: {
+          title: "Captain Sonar"
+        }) {
+          id
+        }
+
+      
+        cg996: createGame(data: {
+          title: "Pandemic Iberia"
+        }) {
+          id
+        }
+
+      
+        cg997: createGame(data: {
+          title: "Cosmic Encounter"
+        }) {
+          id
+        }
+
+      
+        cg998: createGame(data: {
+          title: "Combat Commander: Europe"
+        }) {
+          id
+        }
+
+      
+        cg999: createGame(data: {
+          title: "Goa"
+        }) {
+          id
+        }
+
+      }

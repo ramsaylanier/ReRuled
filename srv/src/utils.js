@@ -1,23 +1,8 @@
-const jwt = require('jsonwebtoken')
-
-function getUserId(ctx) {
-  const Authorization = ctx.request.get('Authorization')
-  if (Authorization) {
-    const token = Authorization.replace('Bearer ', '')
-    const { userId } = jwt.verify(token, process.env.APP_SECRET)
-    return userId
-  }
-
-  throw new AuthError()
+const isLoggedIn = (ctx) => {
+  if (!ctx.request.user) throw new Error(`Not logged in`)
+  return ctxUser(ctx)
 }
 
-class AuthError extends Error {
-  constructor() {
-    super('Not authorized')
-  }
-}
+const ctxUser = (ctx) => ctx.request.user
 
-module.exports = {
-  getUserId,
-  AuthError
-}
+module.exports = { isLoggedIn }

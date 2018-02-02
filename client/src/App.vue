@@ -11,7 +11,6 @@
 
 <script>
 import Drawer from '@/components/drawer/Drawer.vue'
-
 export default {
   name: 'app',
   data () {

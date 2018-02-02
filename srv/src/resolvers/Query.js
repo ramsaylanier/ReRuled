@@ -1,4 +1,9 @@
-const { getUserId, Context } = require('../utils')
+const isLoggedIn = (ctx) => {
+  if (!ctx.request.user) throw new Error(`Not logged in`)
+  return ctxUser(ctx)
+}
+
+const ctxUser = (ctx) => ctx.request.user
 
 const Query = {
   games(parent, args, ctx, info) {
@@ -6,8 +11,8 @@ const Query = {
   },
 
   me(parent, args, ctx, info) {
-    const id = getUserId(ctx)
-    return ctx.db.query.user({ where: { id } }, info)
+    const { auth0id } = isLoggedIn(ctx)
+    return ctx.db.query.user({ where: { auth0id }}, info)
   },
 }
 

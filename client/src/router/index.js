@@ -46,7 +46,11 @@ const router = new Router({
     {
       path: '/games',
       name: 'Games',
-      component: Games
+      components: {
+        header: AppHeader,
+        page: Games,
+        drawerNav: AppNav
+      }
     }
   ]
 })

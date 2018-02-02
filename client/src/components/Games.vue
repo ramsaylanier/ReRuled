@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="page">
     <h1>Games</h1>
     {{games}}
   </div>
