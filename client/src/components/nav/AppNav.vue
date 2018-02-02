@@ -19,15 +19,6 @@
       </ul>
     </nav>
   </div>
-
-  <div class="wrapper" v-else>
-    <nav class="top-nav">
-       <ul class="nav-list"> 
-        <li class="nav-list-item"><button @click="$login()">Login</button></li>
-      </ul>
-    </nav>
-  </div>
-
 </template>
 
 <script>

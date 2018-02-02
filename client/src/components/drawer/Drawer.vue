@@ -82,7 +82,7 @@ export default {
       left: 130vw;
       width: 70vw;
       height: 100%;
-      border-left: 5px solid $primary;
+      // border-left: 3px solid white;
       background-color: darken(white, 5%);
     }
   }

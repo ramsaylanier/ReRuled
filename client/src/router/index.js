@@ -13,7 +13,25 @@ import Games from '@/components/Games'
 import Profile from '@/components/pages/profile/Profile.vue'
 import Callback from '@/components/pages/Callback.vue'
 
+import { checkAuthentication } from '@/auth'
+
 Vue.use(Router)
+
+function requireAuth (to, from, next) {
+  if (checkAuthentication()) {
+    next()
+  } else {
+    next('/')
+  }
+}
+
+function redirectToProfile (to, from, next) {
+  if (checkAuthentication()) {
+    next('/profile')
+  } else {
+    next()
+  }
+}
 
 const router = new Router({
   mode: 'history',
@@ -21,15 +39,15 @@ const router = new Router({
     {
       path: '/',
       name: 'Home',
+      beforeEnter: redirectToProfile,
       components: {
-        header: AppHeader,
-        page: Home,
-        drawerNav: AppNav
+        page: Home
       }
     },
     {
       path: '/profile',
       name: 'Profile',
+      beforeEnter: requireAuth,
       components: {
         header: AppHeader,
         page: Profile,
@@ -46,6 +64,7 @@ const router = new Router({
     {
       path: '/games',
       name: 'Games',
+      beforeEnter: requireAuth,
       components: {
         header: AppHeader,
         page: Games,

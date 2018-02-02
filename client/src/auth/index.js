@@ -4,6 +4,11 @@ import EventEmitter from 'eventemitter3'
 import router from '../router'
 import store from '../store'
 
+export function checkAuthentication () {
+  let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
+  return new Date().getTime() < expiresAt
+}
+
 const AUTHENTICATE = gql`
   mutation authenticate($idToken: String!) {
     authenticate(idToken: $idToken) {
@@ -100,10 +105,7 @@ class Auth {
   }
 
   isAuthenticated () {
-    // Check whether the current time is past the
-    // access token's expiry time
-    let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
-    return new Date().getTime() < expiresAt
+    return checkAuthentication()
   }
 }
 
