@@ -3,8 +3,8 @@ const { Prisma } = require('prisma-binding')
 const resolvers = require('./resolvers')
 const { checkJwt } = require('./middleware/jwt')
 const { getUser } = require('./middleware/getUser')
-const validateAndParseIdToken = require('./helpers/validateAndParseIdToken')
-const cors = require('cors');
+const cors = require('cors')
+const seedGames = require('../seedGames')
 
 const db = new Prisma({
   typeDefs: 'src/generated/prisma.graphql',
@@ -22,13 +22,16 @@ const server = new GraphQLServer({
   }),
 })
 
-
 server.express.use(cors())
-
-// server.express.post(server.options.endpoint, checkJwt,  (err, req, res, next) => {
-//   if (err) return res.status(401).send(err.message)
-//   next()
-// })
-// server.express.post(server.options.endpoint, (req, res, next) => getUser(req, res, next, db))
-server.start(() => console.log('Server is running on http://localhost:4000'))
+server.express.post(server.options.endpoint, checkJwt,  (err, req, res, next) => {
+  if (err) {
+    return res.status(401).send(err.message)
+  }
+  next()
+})
+server.express.post(server.options.endpoint, (req, res, next) => getUser(req, res, next, db))
+server.start(() => {
+  console.log('Server is running on http://localhost:4000')
+  // seedGames()
+})
 

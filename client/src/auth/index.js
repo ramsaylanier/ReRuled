@@ -2,6 +2,7 @@ import auth0 from 'auth0-js'
 import gql from 'graphql-tag'
 import EventEmitter from 'eventemitter3'
 import router from '../router'
+import store from '../store'
 
 const AUTHENTICATE = gql`
   mutation authenticate($idToken: String!) {
@@ -21,9 +22,9 @@ class Auth {
     domain: 'squadlist.auth0.com',
     clientID: 'oiebZgJKLJOM03YjslgbVTalB8yKQvaa',
     redirectUri: 'http://localhost:8080/callback',
-    audience: 'https://squadlist.auth0.com/userinfo',
+    audience: 'https://squadlist.auth0.com/api/v2/',
     responseType: 'token id_token',
-    scope: 'openid email name picture'
+    scope: 'openid profile email user_metadata app_metadata picture'
   })
 
   constructor (cb, apolloClient) {
@@ -80,7 +81,11 @@ class Auth {
         variables: { idToken }
       })
       .then(res => {
-      }).catch(err => console.log('Sign in or create account error: ', err))
+
+      }).catch(err => {
+        console.log('Sign in or create account error: ', err)
+        this.logout()
+      })
   }
 
   logout () {
@@ -89,7 +94,7 @@ class Auth {
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
     this.authNotifier.emit('authChange', false)
-    this.userProfile = null
+    store.dispatch('setCurrentUser', {currentUser: null})
     // navigate to the home route
     router.replace({name: 'Home'})
   }

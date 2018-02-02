@@ -1,0 +1,13 @@
+mutation createGame{
+  cg1: createGame(data: {
+    title: "test"
+  }) {
+    id
+  }
+
+  cg2: createGame(data: {
+    title: "test2"
+  }) {
+    id
+  }
+}
