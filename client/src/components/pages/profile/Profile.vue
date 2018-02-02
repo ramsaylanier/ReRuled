@@ -50,12 +50,11 @@ export default {
 
   .profile{
     align-items: center;
-    padding: 1rem;
+    padding: 0rem 1rem 2rem 1rem;
     display: flex;
     justify-content: center;
     // 
     background-image: $profile-gradient;
-    padding: 2rem;
     border-bottom: 3px solid white;
   }
 
