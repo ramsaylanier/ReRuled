@@ -1,11 +1,15 @@
 # import Post from "./generated/prisma.graphql"
 
 type Query {
-  games: [Game!]!
+  games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game]!
+  rules(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule]!
+  rule(where: RuleWhereUniqueInput!): Rule
   me: User
 }
 
 type Mutation {
   authenticate(idToken: String!): User
+  createRule(ruleText: String!, game: String!, categories: [String!]): Rule
+  deleteRule(where: RuleWhereUniqueInput!): Rule
   createGame(title: String!): Game!
 }

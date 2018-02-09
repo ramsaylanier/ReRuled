@@ -1,6 +1,16 @@
 type Game {
   id: ID! @unique
   title: String!
+  users: [User!]! @relation(name: "OwnedGames")
+  rules: [Rule!]! @relation(name: "GameRules")
+}
+
+type Rule {
+  id: ID! @unique
+  game: Game!
+  ruleText: String!,
+  categories: [String!],
+  author: User! @relation(name: "CreatedRules")
 }
 
 type User {
@@ -10,4 +20,6 @@ type User {
   avatar: String
   auth0id: String! @unique
   identity: String
+  gamesOwned: [Game!]! @relation(name: "OwnedGames")
+  rulesCreated: [Rule!]! @relation(name: "CreatedRules")
 }

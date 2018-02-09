@@ -7,12 +7,16 @@ const ctxUser = (ctx) => ctx.request.user
 
 const Query = {
   games(parent, args, ctx, info) {
-    return ctx.db.query.games()
+    return ctx.db.query.games(args)
+  },
+
+  rule(parent, args, ctx, info) {
+    return ctx.db.query.rule(args)
   },
 
   me(parent, args, ctx, info) {
     const { auth0id } = isLoggedIn(ctx)
-    return ctx.db.query.user({ where: { auth0id }}, info)
+    return ctx.db.query.user({ where: { auth0id }}, info) 
   },
 }
 
