@@ -1,17 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// HEADERS
-import AppHeader from '@/components/header/AppHeader.vue'
-
 // NAVS
 import AppNav from '@/components/nav/AppNav.vue'
 
 // PAGES
 import Home from '@/components/Home'
 import Games from '@/components/Games'
+import Game from '@/components/pages/game/Game.vue'
+import GameRules from '@/components/pages/game/rules/Rules.vue'
+import GameRule from '@/components/pages/game/rules/Rule.vue'
 import Profile from '@/components/pages/profile/Profile.vue'
 import Callback from '@/components/pages/Callback.vue'
+import CreateRule from '@/components/pages/rule/CreateRule.vue'
 
 import { checkAuthentication } from '@/auth'
 
@@ -49,10 +50,42 @@ const router = new Router({
       name: 'Profile',
       beforeEnter: requireAuth,
       components: {
-        header: AppHeader,
         page: Profile,
-        drawerNav: AppNav
+        drawerContent: AppNav
       }
+    },
+    {
+      path: '/create-rule',
+      name: 'Create Rule',
+      beforeEnter: requireAuth,
+      components: {
+        page: CreateRule
+      }
+    },
+    {
+      path: '/game/:title',
+      name: 'Game',
+      beforeEnter: requireAuth,
+      components: {
+        page: Game
+      },
+      children: [
+        {
+          path: 'rules',
+          name: 'Game Rules',
+          components: {
+            page: GameRules
+          }
+        },
+        {
+          path: 'rules/:id',
+          name: 'Game Rule',
+          components: {
+            page: GameRules,
+            rule: GameRule
+          }
+        }
+      ]
     },
     {
       path: '/callback',
@@ -66,7 +99,6 @@ const router = new Router({
       name: 'Games',
       beforeEnter: requireAuth,
       components: {
-        header: AppHeader,
         page: Games,
         drawerNav: AppNav
       }
