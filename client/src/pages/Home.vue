@@ -26,7 +26,7 @@ export default {
   @import "../styles/_colors.scss";
 
   .page{
-    // background: white;
+    background-image: $page-gradient;
     padding: 0;
     display: flex;
     flex-flow: column;

@@ -5,7 +5,7 @@ import Router from 'vue-router'
 import AppNav from '@/components/nav/AppNav.vue'
 
 // PAGES
-import Home from '@/components/Home'
+import Home from '@/pages/Home'
 import Games from '@/components/Games'
 import Game from '@/pages/game/Game.vue'
 import GameRules from '@/pages/game/rules/Rules.vue'

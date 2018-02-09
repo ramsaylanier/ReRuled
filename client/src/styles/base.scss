@@ -1,7 +1,8 @@
 @import "./_colors.scss";
 
 .page{
-  background-image: $page-gradient;
+  // background-image: $page-gradient;
+  background-color: darken(white, 5%);
   min-height: 100vh;
   padding: 1rem;
 }
