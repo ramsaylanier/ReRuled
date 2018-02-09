@@ -8,7 +8,7 @@
 import { mapMutations } from 'vuex'
 import MenuToggle from '@/components/MenuToggle.vue'
 export default {
-  name: 'app-header',
+  name: 'profile-header',
   components: {
     MenuToggle
   },

@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <router-view name="header"/>
+    <icons/>
     <router-view name="page"/>
 
     <drawer>
-      <router-view name="drawerNav" :authenticated="authenticated"/>
+      <router-view name="drawerContent" :authenticated="authenticated"/>
     </drawer>
   </div>
 </template>
 
 <script>
 import Drawer from '@/components/drawer/Drawer.vue'
+import Icons from '@/components/icons/Icons.vue'
 export default {
   name: 'app',
   data () {
@@ -22,7 +23,7 @@ export default {
     }
   },
   components: {
-    Drawer
+    Drawer, Icons
   }
 }
 </script>
