@@ -1,6 +1,24 @@
 <template>
   <div class="page">
     <game-header/>
+    <nav class="game-nav">
+      <ul class="game-nav-list">
+        <li class="game-nav-list-item">
+          <router-link to="rules">
+            <svg class="icon">
+              <use xlink:href="#rule-icon" />
+            </svg>
+          </router-link>
+        </li>
+        <li class="game-nav-list-item">
+          <router-link to="rulesets">
+            <svg class="icon">
+              <use xlink:href="#ruleset-icon" />
+            </svg>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
     <div class="body" ref="page">
       <router-view name="page"/>
     </div>
@@ -74,6 +92,38 @@ export default {
 
   .page-title{
     color: $primary;
+  }
+
+  .game-nav{
+    width: 100%;
+    background-color: darken(white, 5%);
+  }
+
+  .game-nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .game-nav-list-item{
+    flex: 1;
+    text-align: center;
+    a{
+      display: block;
+      padding: 1rem;
+    }
+
+    &:not(:last-of-type){
+      border-right: 3px solid white;
+    }
+  }
+
+  .icon{
+    height: 20px;
+    width: 20px;
+    fill: $primary;
   }
   
 </style>
