@@ -78,6 +78,13 @@ const router = new Router({
           }
         },
         {
+          path: 'rulesets',
+          name: 'Game Rulesets',
+          components: {
+            page: GameRules
+          }
+        },
+        {
           path: 'rules/:id',
           name: 'Game Rule',
           components: {

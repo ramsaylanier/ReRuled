@@ -1,20 +1,15 @@
 <template>
-  <button class="button" @click="handleBack"><back-icon :fill="fill"/></button>
+  <button class="button" @click="handleClick">
+    <svg class="icon">
+      <use xlink:href="#back-icon" />
+    </svg>
+  </button>
 </template>
 
 <script>
-import BackIcon from '@/components/icons/Back.vue'
 export default {
   name: 'back-button',
-  props: ['fill'],
-  components: {
-    BackIcon
-  },
-  methods: {
-    handleBack () {
-      this.$router.go(-1)
-    }
-  }
+  props: ['handleClick']
 }
 </script>
 
@@ -26,5 +21,10 @@ export default {
     padding: 0;
     display: flex;
     align-items: center;
+  }
+
+  .icon{
+    height: 24px;
+    width: 24px;
   }
 </style>

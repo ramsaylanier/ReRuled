@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <back-button/>
+    <back-button :handleClick="handleClick"/>
     <span class="title">{{pageTitle}}</span>
   </header>
 </template>
@@ -15,6 +15,11 @@ export default {
   computed: {
     pageTitle () {
       return this.$route.name
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$router.go(-1)
     }
   }
 }
