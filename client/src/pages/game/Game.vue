@@ -111,8 +111,18 @@ export default {
     flex: 1;
     text-align: center;
     a{
-      display: block;
-      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .7rem;
+
+      &.router-link-active{
+        background-color: darken($primary, 5%);
+
+        .icon{
+          fill: white;
+        }
+      }
     }
 
     &:not(:last-of-type){

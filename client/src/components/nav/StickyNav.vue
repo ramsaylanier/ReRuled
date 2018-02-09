@@ -55,7 +55,7 @@ export default {
           },
           width: 140,
           ease: Power4.easeOut
-        }, 0)
+        }, 0.05)
       } else {
         TweenMax.to('.menu-list-item', 0.4, {
           y: 0,
@@ -103,12 +103,16 @@ export default {
     border: 0;
     background-color: white;
     z-index: 2;
-    color: $primary;
     transform: rotate(45deg);
     transition: transform 300ms ease-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: $primary;
+
+    &:active, &:focus{
+      outline: 0;
+    }
 
     .icon{
       height: 24px;
@@ -127,7 +131,7 @@ export default {
     position: absolute;
     height: 60px;
     width: 60px;
-    background-color: white;
+    background-color: $primary;
     top: 0px;
     right: 0px;
     z-index: 1;
@@ -141,7 +145,7 @@ export default {
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    color: $primary;
+    color: white;
     text-decoration: none;
 
     .icon{
@@ -154,7 +158,7 @@ export default {
 
   .icon{
     transition: opacity 0ms ease-out 0ms;
-    fill: $primary;
+    fill: white;
   }
 
   .menu-item-text{
