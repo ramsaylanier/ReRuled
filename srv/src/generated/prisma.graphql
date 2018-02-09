@@ -8,6 +8,16 @@
 type Game implements Node {
   id: ID!
   title: String!
+  users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User!]
+  rules(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule!]
+}
+
+type Rule implements Node {
+  id: ID!
+  game(where: GameWhereInput): Game!
+  ruleText: String!
+  categories: [String!]
+  author(where: UserWhereInput): User!
 }
 
 type User implements Node {
@@ -17,6 +27,8 @@ type User implements Node {
   avatar: String
   auth0id: String!
   identity: String
+  gamesOwned(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game!]
+  rulesCreated(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule!]
 }
 
 
@@ -25,6 +37,10 @@ type User implements Node {
 #
 
 type AggregateGame {
+  count: Int!
+}
+
+type AggregateRule {
   count: Int!
 }
 
@@ -44,6 +60,28 @@ type GameConnection {
 
 input GameCreateInput {
   title: String!
+  users: UserCreateManyWithoutGamesOwnedInput
+  rules: RuleCreateManyWithoutGameInput
+}
+
+input GameCreateManyWithoutUsersInput {
+  create: [GameCreateWithoutUsersInput!]
+  connect: [GameWhereUniqueInput!]
+}
+
+input GameCreateOneWithoutRulesInput {
+  create: GameCreateWithoutRulesInput
+  connect: GameWhereUniqueInput
+}
+
+input GameCreateWithoutRulesInput {
+  title: String!
+  users: UserCreateManyWithoutGamesOwnedInput
+}
+
+input GameCreateWithoutUsersInput {
+  title: String!
+  rules: RuleCreateManyWithoutGameInput
 }
 
 type GameEdge {
@@ -86,6 +124,58 @@ input GameSubscriptionWhereInput {
 
 input GameUpdateInput {
   title: String
+  users: UserUpdateManyWithoutGamesOwnedInput
+  rules: RuleUpdateManyWithoutGameInput
+}
+
+input GameUpdateManyWithoutUsersInput {
+  create: [GameCreateWithoutUsersInput!]
+  connect: [GameWhereUniqueInput!]
+  disconnect: [GameWhereUniqueInput!]
+  delete: [GameWhereUniqueInput!]
+  update: [GameUpdateWithoutUsersInput!]
+  upsert: [GameUpsertWithoutUsersInput!]
+}
+
+input GameUpdateOneWithoutRulesInput {
+  create: GameCreateWithoutRulesInput
+  connect: GameWhereUniqueInput
+  disconnect: GameWhereUniqueInput
+  delete: GameWhereUniqueInput
+  update: GameUpdateWithoutRulesInput
+  upsert: GameUpsertWithoutRulesInput
+}
+
+input GameUpdateWithoutRulesDataInput {
+  title: String
+  users: UserUpdateManyWithoutGamesOwnedInput
+}
+
+input GameUpdateWithoutRulesInput {
+  where: GameWhereUniqueInput!
+  data: GameUpdateWithoutRulesDataInput!
+}
+
+input GameUpdateWithoutUsersDataInput {
+  title: String
+  rules: RuleUpdateManyWithoutGameInput
+}
+
+input GameUpdateWithoutUsersInput {
+  where: GameWhereUniqueInput!
+  data: GameUpdateWithoutUsersDataInput!
+}
+
+input GameUpsertWithoutRulesInput {
+  where: GameWhereUniqueInput!
+  update: GameUpdateWithoutRulesDataInput!
+  create: GameCreateWithoutRulesInput!
+}
+
+input GameUpsertWithoutUsersInput {
+  where: GameWhereUniqueInput!
+  update: GameUpdateWithoutUsersDataInput!
+  create: GameCreateWithoutUsersInput!
 }
 
 input GameWhereInput {
@@ -119,6 +209,12 @@ input GameWhereInput {
   title_not_starts_with: String
   title_ends_with: String
   title_not_ends_with: String
+  users_every: UserWhereInput
+  users_some: UserWhereInput
+  users_none: UserWhereInput
+  rules_every: RuleWhereInput
+  rules_some: RuleWhereInput
+  rules_none: RuleWhereInput
 }
 
 input GameWhereUniqueInput {
@@ -129,16 +225,22 @@ scalar Long
 
 type Mutation {
   createGame(data: GameCreateInput!): Game!
+  createRule(data: RuleCreateInput!): Rule!
   createUser(data: UserCreateInput!): User!
   updateGame(data: GameUpdateInput!, where: GameWhereUniqueInput!): Game
+  updateRule(data: RuleUpdateInput!, where: RuleWhereUniqueInput!): Rule
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
   deleteGame(where: GameWhereUniqueInput!): Game
+  deleteRule(where: RuleWhereUniqueInput!): Rule
   deleteUser(where: UserWhereUniqueInput!): User
   upsertGame(where: GameWhereUniqueInput!, create: GameCreateInput!, update: GameUpdateInput!): Game!
+  upsertRule(where: RuleWhereUniqueInput!, create: RuleCreateInput!, update: RuleUpdateInput!): Rule!
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
   updateManyGames(data: GameUpdateInput!, where: GameWhereInput!): BatchPayload!
+  updateManyRules(data: RuleUpdateInput!, where: RuleWhereInput!): BatchPayload!
   updateManyUsers(data: UserUpdateInput!, where: UserWhereInput!): BatchPayload!
   deleteManyGames(where: GameWhereInput!): BatchPayload!
+  deleteManyRules(where: RuleWhereInput!): BatchPayload!
   deleteManyUsers(where: UserWhereInput!): BatchPayload!
 }
 
@@ -161,16 +263,200 @@ type PageInfo {
 
 type Query {
   games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game]!
+  rules(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule]!
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
   game(where: GameWhereUniqueInput!): Game
+  rule(where: RuleWhereUniqueInput!): Rule
   user(where: UserWhereUniqueInput!): User
   gamesConnection(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): GameConnection!
+  rulesConnection(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): RuleConnection!
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
   node(id: ID!): Node
 }
 
+type RuleConnection {
+  pageInfo: PageInfo!
+  edges: [RuleEdge]!
+  aggregate: AggregateRule!
+}
+
+input RuleCreatecategoriesInput {
+  set: [String!]
+}
+
+input RuleCreateInput {
+  ruleText: String!
+  categories: RuleCreatecategoriesInput
+  game: GameCreateOneWithoutRulesInput!
+  author: UserCreateOneWithoutRulesCreatedInput!
+}
+
+input RuleCreateManyWithoutAuthorInput {
+  create: [RuleCreateWithoutAuthorInput!]
+  connect: [RuleWhereUniqueInput!]
+}
+
+input RuleCreateManyWithoutGameInput {
+  create: [RuleCreateWithoutGameInput!]
+  connect: [RuleWhereUniqueInput!]
+}
+
+input RuleCreateWithoutAuthorInput {
+  ruleText: String!
+  categories: RuleCreatecategoriesInput
+  game: GameCreateOneWithoutRulesInput!
+}
+
+input RuleCreateWithoutGameInput {
+  ruleText: String!
+  categories: RuleCreatecategoriesInput
+  author: UserCreateOneWithoutRulesCreatedInput!
+}
+
+type RuleEdge {
+  node: Rule!
+  cursor: String!
+}
+
+enum RuleOrderByInput {
+  id_ASC
+  id_DESC
+  ruleText_ASC
+  ruleText_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type RulePreviousValues {
+  id: ID!
+  ruleText: String!
+  categories: [String!]
+}
+
+type RuleSubscriptionPayload {
+  mutation: MutationType!
+  node: Rule
+  updatedFields: [String!]
+  previousValues: RulePreviousValues
+}
+
+input RuleSubscriptionWhereInput {
+  AND: [RuleSubscriptionWhereInput!]
+  OR: [RuleSubscriptionWhereInput!]
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: RuleWhereInput
+}
+
+input RuleUpdatecategoriesInput {
+  set: [String!]
+}
+
+input RuleUpdateInput {
+  ruleText: String
+  categories: RuleUpdatecategoriesInput
+  game: GameUpdateOneWithoutRulesInput
+  author: UserUpdateOneWithoutRulesCreatedInput
+}
+
+input RuleUpdateManyWithoutAuthorInput {
+  create: [RuleCreateWithoutAuthorInput!]
+  connect: [RuleWhereUniqueInput!]
+  disconnect: [RuleWhereUniqueInput!]
+  delete: [RuleWhereUniqueInput!]
+  update: [RuleUpdateWithoutAuthorInput!]
+  upsert: [RuleUpsertWithoutAuthorInput!]
+}
+
+input RuleUpdateManyWithoutGameInput {
+  create: [RuleCreateWithoutGameInput!]
+  connect: [RuleWhereUniqueInput!]
+  disconnect: [RuleWhereUniqueInput!]
+  delete: [RuleWhereUniqueInput!]
+  update: [RuleUpdateWithoutGameInput!]
+  upsert: [RuleUpsertWithoutGameInput!]
+}
+
+input RuleUpdateWithoutAuthorDataInput {
+  ruleText: String
+  categories: RuleUpdatecategoriesInput
+  game: GameUpdateOneWithoutRulesInput
+}
+
+input RuleUpdateWithoutAuthorInput {
+  where: RuleWhereUniqueInput!
+  data: RuleUpdateWithoutAuthorDataInput!
+}
+
+input RuleUpdateWithoutGameDataInput {
+  ruleText: String
+  categories: RuleUpdatecategoriesInput
+  author: UserUpdateOneWithoutRulesCreatedInput
+}
+
+input RuleUpdateWithoutGameInput {
+  where: RuleWhereUniqueInput!
+  data: RuleUpdateWithoutGameDataInput!
+}
+
+input RuleUpsertWithoutAuthorInput {
+  where: RuleWhereUniqueInput!
+  update: RuleUpdateWithoutAuthorDataInput!
+  create: RuleCreateWithoutAuthorInput!
+}
+
+input RuleUpsertWithoutGameInput {
+  where: RuleWhereUniqueInput!
+  update: RuleUpdateWithoutGameDataInput!
+  create: RuleCreateWithoutGameInput!
+}
+
+input RuleWhereInput {
+  AND: [RuleWhereInput!]
+  OR: [RuleWhereInput!]
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  ruleText: String
+  ruleText_not: String
+  ruleText_in: [String!]
+  ruleText_not_in: [String!]
+  ruleText_lt: String
+  ruleText_lte: String
+  ruleText_gt: String
+  ruleText_gte: String
+  ruleText_contains: String
+  ruleText_not_contains: String
+  ruleText_starts_with: String
+  ruleText_not_starts_with: String
+  ruleText_ends_with: String
+  ruleText_not_ends_with: String
+  game: GameWhereInput
+  author: UserWhereInput
+}
+
+input RuleWhereUniqueInput {
+  id: ID
+}
+
 type Subscription {
   game(where: GameSubscriptionWhereInput): GameSubscriptionPayload
+  rule(where: RuleSubscriptionWhereInput): RuleSubscriptionPayload
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
 }
 
@@ -186,6 +472,36 @@ input UserCreateInput {
   avatar: String
   auth0id: String!
   identity: String
+  gamesOwned: GameCreateManyWithoutUsersInput
+  rulesCreated: RuleCreateManyWithoutAuthorInput
+}
+
+input UserCreateManyWithoutGamesOwnedInput {
+  create: [UserCreateWithoutGamesOwnedInput!]
+  connect: [UserWhereUniqueInput!]
+}
+
+input UserCreateOneWithoutRulesCreatedInput {
+  create: UserCreateWithoutRulesCreatedInput
+  connect: UserWhereUniqueInput
+}
+
+input UserCreateWithoutGamesOwnedInput {
+  email: String!
+  name: String
+  avatar: String
+  auth0id: String!
+  identity: String
+  rulesCreated: RuleCreateManyWithoutAuthorInput
+}
+
+input UserCreateWithoutRulesCreatedInput {
+  email: String!
+  name: String
+  avatar: String
+  auth0id: String!
+  identity: String
+  gamesOwned: GameCreateManyWithoutUsersInput
 }
 
 type UserEdge {
@@ -244,6 +560,66 @@ input UserUpdateInput {
   avatar: String
   auth0id: String
   identity: String
+  gamesOwned: GameUpdateManyWithoutUsersInput
+  rulesCreated: RuleUpdateManyWithoutAuthorInput
+}
+
+input UserUpdateManyWithoutGamesOwnedInput {
+  create: [UserCreateWithoutGamesOwnedInput!]
+  connect: [UserWhereUniqueInput!]
+  disconnect: [UserWhereUniqueInput!]
+  delete: [UserWhereUniqueInput!]
+  update: [UserUpdateWithoutGamesOwnedInput!]
+  upsert: [UserUpsertWithoutGamesOwnedInput!]
+}
+
+input UserUpdateOneWithoutRulesCreatedInput {
+  create: UserCreateWithoutRulesCreatedInput
+  connect: UserWhereUniqueInput
+  disconnect: UserWhereUniqueInput
+  delete: UserWhereUniqueInput
+  update: UserUpdateWithoutRulesCreatedInput
+  upsert: UserUpsertWithoutRulesCreatedInput
+}
+
+input UserUpdateWithoutGamesOwnedDataInput {
+  email: String
+  name: String
+  avatar: String
+  auth0id: String
+  identity: String
+  rulesCreated: RuleUpdateManyWithoutAuthorInput
+}
+
+input UserUpdateWithoutGamesOwnedInput {
+  where: UserWhereUniqueInput!
+  data: UserUpdateWithoutGamesOwnedDataInput!
+}
+
+input UserUpdateWithoutRulesCreatedDataInput {
+  email: String
+  name: String
+  avatar: String
+  auth0id: String
+  identity: String
+  gamesOwned: GameUpdateManyWithoutUsersInput
+}
+
+input UserUpdateWithoutRulesCreatedInput {
+  where: UserWhereUniqueInput!
+  data: UserUpdateWithoutRulesCreatedDataInput!
+}
+
+input UserUpsertWithoutGamesOwnedInput {
+  where: UserWhereUniqueInput!
+  update: UserUpdateWithoutGamesOwnedDataInput!
+  create: UserCreateWithoutGamesOwnedInput!
+}
+
+input UserUpsertWithoutRulesCreatedInput {
+  where: UserWhereUniqueInput!
+  update: UserUpdateWithoutRulesCreatedDataInput!
+  create: UserCreateWithoutRulesCreatedInput!
 }
 
 input UserWhereInput {
@@ -333,6 +709,12 @@ input UserWhereInput {
   identity_not_starts_with: String
   identity_ends_with: String
   identity_not_ends_with: String
+  gamesOwned_every: GameWhereInput
+  gamesOwned_some: GameWhereInput
+  gamesOwned_none: GameWhereInput
+  rulesCreated_every: RuleWhereInput
+  rulesCreated_some: RuleWhereInput
+  rulesCreated_none: RuleWhereInput
 }
 
 input UserWhereUniqueInput {
