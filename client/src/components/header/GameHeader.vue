@@ -29,7 +29,7 @@ export default {
   @import "../../styles/_colors.scss";
   .header{
     position: fixed;
-    background-color: $secondary;
+    background-color: $primary;
     top: 0;
     left: 0;
     width: 100%;
