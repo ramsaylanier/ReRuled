@@ -23,7 +23,7 @@
       <router-view name="page"/>
     </div>
 
-    <modal v-if="show">
+    <modal v-if="show"> 
       <router-view name="rule"/>
     </modal>
 
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../../../styles/_colors.scss";
+  @import "../../styles/_colors.scss";
 
   .body{
     transform-origin: center center;
