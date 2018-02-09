@@ -11,6 +11,15 @@ type Rule {
   ruleText: String!,
   categories: [String!],
   author: User! @relation(name: "CreatedRules")
+  rulesets: [Ruleset!]! @relation(name: "RulesInRuleset")
+}
+
+type Ruleset {
+  id: ID! @unique
+  game: Game!
+  name: String!
+  rules: [Rule!]! @relation(name: "RulesInRuleset")
+  author: User! @relation(name: "CreatedRulesets")
 }
 
 type User {
@@ -22,4 +31,5 @@ type User {
   identity: String
   gamesOwned: [Game!]! @relation(name: "OwnedGames")
   rulesCreated: [Rule!]! @relation(name: "CreatedRules")
+  rulesetsCreated: [Ruleset!]! @relation(name: "CreatedRulesets")
 }

@@ -15,7 +15,7 @@
         </router-link>
       </li>
       <li class="menu-list-item">
-        <router-link :to="{name: 'Games'}" class="link" href="">
+        <router-link :to="{name: 'Create Ruleset'}" class="link" href="">
           <span class="menu-item-text">New Set</span>
           <svg class="icon">
             <use xlink:href="#ruleset-icon" />

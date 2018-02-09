@@ -10,9 +10,12 @@ import Games from '@/components/Games'
 import Game from '@/pages/game/Game.vue'
 import GameRules from '@/pages/game/rules/Rules.vue'
 import GameRule from '@/pages/game/rules/Rule.vue'
+import GameRulesets from '@/pages/game/rulesets/Rulesets.vue'
+import GameRuleset from '@/pages/game/rulesets/Ruleset.vue'
 import Profile from '@/pages/profile/Profile.vue'
 import Callback from '@/pages/Callback.vue'
 import CreateRule from '@/pages/rule/CreateRule.vue'
+import CreateRuleset from '@/pages/ruleset/CreateRuleset.vue'
 
 import { checkAuthentication } from '@/auth'
 
@@ -63,6 +66,14 @@ const router = new Router({
       }
     },
     {
+      path: '/create-ruleset',
+      name: 'Create Ruleset',
+      beforeEnter: requireAuth,
+      components: {
+        page: CreateRuleset
+      }
+    },
+    {
       path: '/game/:title',
       name: 'Game',
       beforeEnter: requireAuth,
@@ -81,7 +92,7 @@ const router = new Router({
           path: 'rulesets',
           name: 'Game Rulesets',
           components: {
-            page: GameRules
+            page: GameRulesets
           }
         },
         {
@@ -90,6 +101,14 @@ const router = new Router({
           components: {
             page: GameRules,
             rule: GameRule
+          }
+        },
+        {
+          path: 'rulesets/:id',
+          name: 'Game Ruleset',
+          components: {
+            page: GameRulesets,
+            rule: GameRuleset
           }
         }
       ]

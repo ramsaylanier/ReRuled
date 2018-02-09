@@ -14,6 +14,10 @@ const Query = {
     return ctx.db.query.rule(args)
   },
 
+  ruleset(parent, args, ctx, info) {
+    return ctx.db.query.ruleset(args)
+  },
+
   me(parent, args, ctx, info) {
     const { auth0id } = isLoggedIn(ctx)
     return ctx.db.query.user({ where: { auth0id }}, info) 
