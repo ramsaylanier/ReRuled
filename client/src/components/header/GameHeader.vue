@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <back-button fill="white"/>
+    <back-button :handleClick="handleClick"/>
     <span class="title">{{pageTitle}}</span>
   </header>
 </template>
@@ -15,6 +15,11 @@ export default {
   computed: {
     pageTitle () {
       return this.$route.params.title
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$router.push('/profile')
     }
   }
 }
@@ -36,13 +41,9 @@ export default {
     justify-content: space-between;
     padding: 0 1rem;
   }
-  
+
   .button{
-    svg{
-      path{
-        fill: white;
-      }
-    }
+    fill: white;
   }
 
   .title{
