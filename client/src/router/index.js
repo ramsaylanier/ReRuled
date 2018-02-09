@@ -7,12 +7,12 @@ import AppNav from '@/components/nav/AppNav.vue'
 // PAGES
 import Home from '@/components/Home'
 import Games from '@/components/Games'
-import Game from '@/components/pages/game/Game.vue'
-import GameRules from '@/components/pages/game/rules/Rules.vue'
-import GameRule from '@/components/pages/game/rules/Rule.vue'
-import Profile from '@/components/pages/profile/Profile.vue'
-import Callback from '@/components/pages/Callback.vue'
-import CreateRule from '@/components/pages/rule/CreateRule.vue'
+import Game from '@/pages/game/Game.vue'
+import GameRules from '@/pages/game/rules/Rules.vue'
+import GameRule from '@/pages/game/rules/Rule.vue'
+import Profile from '@/pages/profile/Profile.vue'
+import Callback from '@/pages/Callback.vue'
+import CreateRule from '@/pages/rule/CreateRule.vue'
 
 import { checkAuthentication } from '@/auth'
 

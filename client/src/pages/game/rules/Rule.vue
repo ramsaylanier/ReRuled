@@ -101,7 +101,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../../../../styles/_colors.scss";
+  @import "../../../styles/_colors.scss";
   .rule{
 
   }
