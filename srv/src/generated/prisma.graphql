@@ -18,6 +18,15 @@ type Rule implements Node {
   ruleText: String!
   categories: [String!]
   author(where: UserWhereInput): User!
+  rulesets(where: RulesetWhereInput, orderBy: RulesetOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Ruleset!]
+}
+
+type Ruleset implements Node {
+  id: ID!
+  game(where: GameWhereInput): Game!
+  name: String!
+  rules(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule!]
+  author(where: UserWhereInput): User!
 }
 
 type User implements Node {
@@ -29,6 +38,7 @@ type User implements Node {
   identity: String
   gamesOwned(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game!]
   rulesCreated(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule!]
+  rulesetsCreated(where: RulesetWhereInput, orderBy: RulesetOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Ruleset!]
 }
 
 
@@ -41,6 +51,10 @@ type AggregateGame {
 }
 
 type AggregateRule {
+  count: Int!
+}
+
+type AggregateRuleset {
   count: Int!
 }
 
@@ -67,6 +81,11 @@ input GameCreateInput {
 input GameCreateManyWithoutUsersInput {
   create: [GameCreateWithoutUsersInput!]
   connect: [GameWhereUniqueInput!]
+}
+
+input GameCreateOneInput {
+  create: GameCreateInput
+  connect: GameWhereUniqueInput
 }
 
 input GameCreateOneWithoutRulesInput {
@@ -135,6 +154,13 @@ input GameUpdateManyWithoutUsersInput {
   delete: [GameWhereUniqueInput!]
   update: [GameUpdateWithoutUsersInput!]
   upsert: [GameUpsertWithoutUsersInput!]
+}
+
+input GameUpdateOneInput {
+  create: GameCreateInput
+  connect: GameWhereUniqueInput
+  disconnect: GameWhereUniqueInput
+  delete: GameWhereUniqueInput
 }
 
 input GameUpdateOneWithoutRulesInput {
@@ -226,21 +252,27 @@ scalar Long
 type Mutation {
   createGame(data: GameCreateInput!): Game!
   createRule(data: RuleCreateInput!): Rule!
+  createRuleset(data: RulesetCreateInput!): Ruleset!
   createUser(data: UserCreateInput!): User!
   updateGame(data: GameUpdateInput!, where: GameWhereUniqueInput!): Game
   updateRule(data: RuleUpdateInput!, where: RuleWhereUniqueInput!): Rule
+  updateRuleset(data: RulesetUpdateInput!, where: RulesetWhereUniqueInput!): Ruleset
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
   deleteGame(where: GameWhereUniqueInput!): Game
   deleteRule(where: RuleWhereUniqueInput!): Rule
+  deleteRuleset(where: RulesetWhereUniqueInput!): Ruleset
   deleteUser(where: UserWhereUniqueInput!): User
   upsertGame(where: GameWhereUniqueInput!, create: GameCreateInput!, update: GameUpdateInput!): Game!
   upsertRule(where: RuleWhereUniqueInput!, create: RuleCreateInput!, update: RuleUpdateInput!): Rule!
+  upsertRuleset(where: RulesetWhereUniqueInput!, create: RulesetCreateInput!, update: RulesetUpdateInput!): Ruleset!
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
   updateManyGames(data: GameUpdateInput!, where: GameWhereInput!): BatchPayload!
   updateManyRules(data: RuleUpdateInput!, where: RuleWhereInput!): BatchPayload!
+  updateManyRulesets(data: RulesetUpdateInput!, where: RulesetWhereInput!): BatchPayload!
   updateManyUsers(data: UserUpdateInput!, where: UserWhereInput!): BatchPayload!
   deleteManyGames(where: GameWhereInput!): BatchPayload!
   deleteManyRules(where: RuleWhereInput!): BatchPayload!
+  deleteManyRulesets(where: RulesetWhereInput!): BatchPayload!
   deleteManyUsers(where: UserWhereInput!): BatchPayload!
 }
 
@@ -264,12 +296,15 @@ type PageInfo {
 type Query {
   games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game]!
   rules(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Rule]!
+  rulesets(where: RulesetWhereInput, orderBy: RulesetOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Ruleset]!
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
   game(where: GameWhereUniqueInput!): Game
   rule(where: RuleWhereUniqueInput!): Rule
+  ruleset(where: RulesetWhereUniqueInput!): Ruleset
   user(where: UserWhereUniqueInput!): User
   gamesConnection(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): GameConnection!
   rulesConnection(where: RuleWhereInput, orderBy: RuleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): RuleConnection!
+  rulesetsConnection(where: RulesetWhereInput, orderBy: RulesetOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): RulesetConnection!
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
   node(id: ID!): Node
 }
@@ -289,6 +324,7 @@ input RuleCreateInput {
   categories: RuleCreatecategoriesInput
   game: GameCreateOneWithoutRulesInput!
   author: UserCreateOneWithoutRulesCreatedInput!
+  rulesets: RulesetCreateManyWithoutRulesInput
 }
 
 input RuleCreateManyWithoutAuthorInput {
@@ -301,15 +337,29 @@ input RuleCreateManyWithoutGameInput {
   connect: [RuleWhereUniqueInput!]
 }
 
+input RuleCreateManyWithoutRulesetsInput {
+  create: [RuleCreateWithoutRulesetsInput!]
+  connect: [RuleWhereUniqueInput!]
+}
+
 input RuleCreateWithoutAuthorInput {
   ruleText: String!
   categories: RuleCreatecategoriesInput
   game: GameCreateOneWithoutRulesInput!
+  rulesets: RulesetCreateManyWithoutRulesInput
 }
 
 input RuleCreateWithoutGameInput {
   ruleText: String!
   categories: RuleCreatecategoriesInput
+  author: UserCreateOneWithoutRulesCreatedInput!
+  rulesets: RulesetCreateManyWithoutRulesInput
+}
+
+input RuleCreateWithoutRulesetsInput {
+  ruleText: String!
+  categories: RuleCreatecategoriesInput
+  game: GameCreateOneWithoutRulesInput!
   author: UserCreateOneWithoutRulesCreatedInput!
 }
 
@@ -333,6 +383,180 @@ type RulePreviousValues {
   id: ID!
   ruleText: String!
   categories: [String!]
+}
+
+type RulesetConnection {
+  pageInfo: PageInfo!
+  edges: [RulesetEdge]!
+  aggregate: AggregateRuleset!
+}
+
+input RulesetCreateInput {
+  name: String!
+  game: GameCreateOneInput!
+  rules: RuleCreateManyWithoutRulesetsInput
+  author: UserCreateOneWithoutRulesetsCreatedInput!
+}
+
+input RulesetCreateManyWithoutAuthorInput {
+  create: [RulesetCreateWithoutAuthorInput!]
+  connect: [RulesetWhereUniqueInput!]
+}
+
+input RulesetCreateManyWithoutRulesInput {
+  create: [RulesetCreateWithoutRulesInput!]
+  connect: [RulesetWhereUniqueInput!]
+}
+
+input RulesetCreateWithoutAuthorInput {
+  name: String!
+  game: GameCreateOneInput!
+  rules: RuleCreateManyWithoutRulesetsInput
+}
+
+input RulesetCreateWithoutRulesInput {
+  name: String!
+  game: GameCreateOneInput!
+  author: UserCreateOneWithoutRulesetsCreatedInput!
+}
+
+type RulesetEdge {
+  node: Ruleset!
+  cursor: String!
+}
+
+enum RulesetOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type RulesetPreviousValues {
+  id: ID!
+  name: String!
+}
+
+type RulesetSubscriptionPayload {
+  mutation: MutationType!
+  node: Ruleset
+  updatedFields: [String!]
+  previousValues: RulesetPreviousValues
+}
+
+input RulesetSubscriptionWhereInput {
+  AND: [RulesetSubscriptionWhereInput!]
+  OR: [RulesetSubscriptionWhereInput!]
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: RulesetWhereInput
+}
+
+input RulesetUpdateInput {
+  name: String
+  game: GameUpdateOneInput
+  rules: RuleUpdateManyWithoutRulesetsInput
+  author: UserUpdateOneWithoutRulesetsCreatedInput
+}
+
+input RulesetUpdateManyWithoutAuthorInput {
+  create: [RulesetCreateWithoutAuthorInput!]
+  connect: [RulesetWhereUniqueInput!]
+  disconnect: [RulesetWhereUniqueInput!]
+  delete: [RulesetWhereUniqueInput!]
+  update: [RulesetUpdateWithoutAuthorInput!]
+  upsert: [RulesetUpsertWithoutAuthorInput!]
+}
+
+input RulesetUpdateManyWithoutRulesInput {
+  create: [RulesetCreateWithoutRulesInput!]
+  connect: [RulesetWhereUniqueInput!]
+  disconnect: [RulesetWhereUniqueInput!]
+  delete: [RulesetWhereUniqueInput!]
+  update: [RulesetUpdateWithoutRulesInput!]
+  upsert: [RulesetUpsertWithoutRulesInput!]
+}
+
+input RulesetUpdateWithoutAuthorDataInput {
+  name: String
+  game: GameUpdateOneInput
+  rules: RuleUpdateManyWithoutRulesetsInput
+}
+
+input RulesetUpdateWithoutAuthorInput {
+  where: RulesetWhereUniqueInput!
+  data: RulesetUpdateWithoutAuthorDataInput!
+}
+
+input RulesetUpdateWithoutRulesDataInput {
+  name: String
+  game: GameUpdateOneInput
+  author: UserUpdateOneWithoutRulesetsCreatedInput
+}
+
+input RulesetUpdateWithoutRulesInput {
+  where: RulesetWhereUniqueInput!
+  data: RulesetUpdateWithoutRulesDataInput!
+}
+
+input RulesetUpsertWithoutAuthorInput {
+  where: RulesetWhereUniqueInput!
+  update: RulesetUpdateWithoutAuthorDataInput!
+  create: RulesetCreateWithoutAuthorInput!
+}
+
+input RulesetUpsertWithoutRulesInput {
+  where: RulesetWhereUniqueInput!
+  update: RulesetUpdateWithoutRulesDataInput!
+  create: RulesetCreateWithoutRulesInput!
+}
+
+input RulesetWhereInput {
+  AND: [RulesetWhereInput!]
+  OR: [RulesetWhereInput!]
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  game: GameWhereInput
+  rules_every: RuleWhereInput
+  rules_some: RuleWhereInput
+  rules_none: RuleWhereInput
+  author: UserWhereInput
+}
+
+input RulesetWhereUniqueInput {
+  id: ID
 }
 
 type RuleSubscriptionPayload {
@@ -361,6 +585,7 @@ input RuleUpdateInput {
   categories: RuleUpdatecategoriesInput
   game: GameUpdateOneWithoutRulesInput
   author: UserUpdateOneWithoutRulesCreatedInput
+  rulesets: RulesetUpdateManyWithoutRulesInput
 }
 
 input RuleUpdateManyWithoutAuthorInput {
@@ -381,10 +606,20 @@ input RuleUpdateManyWithoutGameInput {
   upsert: [RuleUpsertWithoutGameInput!]
 }
 
+input RuleUpdateManyWithoutRulesetsInput {
+  create: [RuleCreateWithoutRulesetsInput!]
+  connect: [RuleWhereUniqueInput!]
+  disconnect: [RuleWhereUniqueInput!]
+  delete: [RuleWhereUniqueInput!]
+  update: [RuleUpdateWithoutRulesetsInput!]
+  upsert: [RuleUpsertWithoutRulesetsInput!]
+}
+
 input RuleUpdateWithoutAuthorDataInput {
   ruleText: String
   categories: RuleUpdatecategoriesInput
   game: GameUpdateOneWithoutRulesInput
+  rulesets: RulesetUpdateManyWithoutRulesInput
 }
 
 input RuleUpdateWithoutAuthorInput {
@@ -396,11 +631,24 @@ input RuleUpdateWithoutGameDataInput {
   ruleText: String
   categories: RuleUpdatecategoriesInput
   author: UserUpdateOneWithoutRulesCreatedInput
+  rulesets: RulesetUpdateManyWithoutRulesInput
 }
 
 input RuleUpdateWithoutGameInput {
   where: RuleWhereUniqueInput!
   data: RuleUpdateWithoutGameDataInput!
+}
+
+input RuleUpdateWithoutRulesetsDataInput {
+  ruleText: String
+  categories: RuleUpdatecategoriesInput
+  game: GameUpdateOneWithoutRulesInput
+  author: UserUpdateOneWithoutRulesCreatedInput
+}
+
+input RuleUpdateWithoutRulesetsInput {
+  where: RuleWhereUniqueInput!
+  data: RuleUpdateWithoutRulesetsDataInput!
 }
 
 input RuleUpsertWithoutAuthorInput {
@@ -413,6 +661,12 @@ input RuleUpsertWithoutGameInput {
   where: RuleWhereUniqueInput!
   update: RuleUpdateWithoutGameDataInput!
   create: RuleCreateWithoutGameInput!
+}
+
+input RuleUpsertWithoutRulesetsInput {
+  where: RuleWhereUniqueInput!
+  update: RuleUpdateWithoutRulesetsDataInput!
+  create: RuleCreateWithoutRulesetsInput!
 }
 
 input RuleWhereInput {
@@ -448,6 +702,9 @@ input RuleWhereInput {
   ruleText_not_ends_with: String
   game: GameWhereInput
   author: UserWhereInput
+  rulesets_every: RulesetWhereInput
+  rulesets_some: RulesetWhereInput
+  rulesets_none: RulesetWhereInput
 }
 
 input RuleWhereUniqueInput {
@@ -457,6 +714,7 @@ input RuleWhereUniqueInput {
 type Subscription {
   game(where: GameSubscriptionWhereInput): GameSubscriptionPayload
   rule(where: RuleSubscriptionWhereInput): RuleSubscriptionPayload
+  ruleset(where: RulesetSubscriptionWhereInput): RulesetSubscriptionPayload
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
 }
 
@@ -474,6 +732,7 @@ input UserCreateInput {
   identity: String
   gamesOwned: GameCreateManyWithoutUsersInput
   rulesCreated: RuleCreateManyWithoutAuthorInput
+  rulesetsCreated: RulesetCreateManyWithoutAuthorInput
 }
 
 input UserCreateManyWithoutGamesOwnedInput {
@@ -486,6 +745,11 @@ input UserCreateOneWithoutRulesCreatedInput {
   connect: UserWhereUniqueInput
 }
 
+input UserCreateOneWithoutRulesetsCreatedInput {
+  create: UserCreateWithoutRulesetsCreatedInput
+  connect: UserWhereUniqueInput
+}
+
 input UserCreateWithoutGamesOwnedInput {
   email: String!
   name: String
@@ -493,6 +757,7 @@ input UserCreateWithoutGamesOwnedInput {
   auth0id: String!
   identity: String
   rulesCreated: RuleCreateManyWithoutAuthorInput
+  rulesetsCreated: RulesetCreateManyWithoutAuthorInput
 }
 
 input UserCreateWithoutRulesCreatedInput {
@@ -502,6 +767,17 @@ input UserCreateWithoutRulesCreatedInput {
   auth0id: String!
   identity: String
   gamesOwned: GameCreateManyWithoutUsersInput
+  rulesetsCreated: RulesetCreateManyWithoutAuthorInput
+}
+
+input UserCreateWithoutRulesetsCreatedInput {
+  email: String!
+  name: String
+  avatar: String
+  auth0id: String!
+  identity: String
+  gamesOwned: GameCreateManyWithoutUsersInput
+  rulesCreated: RuleCreateManyWithoutAuthorInput
 }
 
 type UserEdge {
@@ -562,6 +838,7 @@ input UserUpdateInput {
   identity: String
   gamesOwned: GameUpdateManyWithoutUsersInput
   rulesCreated: RuleUpdateManyWithoutAuthorInput
+  rulesetsCreated: RulesetUpdateManyWithoutAuthorInput
 }
 
 input UserUpdateManyWithoutGamesOwnedInput {
@@ -582,6 +859,15 @@ input UserUpdateOneWithoutRulesCreatedInput {
   upsert: UserUpsertWithoutRulesCreatedInput
 }
 
+input UserUpdateOneWithoutRulesetsCreatedInput {
+  create: UserCreateWithoutRulesetsCreatedInput
+  connect: UserWhereUniqueInput
+  disconnect: UserWhereUniqueInput
+  delete: UserWhereUniqueInput
+  update: UserUpdateWithoutRulesetsCreatedInput
+  upsert: UserUpsertWithoutRulesetsCreatedInput
+}
+
 input UserUpdateWithoutGamesOwnedDataInput {
   email: String
   name: String
@@ -589,6 +875,7 @@ input UserUpdateWithoutGamesOwnedDataInput {
   auth0id: String
   identity: String
   rulesCreated: RuleUpdateManyWithoutAuthorInput
+  rulesetsCreated: RulesetUpdateManyWithoutAuthorInput
 }
 
 input UserUpdateWithoutGamesOwnedInput {
@@ -603,11 +890,27 @@ input UserUpdateWithoutRulesCreatedDataInput {
   auth0id: String
   identity: String
   gamesOwned: GameUpdateManyWithoutUsersInput
+  rulesetsCreated: RulesetUpdateManyWithoutAuthorInput
 }
 
 input UserUpdateWithoutRulesCreatedInput {
   where: UserWhereUniqueInput!
   data: UserUpdateWithoutRulesCreatedDataInput!
+}
+
+input UserUpdateWithoutRulesetsCreatedDataInput {
+  email: String
+  name: String
+  avatar: String
+  auth0id: String
+  identity: String
+  gamesOwned: GameUpdateManyWithoutUsersInput
+  rulesCreated: RuleUpdateManyWithoutAuthorInput
+}
+
+input UserUpdateWithoutRulesetsCreatedInput {
+  where: UserWhereUniqueInput!
+  data: UserUpdateWithoutRulesetsCreatedDataInput!
 }
 
 input UserUpsertWithoutGamesOwnedInput {
@@ -620,6 +923,12 @@ input UserUpsertWithoutRulesCreatedInput {
   where: UserWhereUniqueInput!
   update: UserUpdateWithoutRulesCreatedDataInput!
   create: UserCreateWithoutRulesCreatedInput!
+}
+
+input UserUpsertWithoutRulesetsCreatedInput {
+  where: UserWhereUniqueInput!
+  update: UserUpdateWithoutRulesetsCreatedDataInput!
+  create: UserCreateWithoutRulesetsCreatedInput!
 }
 
 input UserWhereInput {
@@ -715,6 +1024,9 @@ input UserWhereInput {
   rulesCreated_every: RuleWhereInput
   rulesCreated_some: RuleWhereInput
   rulesCreated_none: RuleWhereInput
+  rulesetsCreated_every: RulesetWhereInput
+  rulesetsCreated_some: RulesetWhereInput
+  rulesetsCreated_none: RulesetWhereInput
 }
 
 input UserWhereUniqueInput {
