@@ -24,7 +24,7 @@
     </div>
 
     <modal v-if="show"> 
-      <router-view name="rule"/>
+      <router-view name="modal"/>
     </modal>
 
     <sticky-nav/>
@@ -43,14 +43,13 @@ export default {
   },
   data () {
     return {
-      show: this.$route.name === 'Game Rule'
+      show: this.$route.meta.showModal
     }
   },
   watch: {
-    '$route.name' (val) {
-      this.show = val === 'Game Rule'
-
-      if (val === 'Game Rule') {
+    '$route.meta' ({showModal}) {
+      this.show = showModal
+      if (showModal) {
         this.leave()
       } else {
         this.enter()
@@ -60,18 +59,15 @@ export default {
   methods: {
     enter () {
       TweenMax.fromTo(this.$refs.page, 0.5, {
-        alpha: 0,
-        scale: 0.95
+        alpha: 0
       }, {
         alpha: 1,
-        scale: 1,
         ease: Power4.easeOut
       })
     },
     leave () {
       TweenMax.to(this.$refs.page, 0.5, {
         alpha: 0,
-        scale: 0.95,
         ease: Power4.easeOut
       })
     }

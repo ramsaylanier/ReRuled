@@ -1,8 +1,8 @@
 <template>
-  <div class="rule">
-    <template v-if="rule">
+  <div class="ruleset">
+    <template v-if="ruleset">
       <div class="rule-header">
-        <p class="text">{{rule.ruleText}}</p>
+        <p class="text">{{ruleset.name}}</p>
       </div>
 
       <ul class="menu">
@@ -17,19 +17,15 @@
 
 <script>
 import gql from 'graphql-tag'
-import DeleteIcon from '@/components/icons/Delete'
 export default {
-  name: 'game-rule',
-  components: {
-    DeleteIcon
-  },
+  name: 'game-ruleset',
   apollo: {
-    rule: {
+    ruleset: {
       query: gql`
-        query Rule($id: ID!){
-          rule(where: {id: $id}){
+        query Ruleset($id: ID!){
+          ruleset(where: {id: $id}){
             id
-            ruleText
+            name
           }
         }
       `,
@@ -42,7 +38,6 @@ export default {
   },
   methods: {
     handleDelete () {
-      console.log('hi')
       const confirmed = window.confirm('Do You Really Want To Delete This Rule?')
 
       if (confirmed) {
@@ -102,9 +97,6 @@ export default {
 
 <style scoped lang="scss">
   @import "../../../styles/_colors.scss";
-  .rule{
-
-  }
 
   .text{
     margin: 0;
