@@ -1,4 +1,4 @@
-# import Post from "./generated/prisma.graphql"
+# import Game from "./generated/prisma.graphql"
 
 type Query {
   games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game]!
@@ -15,5 +15,6 @@ type Mutation {
   deleteRule(where: RuleWhereUniqueInput!): Rule
   createRuleset(name: String!, game: String!): Ruleset
   deleteRuleset(where: RulesetWhereUniqueInput!): Ruleset
+  addRuleToRuleset(ruleId: ID!, rulesetId: ID!): Ruleset
   createGame(title: String!): Game!
 }

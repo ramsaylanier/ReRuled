@@ -70,8 +70,6 @@ export default {
 
   .nav-list-item{
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
     a{
       color: $primary;
       text-decoration: none;
@@ -94,6 +92,7 @@ export default {
       appearance: none;
       border: 0;
       color: $primary;
+      background-color: transparent;
     }
   }
 

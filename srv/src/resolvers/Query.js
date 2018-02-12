@@ -7,15 +7,15 @@ const ctxUser = (ctx) => ctx.request.user
 
 const Query = {
   games(parent, args, ctx, info) {
-    return ctx.db.query.games(args)
+    return ctx.db.query.games(args, info)
   },
 
   rule(parent, args, ctx, info) {
-    return ctx.db.query.rule(args)
+    return ctx.db.query.rule(args, info)
   },
 
   ruleset(parent, args, ctx, info) {
-    return ctx.db.query.ruleset(args)
+    return ctx.db.query.ruleset(args, info)
   },
 
   me(parent, args, ctx, info) {
