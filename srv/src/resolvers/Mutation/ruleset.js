@@ -35,6 +35,24 @@ const ruleset = {
     }
 
     return ctx.db.mutation.deleteRuleset(args)
+  },
+
+  async addRuleToRuleset(parent, {ruleId, rulesetId}, ctx, info) {
+    const {id} = isLoggedIn(ctx)
+    if (!id) {
+      throw new Error('You must be authenticated to delete a rule.')
+    }
+
+    return ctx.db.mutation.updateRuleset({
+      where: {id: rulesetId},
+      data: {
+        rules: {
+          connect: {
+            id: ruleId
+          }
+        }
+      }
+    })
   }
 }
 

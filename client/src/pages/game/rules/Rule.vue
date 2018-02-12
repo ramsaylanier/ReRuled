@@ -3,25 +3,64 @@
     <template v-if="rule">
       <div class="rule-header">
         <p class="text">{{rule.ruleText}}</p>
+
+        <list>
+          In: 
+          <li v-for="ruleset in rule.rulesets" :key="ruleset.id">
+            {{ruleset.name}}
+          </li>
+        </list>
       </div>
 
       <ul class="menu">
-        <li class="menu-item"><button class="button" @click="handleDelete"><delete-icon/></button></li>
-        <li class="menu-item"><button class="button"><delete-icon/></button></li>
-        <li class="menu-item"><button class="button"><delete-icon/></button></li>
-        <li class="menu-item"><button class="button"><delete-icon/></button></li>
+        <li class="menu-item">
+          <button class="button" @click="handleDelete">
+            <svg class="icon">
+              <use xlink:href="#delete-icon" />
+            </svg>
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="button" @click="togglePopover">
+            <svg class="icon">
+              <use xlink:href="#add-to-ruleset-icon" />
+            </svg>
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="button" @click="togglePopover">
+            <svg class="icon">
+              <use xlink:href="#remove-from-ruleset-icon" />
+            </svg>
+          </button>
+        </li>
       </ul>
     </template>
+
+
+    <popover v-if="showPopover" :handleClose="() => showPopover = false">
+      <ul>
+        <li v-for="ruleset in me.rulesetsCreated" :key="ruleset.id" @click="() => handleAddToRuleset(ruleset)">
+          {{ruleset.name}}
+        </li>
+      </ul>
+    </popover>
   </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
-import DeleteIcon from '@/components/icons/Delete'
+import Popover from '@/components/popover/Popover'
+import List from '@/components/list/List'
 export default {
   name: 'game-rule',
   components: {
-    DeleteIcon
+    Popover, List
+  },
+  data () {
+    return {
+      showPopover: false
+    }
   },
   apollo: {
     rule: {
@@ -30,6 +69,9 @@ export default {
           rule(where: {id: $id}){
             id
             ruleText
+            rulesets{
+              name
+            }
           }
         }
       `,
@@ -38,16 +80,55 @@ export default {
           id: this.$route.params.id
         }
       }
+    },
+    me: {
+      query: gql`
+        query Rulesets($game: String!){
+          me{
+            rulesetsCreated(where: {game: {title: $game}}){
+              id
+              name
+            }
+          }
+        }
+      `,
+      variables () {
+        return {
+          game: this.$route.params.title
+        }
+      }
     }
   },
   methods: {
+    togglePopover () {
+      this.showPopover = !this.showPopover
+    },
     handleDelete () {
-      console.log('hi')
       const confirmed = window.confirm('Do You Really Want To Delete This Rule?')
 
       if (confirmed) {
         this.deleteRule()
       }
+    },
+    handleAddToRuleset (ruleset) {
+      const rulesetId = ruleset.id
+      const ruleId = this.rule.id
+
+      this.$apollo.mutate({
+        mutation: gql`
+          mutation AddRuleToRuleset($rulesetId: ID!, $ruleId: ID!){
+            addRuleToRuleset(rulesetId: $rulesetId, ruleId: $ruleId){
+              id
+            }
+          }
+        `,
+        variables: {
+          rulesetId: rulesetId,
+          ruleId: ruleId
+        }
+      }).then(r => {
+        this.showPopover = false
+      })
     },
     deleteRule () {
       const {id, title} = this.$route.params
@@ -102,19 +183,15 @@ export default {
 
 <style scoped lang="scss">
   @import "../../../styles/_colors.scss";
-  .rule{
-
-  }
-
   .text{
     margin: 0;
     color: black;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.3;
   }
 
   .rule-header{
-    padding: 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     background-color: white;
   }
 
@@ -151,8 +228,8 @@ export default {
     justify-content: center;
 
     svg{
-      height: 30px;
-      width: 30px;
+      height: 24px;
+      width: 24px;
     }
   }
 </style>

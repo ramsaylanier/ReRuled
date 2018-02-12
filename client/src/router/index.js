@@ -86,6 +86,9 @@ const router = new Router({
           name: 'Game Rules',
           components: {
             page: GameRules
+          },
+          meta: {
+            showModal: false
           }
         },
         {
@@ -93,6 +96,9 @@ const router = new Router({
           name: 'Game Rulesets',
           components: {
             page: GameRulesets
+          },
+          meta: {
+            showModal: false
           }
         },
         {
@@ -100,7 +106,10 @@ const router = new Router({
           name: 'Game Rule',
           components: {
             page: GameRules,
-            rule: GameRule
+            modal: GameRule
+          },
+          meta: {
+            showModal: true
           }
         },
         {
@@ -108,7 +117,10 @@ const router = new Router({
           name: 'Game Ruleset',
           components: {
             page: GameRulesets,
-            rule: GameRuleset
+            modal: GameRuleset
+          },
+          meta: {
+            showModal: true
           }
         }
       ]

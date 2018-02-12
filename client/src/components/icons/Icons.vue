@@ -1,6 +1,14 @@
 <template>
   <svg style="display: none">
 
+    <symbol id="close-icon" viewBox="0 0 24 24">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </symbol>
+
+    <symbol id="delete-icon" viewBox="0 0 24 24">
+      <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+    </symbol>
+
     <symbol id="back-icon" viewBox="0 0 24 24">
       <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
     </symbol>
@@ -15,6 +23,14 @@
 
      <symbol id="ruleset-icon" viewBox="0 0 24 24">
       <path d="M3,6V22H21V24H3A2,2 0 0,1 1,22V6H3M16,9H21.5L16,3.5V9M7,2H17L23,8V18A2,2 0 0,1 21,20H7C5.89,20 5,19.1 5,18V4A2,2 0 0,1 7,2M7,4V18H21V11H14V4H7Z"/>
+    </symbol>
+
+    <symbol id="add-to-ruleset-icon" viewBox="0 0 24 24">
+      <path d="M2,16H10V14H2M18,14V10H16V14H12V16H16V20H18V16H22V14M14,6H2V8H14M14,10H2V12H14V10Z"/>
+    </symbol>
+
+    <symbol id="remove-from-ruleset-icon" viewBox="0 0 24 24">
+      <path d="M2,16H10V14H2M12,14V16H22V14M14,6H2V8H14M14,10H2V12H14V10Z"/>
     </symbol>
   </svg>
 </template>
