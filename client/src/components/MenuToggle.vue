@@ -1,5 +1,5 @@
 <template>
-  <a :class="['button', drawerIsOpen ? 'isOpen' : '']" @click="handleClick">
+  <a :class="['button', drawer.isOpen ? 'isOpen' : '']" @click="toggleDrawer">
     <span class="bar bar-1"></span>
     <span class="bar bar-2"></span>
     <span class="bar bar-3"></span>
@@ -7,16 +7,18 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import DrawerQuery from '@/graphql/client/drawer.gql'
+import ToggleDrawerMutation from '@/graphql/client/toggleDrawer.gql'
 export default {
   name: 'menu-toggle',
-  computed: {
-    ...mapGetters(['drawerIsOpen'])
+  apollo: {
+    drawer: DrawerQuery
   },
   methods: {
-    ...mapActions(['toggleDrawer']),
-    handleClick: function (e) {
-      this.toggleDrawer()
+    toggleDrawer () {
+      this.$apollo.mutate({
+        mutation: ToggleDrawerMutation
+      })
     }
   }
 }
