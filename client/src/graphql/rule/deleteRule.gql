@@ -1,0 +1,5 @@
+mutation DeleteRule($id: ID!){
+  deleteRule(where: {id: $id}){
+    id
+  }
+}
