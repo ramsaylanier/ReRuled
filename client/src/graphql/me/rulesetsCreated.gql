@@ -1,0 +1,8 @@
+query RulesetsCreated($game: String!){
+  me{
+    rulesetsCreated(where: {game: {title: $game}}){
+      id
+      name
+    }
+  }
+}

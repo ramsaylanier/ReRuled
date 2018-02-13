@@ -1,0 +1,9 @@
+query Rule($id: ID!){
+  rule(where: {id: $id}){
+    id
+    ruleText
+    rulesets{
+      name
+    }
+  }
+}

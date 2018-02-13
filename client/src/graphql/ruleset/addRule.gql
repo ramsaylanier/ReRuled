@@ -1,0 +1,5 @@
+mutation AddRuleToRuleset($rulesetId: ID!, $ruleId: ID!){
+  addRuleToRuleset(rulesetId: $rulesetId, ruleId: $ruleId){
+    id
+  }
+}
