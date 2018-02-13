@@ -1,5 +1,5 @@
 <template>
-  <div :class="['drawer', drawerIsOpen ? 'isOpen' : '']" @click="handleDrawerClick">
+  <div :class="['drawer', drawer.isOpen ? 'isOpen' : '']" @click="handleDrawerClick">
     <div class="overlay"></div>
     <div class="inner" ref="inner">
       <slot></slot>
@@ -8,17 +8,15 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from 'vuex'
 import {TweenMax, Power4} from 'gsap'
+import DrawerQuery from '@/graphql/client/drawer.gql'
+import ToggleDrawerMutation from '@/graphql/client/toggleDrawer.gql'
 export default {
   name: 'drawer',
-  computed: {
-    ...mapGetters([
-      'drawerIsOpen'
-    ])
+  apollo: {
+    drawer: DrawerQuery
   },
   methods: {
-    ...mapActions(['toggleDrawer']),
     animateDrawerIn () {
       TweenMax.set(this.$el, {x: -this.$el.offsetWidth})
       TweenMax.to(this.$refs.inner, 0.35, {
@@ -36,14 +34,12 @@ export default {
       })
     },
     handleDrawerClick (e) {
-      if (this.drawerIsOpen) {
-        this.toggleDrawer()
-      }
+      this.$apollo.mutate({mutation: ToggleDrawerMutation})
     }
   },
   watch: {
-    drawerIsOpen (isOpen) {
-      isOpen ? this.animateDrawerIn() : this.animateDrawerOut()
+    drawer (drawer) {
+      drawer.isOpen ? this.animateDrawerIn() : this.animateDrawerOut()
     }
   }
 }
