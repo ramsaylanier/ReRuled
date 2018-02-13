@@ -49,9 +49,19 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
+// Components
 import Popover from '@/components/popover/Popover'
 import List from '@/components/list/List'
+
+// Queries
+import RuleQuery from '@/graphql/rule/rule.gql'
+import RulesCreatedQuery from '@/graphql/me/rulesCreated.gql'
+import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
+
+// Mutations
+import DeleteRuleMutation from '@/graphql/rule/deleteRule.gql'
+import AddRuleMutation from '@/graphql/ruleset/addRule.gql'
+
 export default {
   name: 'game-rule',
   components: {
@@ -64,17 +74,7 @@ export default {
   },
   apollo: {
     rule: {
-      query: gql`
-        query Rule($id: ID!){
-          rule(where: {id: $id}){
-            id
-            ruleText
-            rulesets{
-              name
-            }
-          }
-        }
-      `,
+      query: RuleQuery,
       variables () {
         return {
           id: this.$route.params.id
@@ -82,16 +82,7 @@ export default {
       }
     },
     me: {
-      query: gql`
-        query Rulesets($game: String!){
-          me{
-            rulesetsCreated(where: {game: {title: $game}}){
-              id
-              name
-            }
-          }
-        }
-      `,
+      query: RulesetsCreatedQuery,
       variables () {
         return {
           game: this.$route.params.title
@@ -115,13 +106,7 @@ export default {
       const ruleId = this.rule.id
 
       this.$apollo.mutate({
-        mutation: gql`
-          mutation AddRuleToRuleset($rulesetId: ID!, $ruleId: ID!){
-            addRuleToRuleset(rulesetId: $rulesetId, ruleId: $ruleId){
-              id
-            }
-          }
-        `,
+        mutation: AddRuleMutation,
         variables: {
           rulesetId: rulesetId,
           ruleId: ruleId
@@ -132,26 +117,10 @@ export default {
     },
     deleteRule () {
       const {id, title} = this.$route.params
-      const rulesQuery = gql`
-        query Me($title: String!){
-          me{
-            rulesCreated(where: {game: {title: $title}}){
-              id
-              ruleText
-              categories
-            }
-          }
-        }
-      `
+      const rulesQuery = RulesCreatedQuery
 
       this.$apollo.mutate({
-        mutation: gql`
-          mutation DeleteRule($id: ID!){
-            deleteRule(where: {id: $id}){
-              id
-            }
-          }
-        `,
+        mutation: DeleteRuleMutation,
         variables: {
           id: id
         },

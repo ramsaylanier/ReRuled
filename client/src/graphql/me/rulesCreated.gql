@@ -1,0 +1,9 @@
+query Me($title: String!){
+  me{
+    rulesCreated(where: {game: {title: $title}}){
+      id
+      ruleText
+      categories
+    }
+  }
+}
