@@ -1,6 +1,6 @@
 <template>
-  <div :class="['drawer', drawer.isOpen ? 'isOpen' : '']">
-    <div class="overlay" @click="handleDrawerClick"></div>
+  <div :class="['drawer', drawer.isOpen ? 'isOpen' : '']" @click="handleDrawerClick">
+    <div class="overlay"></div>
     <div class="inner" ref="inner">
       <slot></slot>
     </div>
@@ -34,7 +34,10 @@ export default {
       })
     },
     handleDrawerClick (e) {
-      this.$apollo.mutate({mutation: ToggleDrawerMutation})
+      console.log(e.target.tagName)
+      if (e.target.tagName !== 'BUTTON') {
+        this.$apollo.mutate({mutation: ToggleDrawerMutation})
+      }
     }
   },
   watch: {
