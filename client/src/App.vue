@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <icons/>
-    <router-view name="page"/>
-
     <drawer>
       <router-view name="drawerContent" :authenticated="authenticated"/>
     </drawer>
+    <router-view name="page"/>
+
   </div>
 </template>
 
