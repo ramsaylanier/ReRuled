@@ -10,7 +10,7 @@ const rule = {
     const user = await ctx.db.mutation.updateUser(
       {
         data: {
-          gamesOwned: { connect: {id: game}}
+          games: { connect: {id: game}}
         },
         where: {id: id} 
       }
