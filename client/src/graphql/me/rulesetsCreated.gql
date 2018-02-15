@@ -1,8 +1,8 @@
+#import "./fragments/rulesetsFragment.gql"
+
 query RulesetsCreated($gameId: ID!){
   me{
-    rulesetsCreated(where: {game: {id: $gameId}}){
-      id
-      name
-    }
+    id
+    ...Rulesets
   }
 }

@@ -1,40 +1,40 @@
 <template>
-  <list v-if="me.rulesetsCreated && me.rulesetsCreated.length > 0"> 
-    <ruleset-list-item v-for="ruleset in me.rulesetsCreated" :key="ruleset.id" :ruleset="ruleset"/>
-  </list>
+  <rulesets-container>
+    <list slot-scope="data" v-if="!data.loading">
+      <div class="warning" v-if="data.rulesets.length === 0">
+        <p>There are no rulesets for this game</p>
+        <router-link class="button --primary" :to="{name: 'Create Ruleset', query: {game: game.title}}">Create One</router-link>
+      </div>
+      <ruleset-list-item 
+        v-else
+        v-for="ruleset in data.rulesets"
+        :key="ruleset.id"
+        :ruleset="ruleset"
+      />
+    </list>
+  </rulesets-container>
 </template>
 
 <script>
+// Containers
+import RulesetsContainer from '@/containers/RulesetsContainer.vue'
+
 // Components
 import List from '@/components/list/List.vue'
 import RulesetListItem from '@/components/ruleset/RulesetListItem.vue'
 
-// Queries
-import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
-
 export default {
   name: 'game-rules',
+  props: ['game'],
   components: {
-    List, RulesetListItem
-  },
-  data () {
-    return {
-      me: {}
-    }
-  },
-  apollo: {
-    me: {
-      query: RulesetsCreatedQuery,
-      variables () {
-        return {
-          gameId: this.$route.params.gameId
-        }
-      }
-    }
+    RulesetsContainer, List, RulesetListItem
   }
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+  .warning{
+    padding :1rem;
+    background-color: white;
+  }
 </style>
