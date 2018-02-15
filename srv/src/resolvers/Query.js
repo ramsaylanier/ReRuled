@@ -10,8 +10,9 @@ const ctxUser = (ctx) => ctx.request.user
 const Query = {
   games: forwardTo('db'),
   rule: forwardTo('db'),
-  ruleset: forwardTo('db'),
   rules: forwardTo('db'),
+  ruleset: forwardTo('db'),
+  rulesets: forwardTo('db'),
   game(parent, {gameId}, ctx, info) {
     console.log(gameId)
     return ctx.db.query.game({ where: { id: gameId }}, info)

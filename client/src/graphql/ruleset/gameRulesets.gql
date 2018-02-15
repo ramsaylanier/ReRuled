@@ -1,0 +1,10 @@
+query gameRulesets($gameId: ID!){
+  rulesets(
+    where: {
+      game: {id: $gameId}
+    }
+  ){
+    id
+    name
+  }
+}
