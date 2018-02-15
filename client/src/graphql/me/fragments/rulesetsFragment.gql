@@ -1,0 +1,6 @@
+fragment Rulesets on User {
+  rulesets(where: {game: {id: $gameId}}){
+    id
+    name
+  }
+}
