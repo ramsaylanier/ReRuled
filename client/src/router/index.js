@@ -63,6 +63,9 @@ const router = new Router({
       beforeEnter: requireAuth,
       components: {
         page: CreateRule
+      },
+      meta: {
+        prefill: null
       }
     },
     {
@@ -71,6 +74,9 @@ const router = new Router({
       beforeEnter: requireAuth,
       components: {
         page: CreateRuleset
+      },
+      meta: {
+        prefill: null
       }
     },
     {

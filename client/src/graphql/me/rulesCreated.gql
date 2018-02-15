@@ -2,6 +2,7 @@
 
 query Me($gameId: ID!){
   me{
+    id
     ...Rules
   }
 }

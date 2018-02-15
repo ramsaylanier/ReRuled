@@ -51,7 +51,7 @@ export default {
     }
   },
   beforeRouteEnter (to, from, next) {
-    prefill = from.params.title
+    prefill = to.query.game
     next()
   },
   methods: {

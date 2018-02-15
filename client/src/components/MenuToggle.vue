@@ -49,6 +49,7 @@ export default {
   }
 
   .bar{
+    pointer-events: none; 
     display: block;
     background: white;
     height: 2px;
