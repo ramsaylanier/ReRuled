@@ -1,0 +1,7 @@
+fragment Rules on User {
+  rules(where: {game: {id: $gameId}}){
+    id
+    ruleText
+    categories
+  }
+}

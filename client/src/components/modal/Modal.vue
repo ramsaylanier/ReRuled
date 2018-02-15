@@ -57,6 +57,7 @@ export default {
     background-color: darken(white, 10%);
     transform-origin: center center;
     z-index: 101;
+    overflow: auto;
   }
 
   .close-button{

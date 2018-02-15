@@ -1,9 +1,7 @@
-query Me($title: String!){
+#import "./fragments/rulesFragment.gql"
+
+query Me($gameId: ID!){
   me{
-    rulesCreated(where: {game: {title: $title}}){
-      id
-      ruleText
-      categories
-    }
+    ...Rules
   }
 }
