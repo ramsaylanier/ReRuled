@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <back-button :handleClick="handleClick"/>
-    <span class="title">{{pageTitle}}</span>
+    <span class="title">{{game.title}}</span>
   </header>
 </template>
 
@@ -9,13 +9,9 @@
 import BackButton from '@/components/button/BackButton.vue'
 export default {
   name: 'game-header',
+  props: ['game'],
   components: {
     BackButton
-  },
-  computed: {
-    pageTitle () {
-      return this.$route.params.title
-    }
   },
   methods: {
     handleClick () {

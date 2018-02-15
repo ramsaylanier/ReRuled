@@ -1,27 +1,21 @@
 <template>
-  <ul class="list">
-    <rule-list-item v-for="rule in rules" :key="rule.id" :rule="rule"/>
-  </ul>
+  <list>
+    <ruleset-list-item v-for="ruleset in rulesets" :key="ruleset.id" :ruleset="ruleset"/>
+  </list>
 </template>
 
 <script>
-import RuleListItem from './RulesetListItem.vue'
+import List from '@/components/list/List'
+import RulesetListItem from './RulesetListItem.vue'
 export default {
-  name: 'rule-list',
-  props: ['rules'],
+  name: 'ruleset-list',
+  props: ['rulesets'],
   components: {
-    RuleListItem
+    List, RulesetListItem
   }
 }
 </script>
 
 <style>
-  .list{
-    margin: 0;
-    padding: 1rem;
-  }
 
-  .rule{
-    margin-bottom: 1rem;
-  }
 </style>

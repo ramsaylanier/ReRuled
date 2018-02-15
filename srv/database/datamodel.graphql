@@ -3,6 +3,8 @@ type Game {
   title: String!
   users: [User!]! @relation(name: "OwnedGames")
   rules: [Rule!]! @relation(name: "GameRules")
+  ruleCount: Int
+  rulesetCount: Int
 }
 
 type Rule {
@@ -29,7 +31,7 @@ type User {
   avatar: String
   auth0id: String! @unique
   identity: String
-  gamesOwned: [Game!]! @relation(name: "OwnedGames")
-  rulesCreated: [Rule!]! @relation(name: "CreatedRules")
-  rulesetsCreated: [Ruleset!]! @relation(name: "CreatedRulesets")
+  games: [Game!]! @relation(name: "OwnedGames")
+  rules: [Rule!]! @relation(name: "CreatedRules")
+  rulesets: [Ruleset!]! @relation(name: "CreatedRulesets")
 }

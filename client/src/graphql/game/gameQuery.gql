@@ -1,0 +1,8 @@
+query Game($gameId: ID!){
+  game(gameId: $gameId){
+    id
+    title
+    ruleCount
+    rulesetCount
+  }
+}

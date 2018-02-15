@@ -1,0 +1,5 @@
+fragment Rules on Game{
+  rules(where: {author: {id: $userId}}){
+    id
+  }
+}

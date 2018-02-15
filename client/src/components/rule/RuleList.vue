@@ -16,12 +16,5 @@ export default {
 </script>
 
 <style>
-  .list{
-    margin: 0;
-    padding: 1rem;
-  }
 
-  .rule{
-    margin-bottom: 1rem;
-  }
 </style>

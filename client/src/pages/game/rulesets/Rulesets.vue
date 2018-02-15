@@ -5,9 +5,13 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
+// Components
 import List from '@/components/list/List.vue'
 import RulesetListItem from '@/components/ruleset/RulesetListItem.vue'
+
+// Queries
+import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
+
 export default {
   name: 'game-rules',
   components: {
@@ -20,19 +24,10 @@ export default {
   },
   apollo: {
     me: {
-      query: gql`
-        query Me($title: String!){
-          me{
-            rulesetsCreated(where: {game: {title: $title}}){
-              id
-              name
-            }
-          }
-        }
-      `,
+      query: RulesetsCreatedQuery,
       variables () {
         return {
-          title: this.$route.params.title
+          gameId: this.$route.params.gameId
         }
       }
     }

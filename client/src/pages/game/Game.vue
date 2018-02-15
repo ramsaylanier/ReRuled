@@ -1,45 +1,32 @@
 <template>
-  <div class="page">
-    <game-header/>
-    <nav class="game-nav">
-      <ul class="game-nav-list">
-        <li class="game-nav-list-item">
-          <router-link to="rules">
-            <svg class="icon">
-              <use xlink:href="#rule-icon" />
-            </svg>
-          </router-link>
-        </li>
-        <li class="game-nav-list-item">
-          <router-link to="rulesets">
-            <svg class="icon">
-              <use xlink:href="#ruleset-icon" />
-            </svg>
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-    <div class="body" ref="page">
-      <router-view name="page"/>
+  <game-container>
+    <div class="page" slot-scope="data" v-if="data.game">
+      <game-header :game="data.game"/>
+      <game-nav/> 
+      <div class="body" ref="page">
+        <router-view name="detail" :game="data.game"/>
+      </div>
+
+      <modal v-if="show"> 
+        <router-view name="modal"/>
+      </modal>
+
+      <sticky-nav/>
     </div>
-
-    <modal v-if="show"> 
-      <router-view name="modal"/>
-    </modal>
-
-    <sticky-nav/>
-  </div>
+  </game-container>
 </template>
 
 <script>
+import GameContainer from '@/containers/GameContainer.vue'
 import GameHeader from '@/components/header/GameHeader.vue'
+import GameNav from '@/components/nav/GameNav.vue'
 import Modal from '@/components/modal/Modal.vue'
 import StickyNav from '@/components/nav/StickyNav.vue'
 import {TweenMax, Power4} from 'gsap'
 export default {
   name: 'game',
   components: {
-    GameHeader, Modal, StickyNav
+    GameContainer, GameHeader, GameNav, Modal, StickyNav
   },
   data () {
     return {
@@ -89,47 +76,4 @@ export default {
   .page-title{
     color: $primary;
   }
-
-  .game-nav{
-    width: 100%;
-    background-color: darken(white, 5%);
-  }
-
-  .game-nav-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  .game-nav-list-item{
-    flex: 1;
-    text-align: center;
-    a{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: .7rem;
-
-      &.router-link-active{
-        background-color: darken($primary, 5%);
-
-        .icon{
-          fill: white;
-        }
-      }
-    }
-
-    &:not(:last-of-type){
-      border-right: 3px solid white;
-    }
-  }
-
-  .icon{
-    height: 20px;
-    width: 20px;
-    fill: $primary;
-  }
-  
 </style>

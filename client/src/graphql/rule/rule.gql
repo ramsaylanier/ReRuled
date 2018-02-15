@@ -3,6 +3,7 @@ query Rule($id: ID!){
     id
     ruleText
     rulesets{
+      id
       name
     }
   }

@@ -8,23 +8,24 @@
       </div>
       <div class="body">
         <list>
-          <game-list-item v-for="game in me.gamesOwned" :key="game.id" :game="game"/>
+          <game-list-item v-for="game in me.games" :key="game.id" :game="game" :me="true"/>
         </list> 
       </div>     
-
     </template>
     <sticky-nav/>
   </div>
 </template>
 
 <script>
-import gql from 'graphql-tag'
 import ProfileHeader from '@/components/header/ProfileHeader.vue'
 import Avatar from '@/components/user/Avatar.vue'
 import StickyNav from '@/components/nav/StickyNav.vue'
 import List from '@/components/list/List.vue'
 import GameListItem from '@/components/game/GameListItem.vue'
 import AddIcon from '@/components/icons/Add.vue'
+
+import MeQuery from '@/graphql/me/me.gql'
+
 export default {
   name: 'profile',
   components: {
@@ -38,19 +39,7 @@ export default {
   },
   apollo: {
     me: {
-      query: gql`
-        query Me{
-          me{
-            name
-            avatar
-            email
-            gamesOwned{
-              id
-              title
-            }
-          }
-        }
-      `,
+      query: MeQuery,
       loadingKey: 'isLoading'
     }
   }

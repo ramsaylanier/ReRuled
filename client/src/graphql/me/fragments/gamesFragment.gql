@@ -1,0 +1,8 @@
+fragment Games on User{
+  games{
+    id
+    title
+    ruleCount
+    rulesetCount
+  }
+}
