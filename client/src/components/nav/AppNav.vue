@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper" v-if="authenticated">
     <nav class="profile-nav">
-      <ul class="nav-list">
+      <menu-toggle/>
+      <ul class="nav-list" :hidden="!drawer.isOpen">
         <li class="nav-list-item">
           <router-link class="profile-link" :to="{name: 'Profile'}">
               <avatar :src="me.avatar" size="50"/>
@@ -24,11 +25,14 @@
 <script>
 import gql from 'graphql-tag'
 import Avatar from '@/components/user/Avatar.vue'
+import MenuToggle from '@/components/MenuToggle.vue'
+
+import DrawerQuery from '@/graphql/client/drawer.gql'
 export default {
   name: 'app-nav',
   props: ['authenticated'],
   components: {
-    Avatar
+    Avatar, MenuToggle
   },
   data () {
     return {
@@ -37,6 +41,9 @@ export default {
     }
   },
   apollo: {
+    drawer: {
+      query: DrawerQuery
+    },
     me: {
       query: gql`
         query Me{

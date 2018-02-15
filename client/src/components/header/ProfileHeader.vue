@@ -1,22 +1,12 @@
 <template>
   <header class="header">
-    <menu-toggle/>
+
   </header>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import MenuToggle from '@/components/MenuToggle.vue'
 export default {
-  name: 'profile-header',
-  components: {
-    MenuToggle
-  },
-  methods: {
-    ...mapMutations([
-      'TOGGLE_DRAWER'
-    ])
-  }
+  name: 'profile-header'
 }
 </script>
 
