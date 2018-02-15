@@ -1,9 +1,13 @@
 <template>
-  <a :class="['button', drawer.isOpen ? 'isOpen' : '']" @click="toggleDrawer">
+  <button 
+    :class="['button', drawer.isOpen ? 'isOpen' : '']"
+    :aria-expanded="drawer.isOpen || false"
+    @click.prevent="toggleDrawer"
+  >
     <span class="bar bar-1"></span>
     <span class="bar bar-2"></span>
     <span class="bar bar-3"></span>
-  </a>
+  </button>
 </template>
 
 <script>
@@ -26,9 +30,9 @@ export default {
 
 <style lang="scss" scoped>
   .button{
-    position: absolute;
+    position: fixed;
     top: .5rem;
-    right: .5rem;
+    right: 300vw;
     border: 0;
     background-color: transparent;
     display: flex;

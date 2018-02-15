@@ -1,6 +1,6 @@
 <template>
-  <div :class="['drawer', drawer.isOpen ? 'isOpen' : '']" @click="handleDrawerClick">
-    <div class="overlay"></div>
+  <div :class="['drawer', drawer.isOpen ? 'isOpen' : '']">
+    <div class="overlay" @click="handleDrawerClick"></div>
     <div class="inner" ref="inner">
       <slot></slot>
     </div>
