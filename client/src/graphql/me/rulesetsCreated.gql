@@ -1,6 +1,6 @@
-query RulesetsCreated($game: String!){
+query RulesetsCreated($gameId: ID!){
   me{
-    rulesetsCreated(where: {game: {title: $game}}){
+    rulesetsCreated(where: {game: {id: $gameId}}){
       id
       name
     }

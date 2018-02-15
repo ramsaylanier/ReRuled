@@ -1,0 +1,11 @@
+#import "./fragments/gamesFragment.gql"
+
+query Me{
+  me{
+    id
+    name
+    avatar
+    email
+    ...Games
+  }
+}

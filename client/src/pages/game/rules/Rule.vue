@@ -3,13 +3,6 @@
     <template v-if="rule">
       <div class="rule-header">
         <p class="text">{{rule.ruleText}}</p>
-
-        <list>
-          In: 
-          <li v-for="ruleset in rule.rulesets" :key="ruleset.id">
-            {{ruleset.name}}
-          </li>
-        </list>
       </div>
 
       <ul class="menu">
@@ -27,23 +20,22 @@
             </svg>
           </button>
         </li>
-        <li class="menu-item">
-          <button class="button" @click="togglePopover">
-            <svg class="icon">
-              <use xlink:href="#remove-from-ruleset-icon" />
-            </svg>
-          </button>
-        </li>
       </ul>
+
+      <ruleset-list :rulesets="rule.rulesets"/>
     </template>
 
-
     <popover v-if="showPopover" :handleClose="() => showPopover = false">
-      <ul>
+      <ul v-if="me.rulesetsCreated.length > 0">
         <li v-for="ruleset in me.rulesetsCreated" :key="ruleset.id" @click="() => handleAddToRuleset(ruleset)">
           {{ruleset.name}}
         </li>
       </ul>
+
+      <div v-else>
+        <p>You don't have any ruleset created for this game.</p>
+        <router-link :to="{name: 'Create Ruleset'}">Create One</router-link>
+      </div>
     </popover>
   </div>
 </template>
@@ -51,7 +43,7 @@
 <script>
 // Components
 import Popover from '@/components/popover/Popover'
-import List from '@/components/list/List'
+import RulesetList from '@/components/ruleset/RulesetList'
 
 // Queries
 import RuleQuery from '@/graphql/rule/rule.gql'
@@ -60,12 +52,12 @@ import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
 
 // Mutations
 import DeleteRuleMutation from '@/graphql/rule/deleteRule.gql'
-import AddRuleMutation from '@/graphql/ruleset/addRule.gql'
+import AddRuleMutation from '@/graphql/ruleset/addRuleToRuleset.gql'
 
 export default {
   name: 'game-rule',
   components: {
-    Popover, List
+    Popover, RulesetList
   },
   data () {
     return {
@@ -155,7 +147,7 @@ export default {
   .text{
     margin: 0;
     color: black;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.3;
   }
 
@@ -200,5 +192,32 @@ export default {
       height: 24px;
       width: 24px;
     }
+  }
+
+  .ruleset-list{
+    margin: 2rem 0 0 0;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+    li{
+      &:not(:last-of-type){
+        margin-bottom: .5rem;
+      }
+    }
+
+    a{
+      font-size: .8rem;
+      display: inline-block;
+      padding: .5rem 1rem;
+      background: $primary;
+      color: white;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+  }
+
+  .list{
+    margin-top: 1rem;
   }
 </style>

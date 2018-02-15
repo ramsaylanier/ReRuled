@@ -11,9 +11,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 </style>

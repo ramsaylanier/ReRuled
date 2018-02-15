@@ -61,7 +61,7 @@ export default {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: fade-out(black, 0.2);
+    background-color: fade-out(black, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,11 +79,13 @@ export default {
   .icon{
     height: 30px;
     width: 30px;
-    fill: $primary;
+    fill: white;
   }
 
   .inner{
     width: 90%;
+    max-height: 80%;
+    overflow: auto;
     background-color: white;
     padding: 1rem;
   }

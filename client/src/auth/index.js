@@ -2,7 +2,6 @@ import auth0 from 'auth0-js'
 import gql from 'graphql-tag'
 import EventEmitter from 'eventemitter3'
 import router from '../router'
-import store from '../store'
 
 export function checkAuthentication () {
   let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
@@ -99,7 +98,6 @@ class Auth {
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
     this.authNotifier.emit('authChange', false)
-    store.dispatch('setCurrentUser', {currentUser: null})
     // navigate to the home route
     router.replace({name: 'Home'})
   }

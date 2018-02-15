@@ -74,8 +74,7 @@ const router = new Router({
       }
     },
     {
-      path: '/game/:title',
-      name: 'Game',
+      path: '/game/:gameId',
       beforeEnter: requireAuth,
       components: {
         page: Game
@@ -85,9 +84,10 @@ const router = new Router({
           path: 'rules',
           name: 'Game Rules',
           components: {
-            page: GameRules
+            detail: GameRules
           },
           meta: {
+            withNav: true,
             showModal: false
           }
         },
@@ -95,9 +95,10 @@ const router = new Router({
           path: 'rulesets',
           name: 'Game Rulesets',
           components: {
-            page: GameRulesets
+            detail: GameRulesets
           },
           meta: {
+            withNav: true,
             showModal: false
           }
         },
@@ -105,7 +106,7 @@ const router = new Router({
           path: 'rules/:id',
           name: 'Game Rule',
           components: {
-            page: GameRules,
+            detail: GameRules,
             modal: GameRule
           },
           meta: {
@@ -116,7 +117,7 @@ const router = new Router({
           path: 'rulesets/:id',
           name: 'Game Ruleset',
           components: {
-            page: GameRulesets,
+            detail: GameRulesets,
             modal: GameRuleset
           },
           meta: {

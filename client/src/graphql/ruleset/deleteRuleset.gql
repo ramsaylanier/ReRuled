@@ -1,0 +1,5 @@
+mutation DeleteRuleset($id: ID!){
+  deleteRuleset(where: {id: $id}){
+    id
+  }
+}

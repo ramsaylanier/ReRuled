@@ -11,7 +11,7 @@
         <li class="nav-list-item">
           <ul class="subnav-list">
             <li class="nav-list-item">
-              <router-link class="nav-link" :to="{name: 'Games'}">Games</router-link>
+              <router-link class="nav-link" :to="{name: 'Browse'}">Browse</router-link>
             </li>
             <li class="nav-list-item"><button class="nav-button" @click="$logout()">Logout</button></li>
           </ul>

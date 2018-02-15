@@ -1,0 +1,12 @@
+query GameSummary($game: String!){
+  ruleCount(game: $game){
+    aggregate{
+      count
+    }
+  }
+  rulesetCount(game: $game){
+    aggregate{
+      count
+    }
+  }
+}

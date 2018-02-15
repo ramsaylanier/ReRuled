@@ -1,46 +1,23 @@
 <template>
-  <list v-if="me.rulesCreated && me.rulesCreated.length > 0"> 
-    <rule-list-item v-for="rule in me.rulesCreated" :key="rule.id" :rule="rule"/>
-  </list>
+  <rules-container>
+    <list slot-scope="data" v-if="!data.loading"> 
+      <rule-list-item v-for="rule in data.rules" :key="rule.id" :rule="rule"/>
+    </list>
+  </rules-container>
 </template>
 
 <script>
-import gql from 'graphql-tag'
+// Containers
+import RulesContainer from '@/containers/RulesContainer.vue'
+
+// Components
 import List from '@/components/list/List.vue'
 import RuleListItem from '@/components/rule/RuleListItem.vue'
+
 export default {
   name: 'game-rules',
   components: {
-    List, RuleListItem
-  },
-  data () {
-    return {
-      me: {}
-    }
-  },
-  apollo: {
-    me: {
-      query: gql`
-        query Me($title: String!){
-          me{
-            rulesCreated(where: {game: {title: $title}}){
-              id
-              ruleText
-              categories
-            }
-          }
-        }
-      `,
-      variables () {
-        return {
-          title: this.$route.params.title
-        }
-      }
-    }
+    RulesContainer, List, RuleListItem
   }
 }
 </script>
-
-<style>
-
-</style>
