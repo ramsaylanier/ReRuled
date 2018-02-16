@@ -82,9 +82,7 @@ export default {
           categories: []
         }
       }).then(r => {
-        console.log(r)
-      }).catch(err => {
-        console.log(err)
+        this.$router.go(-1)
       })
     }
   },
