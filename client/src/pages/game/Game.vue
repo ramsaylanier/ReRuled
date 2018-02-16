@@ -67,10 +67,11 @@ export default {
 
   .body{
     transform-origin: center center;
+    padding-top: 3rem;
   }
 
   .page{
-    padding: 3rem 0 0 0;
+    padding: 50px 0 0 0;
   }
 
   .page-title{
