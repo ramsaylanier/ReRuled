@@ -1,7 +1,8 @@
+#import "./fragments/ruleFields.gql"
+
 query Rule($id: ID!){
   rule(where: {id: $id}){
-    id
-    ruleText
+    ...RuleFields
     rulesets{
       id
       name

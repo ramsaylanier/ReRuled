@@ -1,22 +1,27 @@
 <template>
-  <nav class="game-nav" v-if="$route.meta.withNav">
-    <ul class="game-nav-list">
-      <li class="game-nav-list-item primary">
-        <router-link :to="{name: 'Game Rules', query: $route.query}">
-          <svg class="icon">
-            <use xlink:href="#rule-icon" />
-          </svg>
-        </router-link>
-      </li>
-      <li class="game-nav-list-item secondary">
-        <router-link :to="{name: 'Game Rulesets', query: $route.query}">
-          <svg class="icon">
-            <use xlink:href="#ruleset-icon" />
-          </svg>
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav class="game-nav" v-if="$route.meta.withNav">
+      <ul class="game-nav-list">
+        <li class="game-nav-list-item secondary">
+          <router-link :to="{name: 'Game Rulesets', query: $route.query}">
+            Sets
+          </router-link>
+        </li>
+        <li class="game-nav-list-item primary">
+          <router-link :to="{name: 'Game Rules', query: $route.query}">
+            Rules
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+    <div class="game-filter"> 
+      <button>
+        <svg class="icon">
+          <use xlink:href="#filter-icon" />
+        </svg>
+      </button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,9 +32,14 @@ export default {
 
 <style lang="scss" scoped>
   @import "../../styles/_colors.scss";
-  .game-nav{
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+    position: fixed;
     width: 100%;
-    background-color: darken(white, 5%);
+    z-index: 100;
   }
 
   .game-nav-list{
@@ -41,54 +51,40 @@ export default {
   }
 
   .game-nav-list-item{
-    flex: 1;
-    text-align: center;
+
     a{
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
-      padding: .7rem;
+      padding: .75rem 1rem;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      // transition: all 300ms ease-out;
+      border-bottom: 3px solid transparent;
+      opacity: 0.8;
     }
 
-    &.primary{
-      a{
-        &.router-link-active{
-          background-color: darken($primary, 5%);
-
-          .icon{
-            fill: white;
-          }
-        }
-      }
-
-      .icon{
-        fill: $primary;
-      }
+    .router-link-active{
+      // background-color: white;
+      border-color: $secondary;
+      opacity: 1;
+      // color: $primary;
     }
+  }
 
-    &.secondary{
-      a{
-        &.router-link-active{
-          background-color: darken($secondary, 5%);
+  .game-filter{
+    display: flex;
+    align-items: center;
 
-          .icon{
-            fill: white;
-          }
-        }
-      }
-
-      .icon{
-        fill: $secondary;
-      }
-    }
-
-    &:not(:last-of-type){
-      border-right: 3px solid white;
+    .icon{
+      // fill: darken($secondary, 30%);
+      fill: white;
     }
   }
 
   .icon{
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
   }
 </style>

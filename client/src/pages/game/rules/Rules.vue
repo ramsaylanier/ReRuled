@@ -37,4 +37,8 @@ export default {
     padding :1rem;
     background-color: white;
   }
+
+  .button{
+    margin-top: 1rem;
+  }
 </style>

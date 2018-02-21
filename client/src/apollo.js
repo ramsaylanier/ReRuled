@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { ApolloClient } from 'apollo-client'
-import { ApolloLink } from 'apollo-link'
+import { ApolloLink, split } from 'apollo-link'
 import { HttpLink } from 'apollo-link-http'
 import { withClientState } from 'apollo-link-state'
 import { WebSocketLink } from 'apollo-link-ws'
@@ -9,6 +9,7 @@ import { setContext } from 'apollo-link-context'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import VueApollo from 'vue-apollo'
 import {merge} from 'lodash'
+import { getMainDefinition } from 'apollo-utilities'
 
 import uiState from '@/state/ui'
 
@@ -26,13 +27,13 @@ const authLink = setContext((_, { headers }) => {
   }
 })
 
-const wsClient = new SubscriptionClient('ws://localhost:4466/srv/dev', {
+const wsClient = new SubscriptionClient('ws://localhost:4000', {
   reconnect: true
 })
 
 const wsLink = new WebSocketLink(wsClient)
 
-const link = withClientState({
+const httpLink = withClientState({
   ...merge(uiState),
   cache
 }).concat(
@@ -41,9 +42,20 @@ const link = withClientState({
   })
 )
 
+const link = split(
+  // split based on operation type
+  ({ query }) => {
+    const { kind, operation } = getMainDefinition(query)
+    return kind === 'OperationDefinition' &&
+      operation === 'subscription'
+  },
+  wsLink,
+  httpLink
+)
+
 // Create the apollo client
 const apolloClient = new ApolloClient({
-  link: ApolloLink.from([authLink, link, wsLink]),
+  link: ApolloLink.from([authLink, link]),
   cache,
   connectToDevTools: true
 })
