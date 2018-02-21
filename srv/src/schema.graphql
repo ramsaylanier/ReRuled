@@ -1,5 +1,9 @@
 # import Game from "./generated/prisma.graphql"
 
+type Subscription{
+  ruleAdded(where: RuleSubscriptionWhereInput): RuleSubscriptionPayload
+}
+
 type Query {
   game(gameId: ID!): Game
   games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game]!

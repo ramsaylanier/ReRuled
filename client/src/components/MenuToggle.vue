@@ -4,9 +4,9 @@
     :aria-expanded="drawer.isOpen || false"
     @click.prevent="toggleDrawer"
   >
-    <span class="bar bar-1"></span>
-    <span class="bar bar-2"></span>
-    <span class="bar bar-3"></span>
+    <svg class="icon">
+      <use xlink:href="#menu-icon"/>
+    </svg>
   </button>
 </template>
 
@@ -15,6 +15,11 @@ import DrawerQuery from '@/graphql/client/drawer.gql'
 import ToggleDrawerMutation from '@/graphql/client/toggleDrawer.gql'
 export default {
   name: 'menu-toggle',
+  data () {
+    return {
+      drawer: {}
+    }
+  },
   apollo: {
     drawer: DrawerQuery
   },
@@ -32,27 +37,25 @@ export default {
   .button{
     position: fixed;
     top: .5rem;
-    right: 300vw;
+    right: 266vw;
+    padding: 0;
     border: 0;
     background-color: transparent;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: top;
-    height: 23px;
+    height: 30px;
     transition: opacity 150ms ease-out;
 
     &.isOpen{
       opacity: 0;
       pointer-events: none;
     }
-  }
 
-  .bar{
-    pointer-events: none; 
-    display: block;
-    background: white;
-    height: 2px;
-    width: 30px;
+    svg{
+      fill: white;
+      pointer-events: none;
+    }
   }
 </style>
