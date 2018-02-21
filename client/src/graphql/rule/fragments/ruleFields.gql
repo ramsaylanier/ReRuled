@@ -1,0 +1,4 @@
+fragment RuleFields on Rule{
+  id
+  ruleText
+}

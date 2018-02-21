@@ -49,6 +49,14 @@ const router = new Router({
       }
     },
     {
+      path: '/browse',
+      name: 'Browse',
+      beforeEnter: redirectToProfile,
+      components: {
+        page: Home
+      }
+    },
+    {
       path: '/profile',
       name: 'Profile',
       beforeEnter: requireAuth,

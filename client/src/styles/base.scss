@@ -2,7 +2,6 @@
 @import "./buttons.scss";
 
 .page{
-  // background-image: $page-gradient;
   background-color: darken(white, 5%);
   min-height: 100vh;
   padding: 1rem;
@@ -23,4 +22,14 @@ ul{
 
 [hidden] {
   display: none;
+}
+
+.icon{
+  &.primary{
+    fill: $primary;
+  }
+
+  &.secondary{
+    fill: $secondary;
+  }
 }

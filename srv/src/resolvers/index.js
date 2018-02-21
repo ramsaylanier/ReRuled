@@ -3,6 +3,7 @@ const { auth } = require('./Mutation/auth')
 const { game } = require('./Mutation/game')
 const { rule } = require('./Mutation/rule')
 const { ruleset } = require('./Mutation/ruleset')
+const { ruleSub } = require('./Subscription/ruleAdded')
 
 module.exports = {
   Query,
@@ -12,5 +13,8 @@ module.exports = {
     ...game,
     ...rule,
     ...ruleset
+  },
+  Subscription: {
+    ruleAdded: ruleSub
   }
 }
