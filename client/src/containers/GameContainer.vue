@@ -8,6 +8,11 @@
 import GameQuery from '@/graphql/game/gameQuery.gql'
 export default {
   name: 'game-container',
+  data () {
+    return {
+      game: {}
+    }
+  },
   apollo: {
     game: {
       query: GameQuery,
