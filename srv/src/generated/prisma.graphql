@@ -180,13 +180,18 @@ input GameUpdateManyWithoutUsersInput {
   upsert: [GameUpsertWithoutUsersInput!]
 }
 
+input GameUpdateNestedInput {
+  where: GameWhereUniqueInput!
+  data: GameUpdateDataInput!
+}
+
 input GameUpdateOneInput {
   create: GameCreateInput
   connect: GameWhereUniqueInput
   disconnect: GameWhereUniqueInput
   delete: GameWhereUniqueInput
-  update: GameUpdateInput
-  upsert: GameUpsertInput
+  update: GameUpdateNestedInput
+  upsert: GameUpsertNestedInput
 }
 
 input GameUpdateOneWithoutRulesInput {
@@ -222,7 +227,7 @@ input GameUpdateWithoutUsersInput {
   data: GameUpdateWithoutUsersDataInput!
 }
 
-input GameUpsertInput {
+input GameUpsertNestedInput {
   where: GameWhereUniqueInput!
   update: GameUpdateDataInput!
   create: GameCreateInput!
