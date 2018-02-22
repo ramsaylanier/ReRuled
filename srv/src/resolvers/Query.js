@@ -1,4 +1,12 @@
 const {forwardTo} = require('prisma-binding')
+const { Prisma } = require('prisma-binding')
+
+const getPrismaLink = (debug = false) => new Prisma({
+  typeDefs: 'src/generated/prisma.graphql',
+  endpoint: process.env.PRISMA_ENDPOINT,
+  secret: process.env.PRISMA_SECRET, 
+  debug: debug 
+})
 
 const isLoggedIn = (ctx) => {
   if (!ctx.request.user) throw new Error(`Not logged in`)
@@ -10,11 +18,12 @@ const ctxUser = (ctx) => ctx.request.user
 const Query = {
   games: forwardTo('db'),
   rule: forwardTo('db'),
-  rules: forwardTo('db'),
+  rules (parent, args, ctx, info) {
+    return getPrismaLink().query.rules(args, info) 
+  },
   ruleset: forwardTo('db'),
   rulesets: forwardTo('db'),
   game(parent, {gameId}, ctx, info) {
-    console.log(gameId)
     return ctx.db.query.game({ where: { id: gameId }}, info)
   },
   me(parent, args, ctx, info) {

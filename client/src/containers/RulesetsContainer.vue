@@ -11,6 +11,11 @@ import GameRulesetsQuery from '@/graphql/ruleset/gameRulesets.gql'
 
 export default {
   name: 'rulesets-container',
+  data () {
+    return {
+      rulesets: []
+    }
+  },
   apollo: {
     rulesets: {
       query () {

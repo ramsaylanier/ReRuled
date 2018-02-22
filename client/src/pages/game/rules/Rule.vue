@@ -77,7 +77,7 @@ export default {
       query: RulesetsCreatedQuery,
       variables () {
         return {
-          game: this.$route.params.title
+          gameId: this.$route.params.gameId
         }
       }
     }
