@@ -1,24 +1,16 @@
 @import "../../../styles/_colors.scss";
 
-.item{
+.container{
   position: relative;
   border-bottom: 5px solid darken(white, 5%);
   display: flex;
 }
 
-.link{
+.touch{
   position: relative;
   font-size: 1.1rem;
   z-index: 2;
   width: 100%;
-
-  a{
-    background-color: white;
-    display: block;
-    color: $secondary;
-    padding: 1rem;
-    text-decoration: none;
-  }
 }
 
 .sub-menu{
