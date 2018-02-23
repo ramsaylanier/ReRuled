@@ -10,6 +10,7 @@
         v-for="rule in data.rules"
         :key="rule.id"
         :rule="rule"
+        :isMine="isMine"
       />
     </ul>
   </rules-container>

@@ -1,7 +1,6 @@
 import {TweenMax, Power4} from 'gsap'
 
 const DRAG_TRIGGER = 60
-const OFFSET = 120
 
 export default {
   name: 'touch-list-item',
@@ -24,6 +23,7 @@ export default {
       })
     },
     handlePanEnd (event) {
+      const OFFSET = this.$refs.menu.offsetWidth
       const dX = event.distance >= DRAG_TRIGGER ? OFFSET : 0
       const dXMod = this.dragDirection === 'panleft' ? -1 : 1
       TweenMax.to(this.$refs.link.$el, 0.5, {
