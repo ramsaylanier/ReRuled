@@ -1,10 +1,15 @@
 import {TweenMax, Power4} from 'gsap'
 
-const DRAG_TRIGGER = 60
-const OFFSET = 120
+import TouchListItem from '@/components/list/touch-list-item/touch-list-item.vue'
+
+import DeleteRuleMutation from '@/graphql/rule/deleteRule.gql'
+import RulesCreatedQuery from '@/graphql/me/rulesCreated.gql'
 
 export default {
   name: 'rule-list-item',
+  components: {
+    TouchListItem
+  },
   props: ['rule'],
   data () {
     return {
@@ -12,23 +17,39 @@ export default {
     }
   },
   methods: {
-    handlePanStart (event) {
-      const dir = event.additionalEvent
-      this.dragDirection = dir
-    },
-    handlePanMove (event) {
-      const {deltaX} = event
-      TweenMax.to(this.$refs.link.$el, 0.5, {
-        x: deltaX,
-        ease: Power4.easeOut
+    handleLeave (el, done) {
+      TweenMax.to(el, 0.5, {
+        x: 50,
+        alpha: 0,
+        ease: Power4.easeOut,
+        onComplete: done
       })
     },
-    handlePanEnd (event) {
-      const dX = event.distance >= DRAG_TRIGGER ? OFFSET : 0
-      const dXMod = this.dragDirection === 'panleft' ? -1 : 1
-      TweenMax.to(this.$refs.link.$el, 0.5, {
-        x: dX * dXMod,
-        ease: Power4.easeOut
+    deleteRule () {
+      const {gameId} = this.$route.params
+      const ruleId = this.rule.id
+
+      this.$apollo.mutate({
+        mutation: DeleteRuleMutation,
+        variables: {
+          id: ruleId
+        },
+        update: (store, {data: {deleteRule}}) => {
+          const data = store.readQuery({
+            query: RulesCreatedQuery,
+            variables: {
+              gameId: gameId
+            }
+          })
+
+          data.me.rules = data.me.rules.filter(rule => {
+            return rule.id !== ruleId
+          })
+
+          store.writeQuery({ query: RulesCreatedQuery, variables: {gameId: gameId}, data })
+        }
+      }).catch(err => {
+        console.log(err)
       })
     }
   }
