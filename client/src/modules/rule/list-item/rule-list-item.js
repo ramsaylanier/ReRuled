@@ -10,7 +10,7 @@ export default {
   components: {
     TouchListItem
   },
-  props: ['rule'],
+  props: ['rule', 'isMine'],
   data () {
     return {
       dragDirection: 'panleft'

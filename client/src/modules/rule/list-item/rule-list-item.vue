@@ -4,12 +4,14 @@
     v-on:leave="handleLeave"
   >
     <touch-list-item>
+
       <template slot="item">
         <router-link class="link" :to="{name: 'Game Rule', params: {id: rule.id}}">
           <span class="text">{{rule.ruleText}}</span>
         </router-link>
       </template>
-      <template slot="menu">
+
+      <template v-if="isMine" slot="menu" >
         <li class="sub-menu-item">
           <button @click="deleteRule">
             <svg class="icon">
@@ -21,6 +23,16 @@
           <button>
             <svg class="icon">
               <use xlink:href="#add-to-ruleset-icon"/>
+            </svg>
+          </button>
+        </li>
+      </template>
+
+      <template v-else slot="menu" >
+        <li class="sub-menu-item">
+          <button>
+            <svg class="icon">
+              <use xlink:href="#copy-icon"/>
             </svg>
           </button>
         </li>
