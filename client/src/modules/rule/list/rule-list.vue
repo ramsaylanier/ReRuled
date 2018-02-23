@@ -1,6 +1,6 @@
 <template>
   <rules-container>
-    <list slot-scope="data" v-if="!data.loading">
+    <ul class="list" slot-scope="data" v-if="!data.loading">
       <div class="warning" v-if="data.rules.length === 0">
         <p>There are no rules for this game</p>
         <router-link class="button --primary" :to="{name: 'Create Rule', query: {game: game.title}}">Create One</router-link>
@@ -11,7 +11,7 @@
         :key="rule.id"
         :rule="rule"
       />
-    </list>
+    </ul>
   </rules-container>
 </template>
 

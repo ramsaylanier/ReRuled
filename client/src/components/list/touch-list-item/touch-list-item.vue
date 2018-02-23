@@ -1,11 +1,13 @@
 <template>
-  <li class="item">
-    <v-touch class="link" ref="link"
+  <li class="container">
+    <v-touch class="touch" ref="link"
       v-on:panstart="handlePanStart"
       v-on:panmove="handlePanMove"
       v-on:panend="handlePanEnd"
-    >
-      <slot name="item"></slot>
+    > 
+      <div class="item">
+        <slot name="item"></slot>
+      </div>
     </v-touch>
     <ul :class="['sub-menu', dragDirection]">
       <slot name="menu"></slot>
