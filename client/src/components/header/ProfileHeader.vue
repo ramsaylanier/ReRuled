@@ -17,7 +17,7 @@ export default {
     background-color: $primary;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 90;
     height: 40px;
   }

@@ -4,18 +4,22 @@ import Router from 'vue-router'
 // NAVS
 import AppNav from '@/components/nav/AppNav.vue'
 
-// PAGES
-import Home from '@/pages/Home'
-import Games from '@/components/Games'
-import Game from '@/pages/game/Game.vue'
-import GameRules from '@/pages/game/rules/Rules.vue'
-import GameRule from '@/pages/game/rules/Rule.vue'
-import GameRulesets from '@/pages/game/rulesets/Rulesets.vue'
-import GameRuleset from '@/pages/game/rulesets/Ruleset.vue'
-import Profile from '@/pages/profile/Profile.vue'
-import Callback from '@/pages/Callback.vue'
-import CreateRule from '@/pages/rule/CreateRule.vue'
-import CreateRuleset from '@/pages/ruleset/CreateRuleset.vue'
+// VIEWS
+import Home from '@/views/Home'
+
+// GAME VIEWS
+import Game from '@/views/game/game.vue'
+import Rules from '@/views/game/children/rules.vue'
+import Rulesets from '@/views/game/children/rulesets.vue'
+
+import Rule from '@/views/rule/Rule.vue'
+import CreateRule from '@/views/rule/CreateRule.vue'
+
+import Ruleset from '@/views/ruleset/Ruleset.vue'
+import CreateRuleset from '@/views/ruleset/CreateRuleset.vue'
+
+import Profile from '@/views/profile/Profile.vue'
+import Callback from '@/views/Callback.vue'
 
 import { checkAuthentication } from '@/auth'
 
@@ -98,7 +102,7 @@ const router = new Router({
           path: 'rules',
           name: 'Game Rules',
           components: {
-            detail: GameRules
+            detail: Rules
           },
           meta: {
             withNav: true,
@@ -109,7 +113,7 @@ const router = new Router({
           path: 'rulesets',
           name: 'Game Rulesets',
           components: {
-            detail: GameRulesets
+            detail: Rulesets
           },
           meta: {
             withNav: true,
@@ -120,8 +124,8 @@ const router = new Router({
           path: 'rules/:id',
           name: 'Game Rule',
           components: {
-            detail: GameRules,
-            modal: GameRule
+            detail: Rules,
+            modal: Rule
           },
           meta: {
             showModal: true
@@ -131,8 +135,8 @@ const router = new Router({
           path: 'rulesets/:id',
           name: 'Game Ruleset',
           components: {
-            detail: GameRulesets,
-            modal: GameRuleset
+            detail: Rulesets,
+            modal: Ruleset
           },
           meta: {
             showModal: true
@@ -145,15 +149,6 @@ const router = new Router({
       name: 'Callback',
       components: {
         page: Callback
-      }
-    },
-    {
-      path: '/games',
-      name: 'Games',
-      beforeEnter: requireAuth,
-      components: {
-        page: Games,
-        drawerNav: AppNav
       }
     }
   ]
