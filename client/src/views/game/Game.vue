@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import GameContainer from '@/containers/GameContainer.vue'
+import GameContainer from '@/modules/game/game-container.vue'
 import GameHeader from '@/components/header/GameHeader.vue'
 import GameNav from '@/components/nav/GameNav.vue'
 import Modal from '@/components/modal/Modal.vue'
