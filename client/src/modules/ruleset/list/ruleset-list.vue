@@ -15,30 +15,5 @@
   </rulesets-container>
 </template>
 
-<script>
-// Containers
-import RulesetsContainer from '@/containers/RulesetsContainer.vue'
-
-// Components
-import List from '@/components/list/List.vue'
-import RulesetListItem from '@/components/ruleset/RulesetListItem.vue'
-
-export default {
-  name: 'game-rules',
-  props: ['game'],
-  components: {
-    RulesetsContainer, List, RulesetListItem
-  }
-}
-</script>
-
-<style scoped lang="scss">
-  .warning{
-    padding :1rem;
-    background-color: white;
-  }
-
-  .button{
-    margin-top: 1rem;
-  }
-</style>
+<script src="./ruleset-list.js"></script>
+<style src="./ruleset-list.scss" lang="scss" scoped></style>
