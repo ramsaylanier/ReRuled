@@ -9,7 +9,7 @@
         <slot name="item"></slot>
       </div>
     </v-touch>
-    <ul :class="['sub-menu', dragDirection]">
+    <ul :class="['sub-menu', dragDirection]" ref="menu">
       <slot name="menu"></slot>
     </ul>
   </li>

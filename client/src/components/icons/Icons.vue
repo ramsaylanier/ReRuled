@@ -1,6 +1,10 @@
 <template>
   <svg style="display: none">
 
+    <symbol id="copy-icon" viewBox="0 0 24 24">
+      <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
+    </symbol>
+
     <symbol id="menu-icon" viewBox="0 0 24 24">
       <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
     </symbol>
