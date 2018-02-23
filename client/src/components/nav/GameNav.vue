@@ -38,7 +38,7 @@ export default {
     justify-content: space-between;
     background-color: $primary;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 100;
   }
 
