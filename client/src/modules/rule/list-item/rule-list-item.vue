@@ -1,31 +1,32 @@
 <template>
-  <li class="rule">
-    <v-touch class="link" ref="link"
-      v-on:panstart="handlePanStart"
-      v-on:panmove="handlePanMove"
-      v-on:panend="handlePanEnd"
-    >
-      <router-link :to="{name: 'Game Rule', params: {id: rule.id}}">
-        <span class="text">{{rule.ruleText}}</span>
-      </router-link>
-    </v-touch>
-    <ul :class="['sub-menu', dragDirection]">
-      <li class="sub-menu-item">
-        <button>
-          <svg class="icon">
-            <use xlink:href="#delete-icon"/>
-          </svg>
-        </button>
-      </li>
-      <li class="sub-menu-item">
-        <button>
-          <svg class="icon">
-            <use xlink:href="#add-to-ruleset-icon"/>
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </li>
+  <transition
+    v-bind:css="false"
+    v-on:leave="handleLeave"
+  >
+    <touch-list-item>
+      <template slot="item">
+        <router-link :to="{name: 'Game Rule', params: {id: rule.id}}">
+          <span class="text">{{rule.ruleText}}</span>
+        </router-link>
+      </template>
+      <template slot="menu">
+        <li class="sub-menu-item">
+          <button @click="deleteRule">
+            <svg class="icon">
+              <use xlink:href="#delete-icon"/>
+            </svg>
+          </button>
+        </li>
+        <li class="sub-menu-item">
+          <button>
+            <svg class="icon">
+              <use xlink:href="#add-to-ruleset-icon"/>
+            </svg>
+          </button>
+        </li>
+      </template>
+    </touch-list-item>
+  </transition>
 </template>
 
 <script src="./rule-list-item.js"></script>
