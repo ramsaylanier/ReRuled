@@ -143,7 +143,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../../../styles/_colors.scss";
+  @import "../../styles/_colors.scss";
   .text{
     margin: 0;
     color: black;

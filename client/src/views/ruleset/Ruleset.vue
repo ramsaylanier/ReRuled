@@ -44,7 +44,7 @@
 
 <script>
 // Components
-import RuleList from '@/components/rule/RuleList'
+import RuleList from '@/modules/rule/list/rule-list.vue'
 import Popover from '@/components/popover/Popover'
 
 // Queries
@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../../../styles/_colors.scss";
+  @import "../../styles/_colors.scss";
 
   .text{
     margin: 0;
