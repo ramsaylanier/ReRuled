@@ -34,11 +34,13 @@
 </template>
 
 <script>
+import RulesCreatedQuery from '@/graphql/me/rulesCreated.gql'
+import GameQuery from '@/graphql/game/gameQuery.gql'
+
 import CreateRuleMutation from '@/graphql/rule/createRule.gql'
 import CreateRuleHeader from '@/components/header/CreateRuleHeader.vue'
 import GameSelect from '@/components/form/GameSelect.vue'
 import FormSubmit from '@/components/form/Submit.vue'
-import GameQuery from '@/graphql/game/gameQuery.gql'
 
 export default {
   name: 'create-rule',
@@ -84,9 +86,33 @@ export default {
           game: gameId,
           ruleText,
           categories: []
+        },
+        update: (store, {data: {createRule}}) => {
+          const prev = store.readQuery({
+            query: RulesCreatedQuery,
+            variables: {
+              gameId: gameId
+            }
+          })
+
+          const data = {
+            ...prev,
+            me: {
+              ...prev.me,
+              rules: [createRule, ...prev.me.rules]
+            }
+          }
+
+          store.writeQuery({
+            query: RulesCreatedQuery,
+            variables: {
+              gameId: gameId
+            },
+            data
+          })
         }
       }).then(r => {
-        this.$router.push({
+        this.$router.replace({
           name: 'Game Rules',
           params: {gameId: gameId},
           query: {me: true}

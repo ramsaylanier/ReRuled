@@ -1,0 +1,58 @@
+
+@import "../../../styles/_colors.scss";
+
+.game{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  padding: 1rem;
+  display: block;
+  font-size: 1.1rem;
+  color: $primary;
+  text-decoration: none;
+  flex: 1;
+}
+
+.meta{
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 6.5rem;
+  padding: 0rem 1rem;
+}
+
+.meta-item{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  &.primary{
+    .icon{
+      fill: $primary;
+    }
+
+    .count{
+      color: $primary;
+    }
+  }
+
+  &.secondary{
+    .icon{
+      fill: $secondary;
+    }
+
+    .count{
+      color: $secondary;
+    }
+  }
+}
+
+.count{
+  margin-left: .25rem;
+  font-size: .9rem;
+}
+
+.icon{
+  height: .9rem;
+  width: .9rem;
+  fill: white;
+}

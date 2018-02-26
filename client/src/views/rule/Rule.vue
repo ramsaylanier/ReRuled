@@ -43,7 +43,7 @@
 <script>
 // Components
 import Popover from '@/components/popover/Popover'
-import RulesetList from '@/components/ruleset/RulesetList'
+import RulesetList from '@/modules/ruleset/list/ruleset-list.vue'
 
 // Queries
 import RuleQuery from '@/graphql/rule/rule.gql'

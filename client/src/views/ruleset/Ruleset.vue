@@ -44,7 +44,6 @@
 
 <script>
 // Components
-import RuleList from '@/modules/rule/list/rule-list.vue'
 import Popover from '@/components/popover/Popover'
 
 // Queries
@@ -58,7 +57,7 @@ import DeleteRulesetMutation from '@/graphql/ruleset/deleteRuleset.gql'
 export default {
   name: 'game-ruleset',
   components: {
-    RuleList, Popover
+    Popover
   },
   data () {
     return {
