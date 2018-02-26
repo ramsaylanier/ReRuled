@@ -1,0 +1,21 @@
+subscription RuleAdded($gameId: ID!){
+  ruleAdded(
+    where: {
+      AND: [{
+        mutation_in: [CREATED]
+      },{
+        node: {
+          game: {
+            id: $gameId
+          }
+        }
+      }]
+    }
+  ){
+    mutation
+    node{
+      id
+      ruleText
+    }
+  }
+}

@@ -7,7 +7,7 @@
     </button>
     <ul class="menu-list">
       <li class="menu-list-item">
-        <router-link :to="{name: 'Create Rule'}" class="link" href="">
+        <router-link :to="{name: 'Create Rule', query: {game: game.id}}" class="link" href="">
           <span class="menu-item-text">New Rule</span>
           <svg class="icon">
             <use xlink:href="#rule-icon" />
@@ -31,6 +31,7 @@ import {TweenMax, Power4} from 'gsap'
 import AddIcon from '@/components/icons/Add'
 export default {
   name: 'sticky-nav',
+  props: ['game'],
   components: {
     AddIcon
   },

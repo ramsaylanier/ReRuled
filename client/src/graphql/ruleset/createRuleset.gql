@@ -1,0 +1,8 @@
+mutation CreateRuleset($game: String!, $name: String!){
+  createRuleset(name: $name, game: $game){
+    id
+    author{
+      id
+    }
+  }
+}

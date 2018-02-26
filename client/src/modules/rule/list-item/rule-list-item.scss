@@ -1,0 +1,23 @@
+@import "../../../styles/_colors.scss";
+
+  
+.link{
+  background-color: white;
+  display: block;
+  color: $secondary;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.sub-menu-item{
+  display: flex;
+  button{
+    display: block;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    border: 0;
+    background-color: transparent;
+  }
+}

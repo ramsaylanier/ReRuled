@@ -155,6 +155,14 @@ input GameSubscriptionWhereInput {
   node: GameWhereInput
 }
 
+input GameUpdateDataInput {
+  title: String
+  ruleCount: Int
+  rulesetCount: Int
+  users: UserUpdateManyWithoutGamesInput
+  rules: RuleUpdateManyWithoutGameInput
+}
+
 input GameUpdateInput {
   title: String
   ruleCount: Int
@@ -172,11 +180,18 @@ input GameUpdateManyWithoutUsersInput {
   upsert: [GameUpsertWithoutUsersInput!]
 }
 
+input GameUpdateNestedInput {
+  where: GameWhereUniqueInput!
+  data: GameUpdateDataInput!
+}
+
 input GameUpdateOneInput {
   create: GameCreateInput
   connect: GameWhereUniqueInput
   disconnect: GameWhereUniqueInput
   delete: GameWhereUniqueInput
+  update: GameUpdateNestedInput
+  upsert: GameUpsertNestedInput
 }
 
 input GameUpdateOneWithoutRulesInput {
@@ -210,6 +225,12 @@ input GameUpdateWithoutUsersDataInput {
 input GameUpdateWithoutUsersInput {
   where: GameWhereUniqueInput!
   data: GameUpdateWithoutUsersDataInput!
+}
+
+input GameUpsertNestedInput {
+  where: GameWhereUniqueInput!
+  update: GameUpdateDataInput!
+  create: GameCreateInput!
 }
 
 input GameUpsertWithoutRulesInput {

@@ -37,7 +37,8 @@ export default {
   data () {
     return {
       me: {},
-      isLoading: 0
+      isLoading: 0,
+      drawer: {}
     }
   },
   apollo: {

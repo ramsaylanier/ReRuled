@@ -13,6 +13,11 @@ import DrawerQuery from '@/graphql/client/drawer.gql'
 import ToggleDrawerMutation from '@/graphql/client/toggleDrawer.gql'
 export default {
   name: 'drawer',
+  data () {
+    return {
+      drawer: {}
+    }
+  },
   apollo: {
     drawer: DrawerQuery
   },

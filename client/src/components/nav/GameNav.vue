@@ -38,7 +38,11 @@ export default {
     justify-content: space-between;
     background-color: $primary;
     position: fixed;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 100vw;
+>>>>>>> touch-events
     z-index: 100;
   }
 
