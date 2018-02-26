@@ -5,7 +5,8 @@
       <form class="form" @submit.prevent="handleSubmit">
         <div class="control">
           <label>Select Game</label>
-          <game-select :select="handleGameSelect" :prefill="prefill"/>
+          <game-select v-if="$route.query.game && !loading" :select="handleGameSelect" :game="game.title"/>
+          <game-select v-else :select="handleGameSelect" :game="''"/>
         </div>
 
         <div class="control">
@@ -25,7 +26,7 @@
         </div>
 
         <div class="control">
-          <form-submit value="Create Rule" :disabled="!this.gameId || this.ruleText.length === 0"/>
+          <form-submit value="Create Rule" :disabled="!game.id && !gameId || ruleText.length === 0"/>
         </div>
       </form>
     </div>
@@ -33,26 +34,39 @@
 </template>
 
 <script>
+import CreateRuleMutation from '@/graphql/rule/createRule.gql'
 import CreateRuleHeader from '@/components/header/CreateRuleHeader.vue'
 import GameSelect from '@/components/form/GameSelect.vue'
 import FormSubmit from '@/components/form/Submit.vue'
-import gql from 'graphql-tag'
-
-let prefill = ''
+import GameQuery from '@/graphql/game/gameQuery.gql'
 
 export default {
   name: 'create-rule',
+  components: {
+    CreateRuleHeader, GameSelect, FormSubmit
+  },
   data () {
     return {
-      gameId: null,
+      game: {},
+      loading: 0,
+      gameId: '',
       categories: [],
-      ruleText: '',
-      prefill: prefill
+      ruleText: ''
     }
   },
-  beforeRouteEnter (to, from, next) {
-    prefill = to.query.game
-    next()
+  apollo: {
+    game: {
+      query: GameQuery,
+      loadingKey: 'loading',
+      variables () {
+        return {
+          gameId: this.$route.query.game
+        }
+      },
+      skip () {
+        return !this.$route.query.game
+      }
+    }
   },
   methods: {
     handleGameSelect (game) {
@@ -62,34 +76,24 @@ export default {
       this.createRule()
     },
     createRule () {
-      const gameId = this.gameId
+      const gameId = this.gameId || this.game.id
       const ruleText = this.ruleText
-      // const categories = this.categories
       this.$apollo.mutate({
-        mutation: gql`
-          mutation($game: String!, $categories: [String!], $ruleText: String!){
-            createRule(ruleText: $ruleText, categories: $categories, game: $game){
-              id
-              author{
-                id
-              }
-            }
-          }
-        `,
+        mutation: CreateRuleMutation,
         variables: {
           game: gameId,
           ruleText,
           categories: []
         }
       }).then(r => {
-        this.$router.go(-1)
+        this.$router.push({
+          name: 'Game Rules',
+          params: {gameId: gameId},
+          query: {me: true}
+        })
       })
     }
-  },
-  components: {
-    CreateRuleHeader, GameSelect, FormSubmit
   }
-
 }
 </script>
 

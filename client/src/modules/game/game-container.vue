@@ -8,6 +8,7 @@
 import GameQuery from '@/graphql/game/gameQuery.gql'
 export default {
   name: 'game-container',
+  props: ['gameId'],
   data () {
     return {
       game: {}
@@ -18,9 +19,10 @@ export default {
       query: GameQuery,
       variables () {
         return {
-          gameId: this.$route.params.gameId
+          gameId: this.gameId
         }
       }
+      // skip: !this.gameId
     }
   }
 }

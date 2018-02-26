@@ -75,9 +75,6 @@ const router = new Router({
       beforeEnter: requireAuth,
       components: {
         page: CreateRule
-      },
-      meta: {
-        prefill: null
       }
     },
     {

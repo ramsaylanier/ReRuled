@@ -39,6 +39,7 @@ export default {
           }
         },
         updateQuery (prev, {subscriptionData}) {
+          console.log(subscriptionData)
           const newRule = subscriptionData.data.ruleAdded.node
           return Object.assign({}, prev, {
             rules: [newRule, ...prev.rules]
@@ -49,7 +50,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

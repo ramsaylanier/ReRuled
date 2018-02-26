@@ -1,5 +1,5 @@
 <template>
-  <game-container>
+  <game-container :gameId="$route.params.gameId">
     <div class="page" slot-scope="data" v-if="data.game">
       <game-header :game="data.game"/>
       <game-nav/> 
@@ -11,7 +11,7 @@
         <router-view name="modal"/>
       </modal>
 
-      <sticky-nav/>
+      <sticky-nav :game="data.game"/>
     </div>
   </game-container>
 </template>

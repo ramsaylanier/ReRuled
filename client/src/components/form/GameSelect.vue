@@ -15,15 +15,18 @@ import gql from 'graphql-tag'
 import CloseIcon from '@/components/icons/Close'
 export default {
   name: 'game-select',
-  props: ['select', 'prefill'],
+  props: ['select', 'game'],
+  model: {
+    prop: 'game',
+    event: 'change'
+  },
   components: {
     CloseIcon
   },
   data () {
     return {
-      game: this.prefill || '',
       skip: false,
-      showList: true
+      showList: false
     }
   },
   methods: {
