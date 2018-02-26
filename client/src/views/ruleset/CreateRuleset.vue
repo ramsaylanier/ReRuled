@@ -5,7 +5,8 @@
       <form class="form" @submit.prevent="handleSubmit">
         <div class="control">
           <label>Select Game</label>
-          <game-select :select="handleGameSelect" :prefill="prefill"/>
+          <game-select v-if="$route.query.game && !loading" :select="handleGameSelect" :game="game.title"/>
+          <game-select v-else :select="handleGameSelect" :game="''"/>
         </div>
 
         <div class="control">
@@ -14,7 +15,7 @@
         </div>
 
         <div class="control">
-          <form-submit value="Create Ruleset" :disabled="!this.gameId || this.name.length === 0"/>
+          <form-submit value="Create Ruleset" :disabled="!game.id && !gameId || this.name.length === 0"/>
         </div>
       </form>
     </div>
@@ -22,25 +23,41 @@
 </template>
 
 <script>
+import GameQuery from '@/graphql/game/gameQuery.gql'
+import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
+
+import CreateRulesetMutation from '@/graphql/ruleset/createRuleset.gql'
+
 import CreateRuleHeader from '@/components/header/CreateRuleHeader.vue'
 import GameSelect from '@/components/form/GameSelect.vue'
 import FormSubmit from '@/components/form/Submit.vue'
-import gql from 'graphql-tag'
-
-let prefill = ''
 
 export default {
   name: 'create-ruleset',
+  components: {
+    CreateRuleHeader, GameSelect, FormSubmit
+  },
   data () {
     return {
-      gameId: null,
-      name: '',
-      prefill: prefill
+      game: {},
+      loading: 0,
+      gameId: '',
+      name: ''
     }
   },
-  beforeRouteEnter (to, from, next) {
-    prefill = to.query.game
-    next()
+  apollo: {
+    game: {
+      query: GameQuery,
+      loadingKey: 'loading',
+      variables () {
+        return {
+          gameId: this.$route.query.game
+        }
+      },
+      skip () {
+        return !this.$route.query.game
+      }
+    }
   },
   methods: {
     handleGameSelect (game) {
@@ -50,34 +67,47 @@ export default {
       this.createRule()
     },
     createRule () {
-      const gameId = this.gameId
+      const gameId = this.gameId || this.game.id
       const name = this.name
       this.$apollo.mutate({
-        mutation: gql`
-          mutation($game: String!, $name: String!){
-            createRuleset(name: $name, game: $game){
-              id
-              author{
-                id
-              }
-            }
-          }
-        `,
+        mutation: CreateRulesetMutation,
         variables: {
           game: gameId,
           name
+        },
+        update: (store, {data: {createRuleset}}) => {
+          const prev = store.readQuery({
+            query: RulesetsCreatedQuery,
+            variables: {
+              gameId: gameId
+            }
+          })
+
+          const data = {
+            ...prev,
+            me: {
+              ...prev.me,
+              rulesets: [createRuleset, ...prev.me.rulesets]
+            }
+          }
+
+          store.writeQuery({
+            query: RulesetsCreatedQuery,
+            variables: {
+              gameId: gameId
+            },
+            data
+          })
         }
       }).then(r => {
-        console.log(r)
-      }).catch(err => {
-        console.log(err)
+        this.$router.replace({
+          name: 'Game Rulesets',
+          params: {gameId: gameId},
+          query: {me: true}
+        })
       })
     }
-  },
-  components: {
-    CreateRuleHeader, GameSelect, FormSubmit
   }
-
 }
 </script>
 

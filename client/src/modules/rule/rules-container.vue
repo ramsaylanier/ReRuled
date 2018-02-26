@@ -39,11 +39,22 @@ export default {
           }
         },
         updateQuery (prev, {subscriptionData}) {
-          console.log(subscriptionData)
           const newRule = subscriptionData.data.ruleAdded.node
-          return Object.assign({}, prev, {
-            rules: [newRule, ...prev.rules]
-          })
+
+          if (prev.me) {
+            return {
+              ...prev,
+              me: {
+                ...prev.me,
+                rules: [newRule, ...prev.me.rules]
+              }
+            }
+          } else {
+            return {
+              ...prev,
+              rules: [newRule, ...prev.rules]
+            }
+          }
         }
       }
     }

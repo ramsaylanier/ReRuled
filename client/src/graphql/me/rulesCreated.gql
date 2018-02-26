@@ -1,8 +1,14 @@
-#import "./fragments/rulesFragment.gql"
+#import "../rule/fragments/ruleFields.gql"
 
 query Me($gameId: ID!){
   me{
     id
-    ...Rules
+    rules(
+      where: {
+        game: {id: $gameId}
+      }
+    ){
+      ...RuleFields 
+    }
   }
 }

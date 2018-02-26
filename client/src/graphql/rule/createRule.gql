@@ -2,8 +2,5 @@ mutation($game: String!, $categories: [String!], $ruleText: String!){
   createRule(ruleText: $ruleText, categories: $categories, game: $game){
     id
     ruleText
-    author{
-      id
-    }
   }
 }
