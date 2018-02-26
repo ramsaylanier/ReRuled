@@ -15,18 +15,7 @@ export default [
     },
     children: [
       ...Rules,
-      ...Rulesets,
-      {
-        path: 'rules/:id/addToRuleset',
-        name: 'Add Rule to Rulesets',
-        components: {
-          detail: Rules,
-          modal: Rulesets
-        },
-        meta: {
-          showModal: true
-        }
-      }
+      ...Rulesets
     ]
   }
 ]
