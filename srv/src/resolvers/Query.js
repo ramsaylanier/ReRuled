@@ -28,7 +28,7 @@ const Query = {
   },
   me(parent, args, ctx, info) {
     const { auth0id } = isLoggedIn(ctx)
-    return ctx.db.query.user({ where: { auth0id }}, info) 
+    return getPrismaLink().query.user({ where: { auth0id }}, info) 
   },
 }
 

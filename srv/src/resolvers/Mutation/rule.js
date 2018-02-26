@@ -1,5 +1,14 @@
 const { isLoggedIn } = require('../../utils')
 
+const { Prisma } = require('prisma-binding')
+
+const getPrismaLink = (debug = false) => new Prisma({
+  typeDefs: 'src/generated/prisma.graphql',
+  endpoint: process.env.PRISMA_ENDPOINT,
+  secret: process.env.PRISMA_SECRET, 
+  debug: debug 
+})
+
 const rule = {
   async createRule(parent, { ruleText, game, categories }, ctx, info) {
     const {id} = isLoggedIn(ctx)
@@ -35,7 +44,7 @@ const rule = {
       throw new Error('You must be authenticated to delete a rule.')
     }
 
-    return ctx.db.mutation.deleteRule(args)
+    return getPrismaLink().mutation.deleteRule(args)
   }
 }
 
