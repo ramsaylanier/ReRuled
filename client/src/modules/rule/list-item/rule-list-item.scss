@@ -11,7 +11,8 @@
 
 .sub-menu-item{
   display: flex;
-  button{
+
+  button, a{
     display: block;
     height: 100%;
     padding: 0;
@@ -19,5 +20,15 @@
     width: 50px;
     border: 0;
     background-color: transparent;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon{
+      height: 24px;
+      width: 24px;
+    }
   }
 }

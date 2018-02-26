@@ -20,11 +20,16 @@
           </button>
         </li>
         <li class="sub-menu-item">
-          <button>
+          <router-link :to="{
+            name: 'Add Rule to Rulesets',
+            params: {
+              id: rule.id  
+            }
+          }">
             <svg class="icon">
               <use xlink:href="#add-to-ruleset-icon"/>
             </svg>
-          </button>
+          </router-link>
         </li>
       </template>
 
