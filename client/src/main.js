@@ -18,7 +18,10 @@ Vue.use(AuthPlugin, {
 })
 
 const apolloProvider = new VueApollo({
-  defaultClient: apolloClient
+  defaultClient: apolloClient,
+  defaultOptions: {
+    $loadingKey: 'loading'
+  }
 })
 
 /* eslint-disable no-new */

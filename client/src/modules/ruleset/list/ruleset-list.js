@@ -1,5 +1,5 @@
 // Containers
-import RulesetsContainer from '@/containers/RulesetsContainer.vue'
+import RulesetsContainer from '@/modules/ruleset/ruleset-container.vue'
 
 // Components
 import List from '@/components/list/List.vue'
