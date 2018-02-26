@@ -2,13 +2,17 @@
 import RulesetsContainer from '@/modules/ruleset/ruleset-container.vue'
 
 // Components
-import List from '@/components/list/List.vue'
-import RulesetListItem from '@/components/ruleset/RulesetListItem.vue'
+import RulesetListItem from '@/modules/ruleset/list-item/ruleset-list-item.vue'
 
 export default {
   name: 'ruleset-list',
   props: ['game'],
+  data () {
+    return {
+      isMine: this.$route.query.me
+    }
+  },
   components: {
-    RulesetsContainer, List, RulesetListItem
+    RulesetsContainer, RulesetListItem
   }
 }

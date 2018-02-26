@@ -24,7 +24,7 @@ const Query = {
   ruleset: forwardTo('db'),
   rulesets: forwardTo('db'),
   game(parent, {gameId}, ctx, info) {
-    return ctx.db.query.game({ where: { id: gameId }}, info)
+    return getPrismaLink().query.game({ where: { id: gameId }}, info)
   },
   me(parent, args, ctx, info) {
     const { auth0id } = isLoggedIn(ctx)
