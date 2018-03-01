@@ -8,7 +8,7 @@ import RulesetList from '@/modules/ruleset/list/ruleset-list.vue'
 
 // Queries
 import RulesCreatedQuery from '@/graphql/me/rulesCreated.gql'
-// import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
+import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
 
 // Mutations
 import DeleteRuleMutation from '@/graphql/rule/deleteRule.gql'
@@ -24,16 +24,16 @@ export default {
       showPopover: false
     }
   },
-  // apollo: {
-  //   me: {
-  //     query: RulesetsCreatedQuery,
-  //     variables () {
-  //       return {
-  //         where: {}
-  //       }
-  //     }
-  //   }
-  // },
+  apollo: {
+    me: {
+      query: RulesetsCreatedQuery,
+      variables () {
+        return {
+          gameId: this.$route.params.gameId
+        }
+      }
+    }
+  },
   methods: {
     togglePopover () {
       this.showPopover = !this.showPopover
@@ -46,8 +46,9 @@ export default {
       }
     },
     handleAddToRuleset (ruleset) {
+      console.log(this.rule)
       const rulesetId = ruleset.id
-      const ruleId = this.rule.id
+      const ruleId = this.$route.params.ruleId
 
       this.$apollo.mutate({
         mutation: AddRuleMutation,

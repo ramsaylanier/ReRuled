@@ -7,7 +7,42 @@
   color: $secondary;
   padding: 1rem;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.text{
+  display: block;
+  padding-right: 1rem;
+}
+
+.categories{
+  align-self: flex-start;
+}
+
+.category{
+  font-size: .8rem;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darken(white, 10%);
+  color: white;
+
+  &:not(:last-of-type){
+    margin-bottom: .25rem;
+  }
+
+  @each $cat in map_keys($catColors) {
+    &.#{$cat}{
+      background-color: map-get($catColors, $cat);
+    }
+  }
+}
+
 
 .sub-menu-item{
   display: flex;

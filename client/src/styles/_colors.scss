@@ -4,3 +4,11 @@ $secondary: #8471b3;
 $page-gradient: linear-gradient(-200deg, $primary 40%, adjust-hue($primary, -5%) 80%);
 $profile-gradient: linear-gradient(-200deg, $primary 40%, adjust-hue($primary, -5%) 80%);
 $submit-gradient: linear-gradient(-200deg, $secondary 0%, adjust-hue($secondary, -40%) 100%);
+
+$catColors: (
+  setup: $primary,
+  movement: adjust-hue($primary, 20),
+  continuous: adjust-hue($primary, 200),
+  endgame: adjust-hue($primary, 260),
+  other: adjust-hue($primary, 300)
+)

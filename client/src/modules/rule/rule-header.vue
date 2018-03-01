@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="['header', rule.categories[0].toLowerCase()]">
     <back-button :handleClick="handleClick"/>
     <span class="title">{{rule.game.title}}</span>
   </header>
@@ -29,7 +29,6 @@ export default {
   @import "../../styles/_colors.scss";
   .header{
     position: fixed;
-    background-color: $primary;
     top: 0;
     left: 0;
     width: 100vw;
@@ -40,6 +39,12 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
+
+    @each $cat in map_keys($catColors) {
+      &.#{$cat}{
+        background-color: map-get($catColors, $cat);
+      }
+    }
   }
 
   .button{

@@ -1,25 +1,32 @@
 @import "../../../styles/_colors.scss";
 
-.body{
-  transform-origin: center center;
+.rule{
   padding-top: 3rem;
 }
 
-.page{
-  padding: 50px 0 0 0;
-}
-
-.page-title{
-  color: $primary;
-}
-
 .text{
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 100;
   padding: 2rem;
   background-color: darken(white, 5%);
-  line-height: 1.5;
+  
+  h2{
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+.heading{
+  font-weight: 100;
+}
+
+.rulesets{
+  padding: 0 2rem 2rem 2rem;
+  background-color: darken(white, 5%);
+
+  .heading{
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
 }
 
 .menu{

@@ -67,7 +67,7 @@ export default {
 
   .body{
     transform-origin: center center;
-    padding-top: 3rem;
+    padding: 3rem 0rem 5rem 0;
   }
 
   .page{
@@ -76,5 +76,9 @@ export default {
 
   .page-title{
     color: $primary;
+  }
+
+  .menu{
+    z-index: 100;
   }
 </style>

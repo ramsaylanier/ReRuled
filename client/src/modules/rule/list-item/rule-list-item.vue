@@ -10,7 +10,11 @@
           params: {ruleId: rule.id},
           query: $route.query
         }">
-          <span class="text">{{rule.ruleText}}</span>
+          <span class="text">{{truncate(rule.ruleText, 150)}}</span>
+          
+          <div class="categories">
+            <span :class="['category', cat.toLowerCase()]" v-for="cat in rule.categories" :key="cat">{{cat.substr(0, 1)}}</span>
+          </div>
         </router-link>
       </template>
 

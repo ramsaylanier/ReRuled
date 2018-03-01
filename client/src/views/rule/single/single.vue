@@ -1,36 +1,37 @@
 <template>
   <rule-container>
-    <div class="rule" slot-scope="data" v-if="!data.loading">
+    <article class="rule" slot-scope="data" v-if="!data.loading">
       <rule-header :rule="data.rule"/>
-      <div class="body">
-        <h3 class="text">{{data.rule.ruleText}}</h3>
-        <ul class="menu">
-          <li class="menu-item">
-            <button class="button" @click="handleDelete">
-              <svg class="icon">
-                <use xlink:href="#delete-icon" />
-              </svg>
-            </button>
-          </li>
-          <li class="menu-item">
-            <button class="button" @click="togglePopover">
-              <svg class="icon">
-                <use xlink:href="#add-to-ruleset-icon" />
-              </svg>
-            </button>
-          </li>
-        </ul>
-
+      <section class="text">
+        <h2 class="heading">{{data.rule.ruleText}}</h2>
+      </section>
+      <section class="rulesets">
+        <h4 class="heading">Sets</h4>
         <ul v-if="data.rule.rulesets">
           <li v-for="ruleset in data.rule.rulesets" :key="ruleset.id">
-            {{ruleset.name}}
+            <router-link :to="{name: 'Ruleset', params: {id: ruleset.id}}">{{ruleset.name}}</router-link>
           </li>
         </ul>
-      </div>
-
-      <!-- <popover v-if="showPopover" :handleClose="() => showPopover = false">
-        <ul v-if="me.rulesetsCreated.length > 0">
-          <li v-for="ruleset in me.rulesetsCreated" :key="ruleset.id" @click="() => handleAddToRuleset(ruleset)">
+      </section>
+      <ul class="menu">
+        <li class="menu-item">
+          <button class="button" @click="handleDelete">
+            <svg class="icon">
+              <use xlink:href="#delete-icon" />
+            </svg>
+          </button>
+        </li>
+        <li class="menu-item">
+          <button class="button" @click="togglePopover">
+            <svg class="icon">
+              <use xlink:href="#add-to-ruleset-icon" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <popover v-if="showPopover" :handleClose="() => showPopover = false">
+        <ul v-if="me.rulesets">
+          <li v-for="ruleset in me.rulesets" :key="ruleset.id" @click="() => handleAddToRuleset(ruleset)">
             {{ruleset.name}}
           </li>
         </ul>
@@ -39,8 +40,8 @@
           <p>You don't have any ruleset created for this game.</p>
           <router-link :to="{name: 'Create Ruleset'}">Create One</router-link>
         </div>
-      </popover> -->
-    </div>
+      </popover>
+    </article>
   </rule-container>
 </template>
 

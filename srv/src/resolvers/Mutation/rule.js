@@ -31,7 +31,7 @@ const rule = {
           game: { connect: { id: game} },
           author: { connect: { id: id} },
           ruleText: ruleText,
-          categories: categories
+          categories: { set: categories }
         },
       },
       info

@@ -20,7 +20,7 @@
             <option>Setup</option>
             <option>Movement</option>
             <option>Endgame</option>
-            <option>Ongoing</option>
+            <option>Continuous</option>
             <option>Other</option>
           </select> 
         </div>
@@ -80,12 +80,14 @@ export default {
     createRule () {
       const gameId = this.gameId || this.game.id
       const ruleText = this.ruleText
+      const categories = this.categories
+      console.log(categories)
       this.$apollo.mutate({
         mutation: CreateRuleMutation,
         variables: {
           game: gameId,
           ruleText,
-          categories: []
+          categories: categories
         },
         update: (store, {data: {createRule}}) => {
           const prev = store.readQuery({

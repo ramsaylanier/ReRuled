@@ -3,7 +3,7 @@ import Ruleset from '@/views/ruleset/Ruleset.vue'
 
 export default {
   path: 'rulesets/:id',
-  name: 'Game Ruleset',
+  name: 'Ruleset',
   components: {
     detail: Rulesets,
     modal: Ruleset

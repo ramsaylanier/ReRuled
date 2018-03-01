@@ -5,6 +5,8 @@ import TouchListItem from '@/components/list/touch-list-item/touch-list-item.vue
 import DeleteRuleMutation from '@/graphql/rule/deleteRule.gql'
 import RulesCreatedQuery from '@/graphql/me/rulesCreated.gql'
 
+import {truncate} from '@/utils.js'
+
 export default {
   name: 'rule-list-item',
   components: {
@@ -17,6 +19,7 @@ export default {
     }
   },
   methods: {
+    truncate,
     handleLeave (el, done) {
       TweenMax.to(el, 0.5, {
         x: 50,
