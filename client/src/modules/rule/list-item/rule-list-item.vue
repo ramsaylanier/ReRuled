@@ -4,9 +4,12 @@
     v-on:leave="handleLeave"
   >
     <touch-list-item>
-
       <template slot="item">
-        <router-link class="link" :to="{name: 'Game Rule', params: {id: rule.id}}">
+        <router-link class="link" :to="{
+          name: 'Rule',
+          params: {ruleId: rule.id},
+          query: $route.query
+        }">
           <span class="text">{{rule.ruleText}}</span>
         </router-link>
       </template>

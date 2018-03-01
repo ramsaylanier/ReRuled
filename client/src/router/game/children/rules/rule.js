@@ -1,14 +1,13 @@
-import Rules from '@/views/game/children/rules.vue'
-import Rule from '@/views/rule/Rule.vue'
+// import Rules from '@/views/game/children/rules.vue'
+// import Rule from '@/views/rule/rule.vue'
 
 export default {
   path: 'rules/:id',
   name: 'Game Rule',
-  components: {
-    detail: Rules,
-    modal: Rule
-  },
+  // components: {
+  //   detail: Rule
+  // },
   meta: {
-    showModal: true
+    showModal: false
   }
 }

@@ -10,6 +10,7 @@ export default [
   {
     path: '/game/:gameId',
     beforeEnter: requireAuth,
+    name: 'Game',
     components: {
       page: Game
     },

@@ -3,6 +3,10 @@
 query Rule($id: ID!){
   rule(where: {id: $id}){
     ...RuleFields
+    game{
+      id
+      title
+    }
     rulesets{
       id
       name
