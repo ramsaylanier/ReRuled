@@ -1,43 +1,31 @@
 <template>
   <div>
-    <slot :rulesets="rulesets" :loading="$apollo.queries.rulesets.loading"></slot>
+    <slot v-if="ruleset" :ruleset="ruleset" :loading="loading"></slot>
   </div>
 </template>
 
 <script>
 // Queries
-import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
-import GameRulesetsQuery from '@/graphql/ruleset/gameRulesets.gql'
+import RulesetQuery from '@/graphql/ruleset/ruleset.gql'
 
 export default {
-  name: 'rulesets-container',
+  name: 'ruleset-container',
   data () {
     return {
-      rulesets: []
+      ruleset: {},
+      loading: 0
     }
   },
   apollo: {
-    rulesets: {
-      query () {
-        if (this.$route.query.me) {
-          return RulesetsCreatedQuery
-        } else {
-          return GameRulesetsQuery
-        }
-      },
+    ruleset: {
+      query: RulesetQuery,
+      loadingKey: 'loading',
       variables () {
         return {
-          gameId: this.$route.params.gameId
+          id: this.$route.params.rulesetId
         }
-      },
-      update (data) {
-        return data.me ? data.me.rulesets : data.rulesets
       }
     }
   }
 }
 </script>
-
-<style>
-
-</style>

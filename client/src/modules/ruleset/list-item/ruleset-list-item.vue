@@ -6,7 +6,7 @@
     <touch-list-item>
 
       <template slot="item">
-        <router-link class="link" :to="{name: 'Game Ruleset', params: {id: ruleset.id}}">
+        <router-link class="link" :to="{name: 'Ruleset', params: {rulesetId: ruleset.id}}">
           <span class="text">{{ruleset.name}}</span>
         </router-link>
       </template>

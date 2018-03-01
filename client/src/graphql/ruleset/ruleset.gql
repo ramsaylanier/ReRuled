@@ -2,9 +2,14 @@ query Ruleset($id: ID!){
   ruleset(where: {id: $id}){
     id
     name
+    game{
+      id
+      title
+    }
     rules{
       id
       ruleText
+      categories
     }
   }
 }

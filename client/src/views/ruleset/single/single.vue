@@ -1,15 +1,14 @@
 <template>
-  <rule-container>
-    <article class="rule" slot-scope="data" v-if="!data.loading">
-      <rule-header :rule="data.rule"/>
+  <ruleset-container>
+    <article class="ruleset" slot-scope="data" v-if="!data.loading">
+      <ruleset-header :ruleset="data.ruleset"/>
       <section class="text">
-        <h2 class="heading">{{data.rule.ruleText}}</h2>
+        <h2 class="heading">{{data.ruleset.name}}</h2>
       </section>
-      <section class="rulesets">
-        <h4 class="heading">Sets</h4>
-        <ul v-if="data.rule.rulesets">
-          <li v-for="ruleset in data.rule.rulesets" :key="ruleset.id">
-            <router-link :to="{name: 'Ruleset', params: {rulesetId: ruleset.id}}">{{ruleset.name}}</router-link>
+      <section class="rules">
+        <ul v-if="data.ruleset.rules">
+          <li v-for="rule in data.ruleset.rules" :key="rule.id">
+            <router-link :to="{name: 'Rule', params: {ruleId: rule.id}}">{{rule.ruleText}}</router-link>
           </li>
         </ul>
       </section>
@@ -17,7 +16,7 @@
         <li class="menu-item">
           <button class="button" @click="handleDelete">
             <svg class="icon">
-              <use xlink:href="#delete-icon" />
+              <use xlink:href="#delete-icon"/>
             </svg>
           </button>
         </li>
@@ -29,10 +28,11 @@
           </button>
         </li>
       </ul>
+
       <popover v-if="showPopover" :handleClose="() => showPopover = false">
-        <ul v-if="me.rulesets">
-          <li v-for="ruleset in me.rulesets" :key="ruleset.id" @click="() => handleAddToRuleset(ruleset)">
-            {{ruleset.name}}
+        <ul v-if="me.rulesCreated.length > 0">
+          <li v-for="rule in me.rulesCreated" :key="rule.id" @click="() => handleAddToRuleset(rule)">
+            {{rule.ruleText}}
           </li>
         </ul>
 
@@ -42,7 +42,7 @@
         </div>
       </popover>
     </article>
-  </rule-container>
+  </ruleset-container>
 </template>
 
 <script src="./single.js"></script>
