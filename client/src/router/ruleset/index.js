@@ -1,5 +1,5 @@
 import CreateRuleset from './createRuleset'
-import Ruleset from '@/views/ruleset/single/single.vue'
+import Ruleset from '@/views/ruleset/ruleset.vue'
 
 import { requireAuth } from '@/router/hooks'
 export default [

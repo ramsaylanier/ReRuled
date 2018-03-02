@@ -1,8 +1,6 @@
-// Containers
-import RuleContainer from '@/modules/rule/rule-container.vue'
-
 // Components
 import RuleHeader from '@/modules/rule/rule-header.vue'
+import RuleText from '@/modules/rule/text/text.vue'
 import Popover from '@/components/popover/Popover'
 import RulesetList from '@/modules/ruleset/list/ruleset-list.vue'
 
@@ -16,8 +14,9 @@ import AddRuleMutation from '@/graphql/ruleset/addRuleToRuleset.gql'
 
 export default {
   name: 'rule',
+  props: ['rule'],
   components: {
-    RuleContainer, RuleHeader, Popover, RulesetList
+    RuleHeader, RuleText, Popover, RulesetList
   },
   data () {
     return {
@@ -46,7 +45,6 @@ export default {
       }
     },
     handleAddToRuleset (ruleset) {
-      console.log(this.rule)
       const rulesetId = ruleset.id
       const ruleId = this.$route.params.ruleId
 

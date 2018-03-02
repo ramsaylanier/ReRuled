@@ -14,5 +14,6 @@ export default {
   .list-item{
     background-color: white;
     border-bottom: 5px solid darken(white, 10%);
+    padding: 1rem .5rem;
   } 
 </style>

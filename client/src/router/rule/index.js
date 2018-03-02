@@ -2,7 +2,7 @@
 import CreateRule from './createRule'
 
 // GAME VIEWS
-import Rule from '@/views/rule/single/single.vue'
+import Rule from '@/views/rule/rule.vue'
 
 import { requireAuth } from '@/router/hooks'
 export default [

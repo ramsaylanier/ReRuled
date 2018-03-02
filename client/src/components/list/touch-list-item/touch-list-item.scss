@@ -37,3 +37,27 @@
   height: 24px;
   fill: darken($secondary, 30%);
 }
+
+.sub-menu-item{
+  display: flex;
+
+  button, a{
+    display: block;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    border: 0;
+    background-color: transparent;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon{
+      height: 24px;
+      width: 24px;
+    }
+  }
+}

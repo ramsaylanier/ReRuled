@@ -6,7 +6,6 @@
   justify-content: space-between;
 }
 .title{
-  padding: 1rem;
   display: block;
   font-size: 1.1rem;
   color: $primary;
@@ -17,8 +16,7 @@
 .meta{
   display: flex;
   justify-content: flex-end;
-  flex-basis: 6.5rem;
-  padding: 0rem 1rem;
+  flex-basis: 4.5rem;
 }
 
 .meta-item{

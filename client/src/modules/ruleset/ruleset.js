@@ -1,12 +1,10 @@
-// Containers
-import RulesetContainer from '@/modules/ruleset/ruleset-container.vue'
-
 // Components
 import RulesetHeader from '@/modules/ruleset/ruleset-header.vue'
-import Popover from '@/components/popover/Popover'
+import ListItem from '@/components/list/list-item.vue'
+import RuleCategory from '@/modules/rule/category/category.vue'
+import RuleText from '@/modules/rule/text/text.vue'
 
 // Queries
-
 import RulesetsCreatedQuery from '@/graphql/me/rulesetsCreated.gql'
 import RulesCreatedQuery from '@/graphql/me/rulesCreated.gql'
 
@@ -16,11 +14,12 @@ import DeleteRulesetMutation from '@/graphql/ruleset/deleteRuleset.gql'
 export default {
   name: 'ruleset',
   components: {
-    RulesetContainer, RulesetHeader, Popover
+    RulesetHeader, ListItem, RuleCategory, RuleText
   },
+  props: ['ruleset'],
   data () {
     return {
-      showPopover: false
+      menuOpen: false
     }
   },
   apollo: {
@@ -34,8 +33,8 @@ export default {
     }
   },
   methods: {
-    togglePopover () {
-      this.showPopover = !this.showPopover
+    handleMenuToggle () {
+      this.menuOpen = !this.menuOpen
     },
     handleDelete () {
       const confirmed = window.confirm('Do You Really Want To Delete This Ruleset?')

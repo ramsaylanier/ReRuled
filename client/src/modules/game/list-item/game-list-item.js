@@ -1,4 +1,4 @@
-import ListItem from '@/components/list/ListItem.vue'
+import ListItem from '@/components/list/list-item.vue'
 export default {
   name: 'game-list-item',
   props: ['game', 'me'],

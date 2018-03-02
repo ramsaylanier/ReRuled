@@ -20,7 +20,7 @@
 import ProfileHeader from '@/components/header/ProfileHeader.vue'
 import Avatar from '@/components/user/Avatar.vue'
 import StickyNav from '@/components/nav/StickyNav.vue'
-import List from '@/components/list/List.vue'
+import List from '@/components/list/list.vue'
 import GameListItem from '@/modules/game/list-item/game-list-item.vue'
 import AddIcon from '@/components/icons/Add.vue'
 
