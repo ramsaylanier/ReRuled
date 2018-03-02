@@ -1,12 +1,13 @@
 <template>
   <header class="header">
     <back-button :handleClick="handleClick"/>
-    <span class="title">{{game.title}}</span>
+    <span class="title">{{truncate(game.title, 70)}}</span>
   </header>
 </template>
 
 <script>
 import BackButton from '@/components/button/BackButton.vue'
+import {truncate} from '@/utils.js'
 export default {
   name: 'game-header',
   props: ['game'],
@@ -14,6 +15,7 @@ export default {
     BackButton
   },
   methods: {
+    truncate,
     handleClick () {
       this.$router.push('/profile')
     }
@@ -43,7 +45,7 @@ export default {
   }
 
   .title{
-    width: 70%;
+    width: 80%;
     color: white;
     font-size: 1.1rem;
     text-align: right;

@@ -1,5 +1,5 @@
 import {requireAuth} from '@/router/hooks'
-import CreateRuleset from '@/views/ruleset/CreateRuleset.vue'
+import CreateRuleset from '@/views/ruleset/create-ruleset.vue'
 
 export default {
   path: '/create-ruleset',

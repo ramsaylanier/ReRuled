@@ -81,7 +81,6 @@ export default {
       const gameId = this.gameId || this.game.id
       const ruleText = this.ruleText
       const categories = this.categories
-      console.log(categories)
       this.$apollo.mutate({
         mutation: CreateRuleMutation,
         variables: {

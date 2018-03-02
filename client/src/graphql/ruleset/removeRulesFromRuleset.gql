@@ -1,0 +1,10 @@
+mutation RemoveRulesFromRuleset($rulesetId: ID!, $ruleIds: [ID!]){
+  removeRulesFromRuleset(rulesetId: $rulesetId, ruleIds: $ruleIds){
+    id
+    rules{
+      id
+      ruleText
+      categories
+    }
+  }
+}

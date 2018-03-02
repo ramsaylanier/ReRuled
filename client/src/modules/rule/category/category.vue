@@ -15,9 +15,9 @@ export default {
 
 .category{
   font-size: .8rem;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  border-radius: 3px;
+  height: 24px;
+  width: 24px;
   display: flex;
   justify-content: center;
   align-items: center;

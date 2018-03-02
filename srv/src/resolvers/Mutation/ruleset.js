@@ -62,6 +62,24 @@ const ruleset = {
         }
       }
     })
+  },
+
+  async removeRulesFromRuleset(parent, {rulesetId, ruleIds}, ctx, info) {
+    const {id} = isLoggedIn(ctx)
+    if (!id) {
+      throw new Error('You must be authenticated to delete a rule.')
+    }
+
+    const rulesToRemove = ruleIds.map(rule => ({id: rule}))
+
+    return ctx.db.mutation.updateRuleset({
+      where: {id: rulesetId},
+      data: {
+        rules: {
+          disconnect: rulesToRemove
+        }
+      }
+    }, info)
   }
 }
 

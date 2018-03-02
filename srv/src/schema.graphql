@@ -22,5 +22,6 @@ type Mutation {
   createRuleset(name: String!, game: String!): Ruleset
   deleteRuleset(where: RulesetWhereUniqueInput!): Ruleset
   addRuleToRuleset(ruleId: ID!, rulesetId: ID!): Ruleset
+  removeRulesFromRuleset(rulesetId: ID, ruleIds: [ID!]): Ruleset
   createGame(title: String!): Game!
 }
