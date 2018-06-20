@@ -7,7 +7,13 @@
       :menuOpen="menuOpen"
     />
     <section class="sub-header">
-    <h2 class="heading">{{ruleset.name}}</h2>
+      <h2 class="heading">{{ruleset.name}}</h2>
+
+      <button v-if="menuOpen" class="menu-toggle" @click="handleRemoveClick">
+        <svg class="icon">
+          <use xlink:href="#edit-icon"/>
+        </svg>
+      </button>
     </section>
     <section class="rules">
       <transition-group
@@ -26,26 +32,28 @@
           :class="rule.categories[0].toLowerCase()"
           :data-index="index"
         >
-          <router-link  class="rule" :to="{
-            name: 'Rule',
-            params: {ruleId: rule.id},
-            query: $route.query}
-          ">
-            <rule-text :text="rule.ruleText"/>
-          </router-link>
-          <div class="action">
-            <transition
-              v-bind:css="false"
-              v-on:enter="enter"
-              v-on:leave="leave"
-            >
-              <checkbox v-if="menuOpen" :onCheck="(isChecked) => handleCheckRule(rule, isChecked)"/>
-              <rule-category v-else :category="rule.categories[0]"/>
-            </transition>
-          </div>
+            <router-link  class="rule" :to="{
+              name: 'Rule',
+              params: {ruleId: rule.id},
+              query: $route.query}
+            ">
+              <rule-text :text="rule.ruleText"/>
+            </router-link>
+            <div class="action">
+              <transition
+                v-bind:css="false"
+                v-on:enter="enter"
+                v-on:leave="leave"
+              >
+                <checkbox v-if="menuOpen" :onCheck="(isChecked) => handleCheckRule(rule, isChecked)"/>
+                <rule-category v-else :category="rule.categories[0]"/>
+              </transition>
+            </div>
         </li>
       </transition-group>
     </section>
+
+    <sticky-nav :game="{id: $route.params.gameId}"/>
   </article>
 </template>
 

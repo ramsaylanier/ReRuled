@@ -91,7 +91,7 @@ export default {
   .menu-toggle{
     display: flex;
     align-items: center;
-    flex-basis: 30px;
+    flex-basis: 24px;
     border: 0;
     background: transparent;
     padding: 0;

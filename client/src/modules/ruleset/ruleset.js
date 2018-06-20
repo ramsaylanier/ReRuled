@@ -4,6 +4,7 @@ import ListItem from '@/components/list/list-item.vue'
 import RuleCategory from '@/modules/rule/category/category.vue'
 import RuleText from '@/modules/rule/text/text.vue'
 import Checkbox from '@/components/form/checkbox.vue'
+import StickyNav from '@/components/nav/StickyNav.vue'
 
 // Queries
 import RulesetQuery from '@/graphql/ruleset/ruleset.gql'
@@ -19,7 +20,7 @@ import {TweenMax, Power4} from 'gsap'
 export default {
   name: 'ruleset',
   components: {
-    RulesetHeader, ListItem, RuleCategory, RuleText, Checkbox
+    RulesetHeader, ListItem, RuleCategory, RuleText, Checkbox, StickyNav
   },
   props: ['ruleset'],
   data () {

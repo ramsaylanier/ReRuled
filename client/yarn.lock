@@ -105,6 +105,10 @@ ajv@^5.0.0, ajv@^5.1.0, ajv@^5.1.5:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
+alias-quokka-plugin@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/alias-quokka-plugin/-/alias-quokka-plugin-0.1.0.tgz#e314d83b3189a106ebe81672d6d74d8d8e8da8e7"
+
 align-text@^0.1.1, align-text@^0.1.3:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/align-text/-/align-text-0.1.4.tgz#0cd90a561093f35d0a99256c22b7069433fad117"
@@ -499,6 +503,13 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
+babel-alias-quokka-plugin@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/babel-alias-quokka-plugin/-/babel-alias-quokka-plugin-1.0.9.tgz#0f21f5632d13fb3e3e6d4346dda1fe1c0a407865"
+  dependencies:
+    babel-load-config "^1.0.0"
+    babel-plugin-module-resolver "^3.0.0"
+
 babel-code-frame@^6.16.0, babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -682,6 +693,10 @@ babel-jest@^21.0.2, babel-jest@^21.2.0:
     babel-plugin-istanbul "^4.0.0"
     babel-preset-jest "^21.2.0"
 
+babel-load-config@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/babel-load-config/-/babel-load-config-1.0.0.tgz#533471d214542d71008674296f087aed6366c9bf"
+
 babel-loader@^7.1.1:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.2.tgz#f6cbe122710f1aa2af4d881c6d5b54358ca24126"
@@ -735,6 +750,16 @@ babel-plugin-jsx-v-model@^2.0.1:
 babel-plugin-jsx-vue-functional@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-jsx-vue-functional/-/babel-plugin-jsx-vue-functional-2.1.0.tgz#5630a0c86fe1904d28c30465e6bf1cf71235a239"
+
+babel-plugin-module-resolver@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.1.0.tgz#cf7868bd2c1818f855aede16141009b87dd1f95b"
+  dependencies:
+    find-babel-config "^1.1.0"
+    glob "^7.1.2"
+    pkg-up "^2.0.0"
+    reselect "^3.0.1"
+    resolve "^1.4.0"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -6051,6 +6076,12 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pkg-up@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
+  dependencies:
+    find-up "^2.1.0"
+
 plugin-error@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-1.0.1.tgz#77016bd8919d0ac377fdcdd0322328953ca5781c"
@@ -6922,6 +6953,10 @@ require-uncached@^1.0.2:
 requires-port@1.0.x, requires-port@1.x.x, requires-port@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+
+reselect@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
 
 resolve-cwd@^2.0.0:
   version "2.0.0"

@@ -24,7 +24,18 @@ ul{
   display: none;
 }
 
+button{
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 1;
+  background-color: transparent;
+}
+
 .icon{
+  height: 24px;
+  width: 24px;
   &.primary{
     fill: $primary;
   }
